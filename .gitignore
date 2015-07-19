@@ -1,3 +1,9 @@
+# Directories
+.git/
+.grunt/
+release/
 node_modules/
+
+# Files
 Gemfile.lock
 *.sublime-*
