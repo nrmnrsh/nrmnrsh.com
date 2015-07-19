@@ -50,6 +50,7 @@ module.exports = function(grunt) {
 			'test',
 			'build',
 			'optimize',
+			'bump',
 			'shell:release'
 		]
 	);

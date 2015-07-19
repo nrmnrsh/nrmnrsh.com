@@ -16,12 +16,11 @@ module.exports = function(grunt) {
 		},
 		release: {
 			command: [
-				'cd release',
 				'git add .',
 				'git commit -m "Update gh-pages to latest version"',
-				'git push',
-				'open "https://nrmnrsh.github.io/nrmnrsh.com/"'
-			].join(' && ')
+				'git push'
+			].join(' && '),
+			cwd: './release/'
 		}
 	});
 
