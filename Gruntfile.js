@@ -22,12 +22,20 @@ module.exports = function(grunt) {
 	);
 
 	grunt.registerTask(
+		'build-fast',
+		'Build all files for a deploy.',
+		[
+			'site',
+			'sass'
+		]
+	);
+
+	grunt.registerTask(
 		'build',
 		'Build all files for a deploy.',
 		[
 			'shell:clean',
-			'site',
-			'sass',
+			'build-fast'
 		]
 	);
 
