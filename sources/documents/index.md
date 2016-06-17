@@ -1,8 +1,19 @@
+---
+template: base.html
+title: nrmnrsh.com
+---
+
 # nrmnrsh.com
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Hi! My name is Norman Rusch. I'm senior webdeveloper with focus on frontend
+technologies from berlin. I love to write reusable and tested javascript,
+semantic and accessible html and modular css.
+
+## Open Source
+
+These are some of the open source projects i'm working on:
+
+* lintspaces
+* picnic
+
+## Portfolio

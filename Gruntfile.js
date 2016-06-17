@@ -27,7 +27,7 @@ module.exports = function(grunt) {
 		'Build all files for a deploy.',
 		[
 			'shell:clean',
-			'markdown',
+			'site',
 			'shell:compass',
 		]
 	);
