@@ -11,8 +11,7 @@ module.exports = function(grunt) {
 		[
 			'jshint',
 			'jscs',
-			'lintspaces',
-			'scsslint'
+			'lintspaces'
 		]
 	);
 
@@ -28,7 +27,7 @@ module.exports = function(grunt) {
 		[
 			'shell:clean',
 			'site',
-			'shell:compass',
+			'sass',
 		]
 	);
 

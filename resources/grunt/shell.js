@@ -9,11 +9,6 @@ module.exports = function(grunt) {
 				'git checkout gh-pages'
 			].join(' && ')
 		},
-		compass: {
-			command: [
-				'echo "compile compass"'
-			].join(' && ')
-		},
 		release: {
 			command: [
 				'cd ' + process.cwd() + '/release',
