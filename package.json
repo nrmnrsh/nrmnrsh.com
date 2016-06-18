@@ -33,6 +33,7 @@
     "grunt-sass": "1.2.0",
     "grunt-shell": "1.1.2",
     "grunt-site": "1.0.1",
-    "grunt-svgmin": "2.0.1"
+    "grunt-svgmin": "2.0.1",
+    "node-reset-scss": "1.0.1"
   }
 }
