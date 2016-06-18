@@ -13,7 +13,34 @@ semantic and accessible html and modular css.
 
 These are some of the open source projects i'm working on:
 
-* lintspaces
-* picnic
+* ### [lintspaces](https://github.com/schorfES/node-lintspaces)
+
+	A validator for checking spaces in files.
+
+* ### [picnic](https://github.com/moccu/picnic)
+
+	Collection of tiny backbone.geppetto modules and tools to make our live
+	easier.
+
+* ### [systemjs-pluginbuilder](https://github.com/moccu/systemjs-pluginbuilder)
+
+	A systemJS build tool to create plugin based bundles.
+
+* ### [django-omnibus](https://github.com/moccu/django-omnibus)
+
+	A Django library which helps to create websocket-based connections between a
+	browser and a server to deliver messages.
+
+* ### [jquery.hipsterSlider](https://github.com/schorfES/jquery.hipsterSlider)
+
+	An other jQuery Slideshow Plugin.
+
+* ### [grunt-cookielist](https://github.com/schorfES/grunt-cookielist)
+
+	A grunt crawler to list all cookies on urls using phantomjs.
 
 ## Portfolio
+
+## Conferences
+
+## About
