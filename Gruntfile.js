@@ -55,6 +55,7 @@ module.exports = function(grunt) {
 		'postcss:build',
 
 		// Templates
+		'assemble:build',
 
 		// Optimizations
 		'optimize'
