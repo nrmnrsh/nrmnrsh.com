@@ -1,0 +1,19 @@
+(function() {
+	// Init i18nnext with current language...
+	i18next.init({
+		nsSeparator: false,
+		keySeparator: false,
+		lng: '{{ lng }}',
+		resources: {
+			'{{ lng }}': {
+				translation: {{{ translation }}}
+			}
+		}
+	});
+
+	// Simple gettext fallback for modules which are currently not
+	// migrated to i18next...
+	window.gettext = function(key) {
+		return window.i18next ? window.i18next.t(key) : key;
+	};
+})();

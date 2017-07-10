@@ -1,0 +1,7 @@
+{
+	"editorconfig": ".editorconfig",
+	"newlineMaximum": 2,
+	"ignores": [
+		"js-comments"
+	]
+}

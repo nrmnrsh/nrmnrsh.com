@@ -1,0 +1,23 @@
+html,
+body {
+	@include font-default();
+	// Allow better font smoothing:
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	// Prevent iOS font scaling in landscape:
+	-webkit-text-size-adjust: none;
+	background: $color-background;
+	color: $color-text;
+}
+
+html {
+	font-size: $font-size-base;
+}
+
+body {
+	line-height: $font-line-height-base;
+}
+
+a {
+	color: inherit;
+}

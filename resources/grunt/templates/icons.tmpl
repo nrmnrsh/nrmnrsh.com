@@ -1,0 +1,8 @@
+// DO NOT ADD ANY ICONS HERE!
+// This is generated automatically through a grunt task. Just put .svg's into
+// the 'icons' folder placed in each 'resources' folder inside an event.
+// The font is genereated by the grunt task: 'grunt webfonts'.
+
+$icons:
+	<% for (var i = 0, l = glyphs.length; i < l; i++) { %>(<%= glyphs[i] %>, '\<%= codepoints[i] %>')<% if (i !== l - 1) { %>,<%= '\n\t' %><% } %><% } %>
+;

@@ -1,9 +1,11 @@
 # Directories
 .git/
 .grunt/
+build/
 release/
 node_modules/
+jspm_packages/
 
 # Files
-Gemfile.lock
 *.sublime-*
+sources/scss/settings/_icons.scss
