@@ -60,4 +60,11 @@ module.exports = function(grunt) {
 		// Optimizations
 		'optimize'
 	]);
+
+	grunt.registerTask('release', [
+		'validate',
+		'test',
+		'build',
+		'gh-pages:release'
+	]);
 };
