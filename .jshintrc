@@ -5,13 +5,15 @@
 	"eqnull": true,
 	"expr": true,
 	"globals": {
-		"process": true,
-		"console": true,
-		"module": true,
-		"require": true,
 		"exports": true,
+		"module": true,
+		"define": true,
+		"require": true,
+		"window": true,
+		"document": true,
+
 		"__dirname": true,
-		"__filename": true
+		"process": true
 	},
 	"immed": true,
 	"noarg": true,
@@ -20,5 +22,7 @@
 	"smarttabs": true,
 	"trailing": true,
 	"undef": true,
-	"unused": true
+	"unused": true,
+	"es3": false,
+	"esnext": true
 }
