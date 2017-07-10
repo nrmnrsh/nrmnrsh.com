@@ -4,7 +4,7 @@
   "description": "The portfolio website of Norman Rusch",
   "main": "Gruntfile.js",
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt validate test"
   },
   "repository": {
     "type": "git",
