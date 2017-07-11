@@ -3,4 +3,7 @@
 
 @import 'mixins/ui/typography';
 
-@import 'layout';
+@import 'layout/box-sizing';
+@import 'layout/layout';
+
+@import 'modules/intro/intro';
