@@ -156,7 +156,7 @@ module.exports = function(grunt) {
 			build: {
 				options: {
 					data: ['<%= files.sources.hbs %>/*.json'],
-					partials: ['<%= files.sources.hbs %>partials/*.hbs'],
+					partials: ['<%= files.sources.hbs %>partials/**/*.hbs'],
 					layouts: ['<%= files.sources.hbs %>layouts/*.hbs']
 				},
 				files: [{
