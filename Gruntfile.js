@@ -55,7 +55,10 @@ module.exports = function(grunt) {
 		'postcss:build',
 
 		// Templates
-		'assemble:build'
+		'assemble:build',
+
+		// Assets like images etc.
+		'copy:build'
 	]);
 
 	grunt.registerTask('release', [
