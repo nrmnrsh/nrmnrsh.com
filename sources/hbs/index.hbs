@@ -3,9 +3,5 @@ title: nrmnrsh.com
 layout: default.hbs
 data: index.json
 ---
-<h1>
-	<em>{{ index.headline }} -</em>
-	<span>{{ index.subline }}</span>
-</h1>
 
-<p>{{ index.about }}</p>
+{{> intro headline=index.headline subline=index.subline copy=index.about background='./img/intro/background.jpg' }}

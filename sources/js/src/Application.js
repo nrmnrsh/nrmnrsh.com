@@ -1,11 +1,17 @@
 import Application from 'picnic/core/app/Application';
 import Geppetto from 'backbone.geppetto';
 
+import Intro from 'app/modules/intro/commands/Initialize';
+
 
 class Context extends Geppetto.Context {
 
 	initialize() {
-		window.console.log('RUN RUN RUN');
+		this.wireCommands({
+			'application:start': [
+				Intro
+			]
+		});
 	}
 
 }
