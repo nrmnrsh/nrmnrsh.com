@@ -55,16 +55,14 @@ module.exports = function(grunt) {
 		'postcss:build',
 
 		// Templates
-		'assemble:build',
-
-		// Optimizations
-		'optimize'
+		'assemble:build'
 	]);
 
 	grunt.registerTask('release', [
 		'validate',
 		'test',
 		'build',
+		'optimize',
 		'gh-pages:release'
 	]);
 };
