@@ -16,7 +16,8 @@
     "scss": "sources/scss/",
     "i18n": "sources/js/i18n/",
     "js": "sources/js/src/",
-    "hbs": "sources/hbs/"
+    "hbs": "sources/hbs/",
+    "img": "sources/img/"
   },
   "tests": {
     "js": "sources/js/tests/"

@@ -17,6 +17,19 @@ module.exports = function(grunt) {
 			build: ['<%= files.release.base %>*']
 		},
 
+		copy: {
+			build: {
+				files: [
+					{
+						expand: true,
+						src: '**/*',
+						cwd: '<%- files.sources.img %>',
+						dest: '<%- files.release.img %>'
+					}
+				]
+			}
+		},
+
 		pluginbuilder: {
 			build: {
 				options: {
