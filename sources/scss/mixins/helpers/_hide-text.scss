@@ -1,0 +1,7 @@
+@mixin hide-text() {
+	$approximate-em-value: 12px / 1em;
+	$wider-than-any-screen: -9999em;
+	overflow: hidden;
+	text-align: left;
+	text-indent: $wider-than-any-screen * $approximate-em-value;
+}
