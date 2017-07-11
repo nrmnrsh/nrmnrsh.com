@@ -10,7 +10,9 @@ SystemJSHelper.prototype.resolve = function(name) {
 		location = this._SystemJS.paths[registry + ':*']
 	;
 
-	return location.replace('*', directory);
+	return location
+		.replace('*', directory)
+		.replace('file://', '');
 };
 
 module.exports = SystemJSHelper;

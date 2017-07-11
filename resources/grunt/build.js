@@ -78,8 +78,8 @@ module.exports = function(grunt) {
 								'<%= files.sources.jspm %>system-polyfills.js',
 								'<%= files.sources.jspm %>system.js',
 								'./config.js',
-								path.join(systemJSHelper.resolve('i18next'), 'i18next.js'),
-								path.join(systemJSHelper.resolve('picnic'), 'core', 'app', 'ApplicationRunner.js'),
+								path.join('.', systemJSHelper.resolve('i18next'), 'i18next.js'),
+								path.join('.', systemJSHelper.resolve('picnic'), 'core/app/ApplicationRunner.js'),
 								'<%= files.build.i18n %>' + lng + '/i18n.js',
 								'<%= files.build.js %>Application.js'
 							],
