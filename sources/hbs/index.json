@@ -1,5 +1,10 @@
 {
-  "headline": "nrmnrsh.com",
-  "subline": "A webdeveloper's portfolio",
-  "about": "Hi! My name is Norman Rusch. I'm senior webdeveloper with focus on frontend technologies from berlin. I love to write reusable and tested javascript, semantic and accessible html and modular css."
+  "intro": {
+    "headline": "nrmnrsh.com",
+    "subline": "A webdeveloper's portfolio",
+    "copy": "Hi! My name is Norman Rusch. I'm a senior webdeveloper with focus on frontend technologies from berlin. I love to write reusable and tested javascript, semantic and accessible html and modular css.",
+    "background": {
+      "sizes": [320, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300, 1400, 1500, 1600, 1700, 1800, 1900, 2000]
+    }
+  }
 }

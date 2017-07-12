@@ -19,6 +19,7 @@
     "url": "https://github.com/nrmnrsh/nrmnrsh.com/issues"
   },
   "homepage": "https://nrmnrsh.github.io/nrmnrsh.com/",
+  "preinstall": "brew install GraphicsMagick",
   "devDependencies": {
     "autoprefixer": "6.3.6",
     "cssnano": "^3.7.1",
@@ -39,6 +40,7 @@
     "grunt-lintspaces": "^0.8.0",
     "grunt-modernizr": "^1.0.2",
     "grunt-postcss": "^0.8.0",
+    "grunt-responsive-images": "^1.10.1",
     "grunt-sass": "^1.1.0",
     "grunt-sass-lint": "^0.2.0",
     "grunt-shell": "1.1.2",

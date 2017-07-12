@@ -2,7 +2,12 @@ var
 	path = require('path'),
 	SystemJS = require('systemjs'),
 	SystemJSHelper = require('./helpers/SystemJSHelper'),
-	systemJSHelper = new SystemJSHelper(SystemJS)
+	systemJSHelper = new SystemJSHelper(SystemJS),
+
+	THUMBNAIL_MIN = 320,
+	THUMBNAIL_MAX = 2000,
+	THUMBNAIL_STEP = 100,
+	THUMBNAIL_COUNT = Math.ceil((THUMBNAIL_MAX - THUMBNAIL_MIN) / THUMBNAIL_STEP) + 1
 ;
 
 
@@ -165,6 +170,30 @@ module.exports = function(grunt) {
 					expand: true,
 					flatten: false,
 					src: ['*.hbs']
+				}]
+			}
+		},
+
+		responsive_images: {
+			build: {
+				options: {
+					upscale: false,
+					sizes: Array
+						.apply(null, {length: THUMBNAIL_COUNT})
+						.map(function(item, index) {
+							return {
+								width: Math.max(
+									Math.round(THUMBNAIL_MIN / THUMBNAIL_STEP + index) * THUMBNAIL_STEP,
+									THUMBNAIL_MIN
+								)
+							};
+						})
+				},
+				files: [{
+					expand: true,
+					src: ['**/*.{jpg,png}'],
+					cwd: '<%= files.sources.img %>',
+					dest: '<%= files.release.img %>'
 				}]
 			}
 		}
