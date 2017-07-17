@@ -9,7 +9,7 @@ $color-link: #00FFC5 !default;
 
 // Font definitions
 $font-size-base: 14px !default;
-$font-line-height-base: 20px / $font-size-base !default;
+$font-line-height-base: 28px / $font-size-base !default;
 
 // Icon-font:
 $font-icons-name: 'icons' !default;
@@ -35,6 +35,7 @@ $font-load:
 ;
 
 // Intro:
+$intro-headline-animation-duration: 25s !default;
 $intro-shadow-color: #000000 !default;
 
 // Social:
