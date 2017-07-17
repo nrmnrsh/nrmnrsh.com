@@ -7,21 +7,21 @@ module.exports = function(grunt) {
 				spawn: false
 			},
 			js: {
-				files: ['<%= files.sources.js %>**/*'],
+				files: ['<%= settings.sources.js %>**/*'],
 				tasks: [
 					'pluginbuilder:build',
 					'concat:build'
 				]
 			},
 			scss: {
-				files: ['<%= files.sources.scss %>**/*'],
+				files: ['<%= settings.sources.scss %>**/*'],
 				tasks: [
 					'sass:build',
 					'postcss:build'
 				]
 			},
 			hbs: {
-				files: ['<%= files.sources.hbs %>**/*'],
+				files: ['<%= settings.sources.hbs %>**/*'],
 				tasks: [
 					'assemble:build'
 				]

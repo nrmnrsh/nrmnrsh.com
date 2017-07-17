@@ -4,7 +4,7 @@ module.exports = function(grunt) {
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
-		files: grunt.file.readJSON('resources/grunt/settings/files.json')
+		settings: grunt.file.readJSON('resources/grunt/settings/settings.json')
 	});
 
 	// This grunt task needs to be loaded directly because the npm module name

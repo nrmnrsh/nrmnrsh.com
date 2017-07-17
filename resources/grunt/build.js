@@ -19,7 +19,7 @@ module.exports = function(grunt) {
 	grunt.config.merge({
 
 		clean: {
-			build: ['<%= files.release.base %>*']
+			build: ['<%= settings.release.base %>*']
 		},
 
 		copy: {
@@ -28,14 +28,14 @@ module.exports = function(grunt) {
 					{
 						expand: true,
 						src: '**/*',
-						cwd: '<%- files.sources.img %>',
-						dest: '<%- files.release.img %>'
+						cwd: '<%= settings.sources.img %>',
+						dest: '<%= settings.release.img %>'
 					},
 					{
 						expand: true,
 						src: '**/*',
-						cwd: '<%- files.sources.fonts %>',
-						dest: '<%- files.release.fonts %>'
+						cwd: '<%= settings.sources.fonts %>',
+						dest: '<%= settings.release.fonts %>'
 					}
 				]
 			}
@@ -46,19 +46,19 @@ module.exports = function(grunt) {
 				options: {
 					out: '../build/',
 					builder: 'jspm',
-					basePath: '<%= files.sources.js %>Application.js'
+					basePath: '<%= settings.sources.js %>Application.js'
 				}
 			}
 		},
 
 		modernizr: {
 			build: {
-				dest: '<%= files.build.js %>modernizr.js',
+				dest: '<%= settings.build.js %>modernizr.js',
 				crawl: true,
 				files: {
 					src: [
-						'<%= files.sources.js %>**/*.js',
-						'<%= files.sources.scss %>**/*.scss'
+						'<%= settings.sources.js %>**/*.js',
+						'<%= settings.sources.scss %>**/*.scss'
 					]
 				},
 				customTests: [],
@@ -77,18 +77,18 @@ module.exports = function(grunt) {
 				files: (function() {
 					var files = {};
 
-					grunt.config.get('files').lngs
+					grunt.config.get('settings').lngs
 						.forEach(function(lng) {
-							var dest = grunt.template.process('<%= files.release.js %>Application.' + lng + '.js');
+							var dest = grunt.template.process('<%= settings.release.js %>Application.' + lng + '.js');
 							files[dest] = [
-								'<%= files.build.js %>modernizr.js',
-								'<%= files.sources.jspm %>system-polyfills.js',
-								'<%= files.sources.jspm %>system.js',
+								'<%= settings.build.js %>modernizr.js',
+								'<%= settings.sources.jspm %>system-polyfills.js',
+								'<%= settings.sources.jspm %>system.js',
 								'./config.js',
 								path.join('.', systemJSHelper.resolve('i18next'), 'i18next.js'),
 								path.join('.', systemJSHelper.resolve('picnic'), 'core/app/ApplicationRunner.js'),
-								'<%= files.build.i18n %>' + lng + '/i18n.js',
-								'<%= files.build.js %>Application.js'
+								'<%= settings.build.i18n %>' + lng + '/i18n.js',
+								'<%= settings.build.js %>Application.js'
 							];
 						});
 
@@ -100,8 +100,8 @@ module.exports = function(grunt) {
 		webfont: {
 			build: {
 				src: 'resources/icons/*.svg',
-				dest: '<%= files.release.fonts %>',
-				destCss: '<%= files.sources.scss %>settings/',
+				dest: '<%= settings.release.fonts %>',
+				destCss: '<%= settings.sources.scss %>settings/',
 				options: {
 					fontBaseName: 'icons',
 					template: 'resources/grunt/templates/icons.tmpl',
@@ -129,7 +129,7 @@ module.exports = function(grunt) {
 					expand: true,
 					cwd: 'sources/scss',
 					src: ['*.scss','!_*.scss'],
-					dest: '<%= files.release.css %>',
+					dest: '<%= settings.release.css %>',
 					ext: '.css'
 				}]
 			}
@@ -156,20 +156,20 @@ module.exports = function(grunt) {
 			build: {
 				expand: true,
 				flatten: false,
-				src: '<%= files.release.css %>*.css'
+				src: '<%= settings.release.css %>*.css'
 			}
 		},
 
 		assemble: {
 			build: {
 				options: {
-					data: ['<%= files.sources.hbs %>/*.json'],
-					partials: ['<%= files.sources.hbs %>partials/**/*.hbs'],
-					layouts: ['<%= files.sources.hbs %>layouts/*.hbs']
+					data: ['<%= settings.sources.hbs %>/*.json'],
+					partials: ['<%= settings.sources.hbs %>partials/**/*.hbs'],
+					layouts: ['<%= settings.sources.hbs %>layouts/*.hbs']
 				},
 				files: [{
-					cwd: '<%= files.sources.hbs %>',
-					dest: '<%= files.release.html %>',
+					cwd: '<%= settings.sources.hbs %>',
+					dest: '<%= settings.release.html %>',
 					expand: true,
 					flatten: false,
 					src: ['*.hbs']
@@ -195,8 +195,8 @@ module.exports = function(grunt) {
 				files: [{
 					expand: true,
 					src: ['**/*.{jpg,png}'],
-					cwd: '<%= files.sources.img %>',
-					dest: '<%= files.release.img %>'
+					cwd: '<%= settings.sources.img %>',
+					dest: '<%= settings.release.img %>'
 				}]
 			}
 		}

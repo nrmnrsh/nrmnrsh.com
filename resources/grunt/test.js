@@ -16,7 +16,7 @@ module.exports = function(grunt) {
 					data: {
 						tests: function() {
 							return grunt.file
-								.expand(grunt.template.process('<%= files.tests.js %>**/*.js'))
+								.expand(grunt.template.process('<%= settings.tests.js %>**/*.js'))
 								.map(function(path) {
 									return path.replace(/\.js$/, '');
 								});

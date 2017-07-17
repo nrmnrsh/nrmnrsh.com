@@ -15,8 +15,8 @@ module.exports = function(grunt) {
 				files: [{
 					expand: true,
 					src: ['*.js'],
-					dest: '<%= files.release.js %>',
-					cwd: '<%= files.release.js %>'
+					dest: '<%= settings.release.js %>',
+					cwd: '<%= settings.release.js %>'
 				}]
 			}
 		},
@@ -25,9 +25,9 @@ module.exports = function(grunt) {
 			optimize: {
 				files: [{
 					expand: true,
-					cwd: '<%= files.release.img %>',
+					cwd: '<%= settings.release.img %>',
 					src: '**/*.{png,jpg,gif}',
-					dest: '<%= files.release.img %>'
+					dest: '<%= settings.release.img %>'
 				}]
 			}
 		},
@@ -36,9 +36,9 @@ module.exports = function(grunt) {
 			optimize: {
 				files: [{
 					expand: true,
-					cwd: '<%= files.release.img %>',
+					cwd: '<%= settings.release.img %>',
 					src: '**/*.svg',
-					dest: '<%= files.release.img %>'
+					dest: '<%= settings.release.img %>'
 				}]
 			}
 		},
@@ -47,9 +47,9 @@ module.exports = function(grunt) {
 			optimize: {
 				files: [{
 					expand: true,
-					cwd: '<%= files.release.html %>',
+					cwd: '<%= settings.release.html %>',
 					src: '*.html',
-					dest: '<%= files.release.html %>'
+					dest: '<%= settings.release.html %>'
 				}],
 				options: {
 					//Strip HTML comments

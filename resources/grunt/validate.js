@@ -5,8 +5,8 @@ module.exports = function(grunt) {
 		jshint: {
 			validate: {
 				src: [
-					'<%= files.sources.js %>**/*.js',
-					'<%= files.tests.js %>**/*.js'
+					'<%= settings.sources.js %>**/*.js',
+					'<%= settings.tests.js %>**/*.js'
 				],
 				options: {
 					jshintrc: '.jshintrc'
@@ -17,8 +17,8 @@ module.exports = function(grunt) {
 		jscs: {
 			validate: {
 				src: [
-					'<%= files.sources.js %>**/*.js',
-					'<%= files.tests.js %>**/*.js'
+					'<%= settings.sources.js %>**/*.js',
+					'<%= settings.tests.js %>**/*.js'
 				],
 				options: {
 					config: '.jscs.json'
@@ -29,12 +29,12 @@ module.exports = function(grunt) {
 		lintspaces: {
 			validate: {
 				src: [
-					'<%= files.sources.hbs %>**/*.hbs',
-					'<%= files.sources.scss %>**/*.scss',
-					'<%= files.sources.js %>**/*.html',
-					'<%= files.sources.js %>**/*.js',
-					'<%= files.tests.js %>**/*.html',
-					'<%= files.tests.js %>**/*.js',
+					'<%= settings.sources.hbs %>**/*.hbs',
+					'<%= settings.sources.scss %>**/*.scss',
+					'<%= settings.sources.js %>**/*.html',
+					'<%= settings.sources.js %>**/*.js',
+					'<%= settings.tests.js %>**/*.html',
+					'<%= settings.tests.js %>**/*.js',
 				],
 				options: {
 					rcconfig: true
@@ -45,7 +45,7 @@ module.exports = function(grunt) {
 		sasslint: {
 			validate: {
 				src: [
-					'<%= files.sources.scss %>**/*.scss'
+					'<%= settings.sources.scss %>**/*.scss'
 				],
 				options: {
 					configFile: '.sass-lint.yml'

@@ -12,14 +12,14 @@ module.exports = function(grunt) {
 		i18next: {
 			i18n:  {
 				src: [
-					'<%= files.sources.js %>**/*.{js,html}',
+					'<%= settings.sources.js %>**/*.{js,html}',
 					'jspm_packages/github/moccu/picnic*/**/*.{js,html}'
 				],
-				dest: '<%= files.sources.i18n %>',
+				dest: '<%= settings.sources.i18n %>',
 				options: {
-					lngs: grunt.config.get('files').lngs,
+					lngs: grunt.config.get('settings').lngs,
 					resource: {
-						loadPath: '<%= files.sources.i18n %>{{lng}}/translation.json',
+						loadPath: '<%= settings.sources.i18n %>{{lng}}/translation.json',
 						savePath: '{{lng}}/translation.json',
 					},
 					func: {
@@ -37,8 +37,8 @@ module.exports = function(grunt) {
 	grunt.task.registerTask('i18n2js', 'A simple task to wrap i18next json into js files including setup of i18next', function() {
 		var
 			template = Handlebars.compile(grunt.file.read(TEMPLATE_I18NEXT)),
-			output = grunt.template.process('<%= files.build.i18n %>'),
-			input = grunt.template.process('<%= files.sources.i18n %>*')
+			output = grunt.template.process('<%= settings.build.i18n %>'),
+			input = grunt.template.process('<%= settings.sources.i18n %>*')
 		;
 
 		grunt.file.expand(input).forEach(function(dir) {
