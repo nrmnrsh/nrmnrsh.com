@@ -59,8 +59,8 @@ module.exports = function(grunt) {
 		'assemble:build',
 
 		// Assets like images etc.
-		'copy:build',
-		'responsive_images:build'
+		'copy:build'
+		//'responsive_images:build'
 	]);
 
 	grunt.registerTask('release', [
