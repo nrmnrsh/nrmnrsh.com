@@ -6,5 +6,25 @@
     "background": {
       "sizes": [320, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300, 1400, 1500, 1600, 1700, 1800, 1900, 2000]
     }
+  },
+  "social": {
+    "headline": "Follow me",
+    "links": [
+      {
+        "type": "github",
+        "label": "Github",
+        "href": "https://github.com/schorfES/"
+      },
+      {
+        "type": "twitter",
+        "label": "Twitter",
+        "href": "https://twitter.com/nrmnrsh"
+      },
+      {
+        "type": "linkedin",
+        "label": "LinkedIn",
+        "href": "https://www.linkedin.com/in/nrmnrsh/"
+      }
+    ]
   }
 }

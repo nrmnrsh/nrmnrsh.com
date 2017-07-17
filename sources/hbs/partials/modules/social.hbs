@@ -1,0 +1,19 @@
+<div class="content content-social">
+	<div>
+		<h2>{{ context.headline }}</h2>
+
+		<ul>
+			{{#each context.links}}
+				<li class="is-type-{{ this.type }}">
+					<a
+						href="{{ this.href }}"
+						title="{{ this.title }}"
+						target="_blank"
+						rel="noopener">
+						<span>{{ this.label }}</span>
+					</a>
+				</li>
+			{{/each}}
+		</ul>
+	</div>
+</div>

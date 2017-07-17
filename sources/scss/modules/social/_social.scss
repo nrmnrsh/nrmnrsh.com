@@ -1,0 +1,33 @@
+.content-social {
+	background: $social-background;
+	color: $social-color;
+	text-align: center;
+
+	h2 {
+		@include headline-primary();
+	}
+
+	li,
+	a {
+		display: inline-block;
+	}
+
+	a {
+		@include icon('github', 'before');
+		padding: 1rem;
+		font-size: 3em;
+		text-decoration: none;
+	}
+
+	span {
+		@include invisible();
+	}
+
+	@each $icon in $social-icons {
+		.is-type-#{$icon} {
+			a {
+				@include icon-sign($icon, 'before');
+			}
+		}
+	}
+}

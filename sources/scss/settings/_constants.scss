@@ -38,4 +38,6 @@ $font-load:
 $intro-shadow-color: #000000 !default;
 
 // Social:
+$social-background: $color-text !default;
+$social-color: $color-background !default;
 $social-icons: ('github', 'twitter', 'linkedin') !default;
