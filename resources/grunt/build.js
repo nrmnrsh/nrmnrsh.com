@@ -106,7 +106,7 @@ module.exports = function(grunt) {
 					fontBaseName: 'icons',
 					template: 'resources/grunt/templates/icons.tmpl',
 					stylesheet: 'scss',
-					types: 'woff2,woff',
+					types: 'woff',
 					htmlDemo: false,
 					templateOptions: {
 						baseClass: 'icon',

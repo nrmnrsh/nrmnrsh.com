@@ -20,13 +20,13 @@ $font-icons-filename: 'icons' !default;
 $font-default-name: 'lora' !default;
 $font-default-family: 'lora', serif !default;
 $font-default-dir: '../fonts/' !default;
-$font-default-filename: 'lora-v10-latin-regular' !default;
+$font-default-filename: 'lora' !default;
 
 // Primary font:
 $font-primary-name: 'satisfy' !default;
 $font-primary-family: 'satisfy', serif !default;
 $font-primary-dir: '../fonts/' !default;
-$font-primary-filename: 'satisfy-v6-latin-regular' !default;
+$font-primary-filename: 'satisfy' !default;
 
 $font-load:
 	($font-icons-name, $font-icons-dir, $font-icons-filename, false),
