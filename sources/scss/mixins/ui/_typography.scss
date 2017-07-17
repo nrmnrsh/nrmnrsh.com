@@ -17,3 +17,45 @@
 @each $font in $font-load {
 	@include load-font(nth($font, 1), nth($font, 2), nth($font, 3), nth($font, 4));
 }
+
+// Font-Families
+// -----------------------------------------------------------------------------
+
+@mixin font-default() {
+	font-family: $font-default-family;
+}
+
+@mixin font-primary() {
+	font-family: $font-primary-family;
+}
+
+// Headlines
+// -----------------------------------------------------------------------------
+
+@mixin headline($font-size-mobile, $font-size-tablet: $font-size-mobile, $font-size-desktop: $font-size-tablet) {
+	margin: 0 0 0.5em;
+	font-size: $font-size-mobile / $font-size-base * 1em;
+	line-height: 1;
+	hyphens: auto;
+
+	@if ($font-size-tablet) {
+		@include break-at(nth($content-breakpoints, 1)) {
+			font-size: $font-size-tablet / $font-size-base * 1em;
+		}
+	}
+
+	@if ($font-size-desktop) {
+		@include break-at(nth($content-breakpoints, 2)) {
+			font-size: $font-size-desktop / $font-size-base * 1em;
+		}
+	}
+}
+
+@mixin headline-primary() {
+	@include headline(40px, 50px, 70px);
+	@include font-primary();
+}
+
+@mixin headline-secondary() {
+	@include headline(20px);
+}

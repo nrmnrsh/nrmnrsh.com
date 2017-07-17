@@ -10,6 +10,7 @@ body {
 }
 
 html {
+	@include font-default();
 	font-size: $font-size-base;
 }
 

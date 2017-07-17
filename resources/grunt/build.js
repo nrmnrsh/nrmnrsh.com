@@ -30,6 +30,12 @@ module.exports = function(grunt) {
 						src: '**/*',
 						cwd: '<%- files.sources.img %>',
 						dest: '<%- files.release.img %>'
+					},
+					{
+						expand: true,
+						src: '**/*',
+						cwd: '<%- files.sources.fonts %>',
+						dest: '<%- files.release.fonts %>'
 					}
 				]
 			}

@@ -18,6 +18,7 @@
   "sources": {
     "jspm": "jspm_packages/",
     "scss": "sources/scss/",
+    "fonts": "sources/fonts/",
     "i18n": "sources/js/i18n/",
     "js": "sources/js/src/",
     "hbs": "sources/hbs/",
