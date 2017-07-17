@@ -33,6 +33,7 @@ module.exports = function(grunt) {
 	]);
 
 	grunt.registerTask('optimize', [
+		'uglify:optimize',
 		'imagemin:optimize',
 		'svgmin:optimize',
 		'htmlmin:optimize'
@@ -47,7 +48,7 @@ module.exports = function(grunt) {
 		// Javascript
 		'pluginbuilder:build',
 		'modernizr:build',
-		'uglify:build',
+		'concat:build',
 
 		// Stylesheets
 		'webfont:build',

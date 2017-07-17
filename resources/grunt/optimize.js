@@ -2,6 +2,25 @@ module.exports = function(grunt) {
 
 	grunt.config.merge({
 
+		uglify: {
+			optimize: {
+				options: {
+					mangle: true,
+					compress: true,
+					report: 'gzip',
+					sourceMap: true,
+					preserveComments: false,
+					quoteStyle: 1
+				},
+				files: [{
+					expand: true,
+					src: ['*.js'],
+					dest: '<%= files.release.js %>',
+					cwd: '<%= files.release.js %>'
+				}]
+			}
+		},
+
 		imagemin: {
 			optimize: {
 				files: [{

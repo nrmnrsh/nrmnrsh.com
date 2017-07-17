@@ -63,22 +63,18 @@ module.exports = function(grunt) {
 			}
 		},
 
-		uglify: {
+		concat: {
 			build: {
 				options: {
-					mangle: true,
-					compress: true,
-					report: 'gzip',
-					sourceMap: true,
-					preserveComments: false,
-					quoteStyle: 1
+					sourceMap: true
 				},
-				files: grunt.file.expand(grunt.template.process('<%= files.sources.i18n %>*'))
-					.map(function(dir) {
-						var lng = path.basename(dir);
+				files: (function() {
+					var files = {};
 
-						return {
-							src: [
+					grunt.config.get('files').lngs
+						.forEach(function(lng) {
+							var dest = grunt.template.process('<%= files.release.js %>Application.' + lng + '.js');
+							files[dest] = [
 								'<%= files.build.js %>modernizr.js',
 								'<%= files.sources.jspm %>system-polyfills.js',
 								'<%= files.sources.jspm %>system.js',
@@ -87,10 +83,11 @@ module.exports = function(grunt) {
 								path.join('.', systemJSHelper.resolve('picnic'), 'core/app/ApplicationRunner.js'),
 								'<%= files.build.i18n %>' + lng + '/i18n.js',
 								'<%= files.build.js %>Application.js'
-							],
-							dest: '<%= files.release.js %>Application.' + lng + '.min.js'
-						};
-					})
+							];
+						});
+
+					return files;
+				})()
 			}
 		},
 

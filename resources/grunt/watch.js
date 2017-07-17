@@ -10,7 +10,7 @@ module.exports = function(grunt) {
 				files: ['<%= files.sources.js %>**/*'],
 				tasks: [
 					'pluginbuilder:build',
-					'uglify:build'
+					'concat:build'
 				]
 			},
 			scss: {
