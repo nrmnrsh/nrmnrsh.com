@@ -1,0 +1,15 @@
+.content {
+	> div {
+		margin: 0 auto;
+		padding: 4rem 2rem;
+		max-width: $content-max-width;
+
+		@include break-at(nth($content-breakpoints, 1)) {
+			padding: 6rem 2rem;
+		}
+
+		@include break-at(nth($content-breakpoints, 2)) {
+			padding: 8rem 2rem;
+		}
+	}
+}
