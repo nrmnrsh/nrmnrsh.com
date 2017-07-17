@@ -105,7 +105,7 @@ rules:
   # Rule will enforce that mixins should be written before declarations in a ruleset.
   mixins-before-declarations:
     - 2
-    - exclude: ['grid-break', 'media-retina', 'background']
+    - exclude: ['break-at', 'media-retina', 'background']
 
   # Rule will enforce how deeply a selector can be nested.
   nesting-depth:

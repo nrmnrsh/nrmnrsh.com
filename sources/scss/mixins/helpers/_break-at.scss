@@ -1,0 +1,11 @@
+@mixin break-at($min, $max: 0) {
+	@if($max > $min) {
+		@media screen and (min-width: $min) and (max-width: $max) {
+			@content;
+		}
+	} @else {
+		@media screen and (min-width: $min) {
+			@content;
+		}
+	}
+}
