@@ -157,7 +157,7 @@ rules:
   # of unknown CSS properties.
   no-misspelled-properties:
     - 2
-    - extra-properties: ['animation-', 'overflow-scrolling', 'touch-callout']
+    - extra-properties: ['animation-', 'overflow-scrolling', 'touch-callout', font-display]
 
   # Rule will enforce that selectors are not allowed to have qualifying elements.
   no-qualifying-elements:

@@ -1,8 +1,10 @@
 @import 'reset';
-@import 'constants';
+@import 'settings/constants';
+@import 'settings/icons';
 
 @import 'mixins/helpers/clearfix';
 @import 'mixins/helpers/hide-text';
+@import 'mixins/helpers/icon';
 @import 'mixins/helpers/invisible';
 @import 'mixins/helpers/media-retina';
 @import 'mixins/ui/typography';

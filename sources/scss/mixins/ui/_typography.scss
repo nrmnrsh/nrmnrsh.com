@@ -1,0 +1,19 @@
+// Font-Loader
+// -----------------------------------------------------------------------------
+
+@mixin load-font($name, $dir, $filename, $swap: false) {
+	@font-face {
+		font-family: $name;
+		font-weight: 400;
+		font-style: normal;
+		src: url('#{$dir}#{$filename}.woff') format('woff');
+		@if ($swap) {
+			font-display: swap;
+		}
+	}
+}
+
+// Load configured fonts:
+@each $font in $font-load {
+	@include load-font(nth($font, 1), nth($font, 2), nth($font, 3), nth($font, 4));
+}

@@ -1,0 +1,26 @@
+// Dimensions:
+$content-max-width: 900px !default;
+
+// Overall colors:
+$color-background: #1B1B1B !default;
+$color-text: #FFFFFF !default;
+$color-link: #00FFC5 !default;
+
+// Font definitions
+$font-size-base: 14px !default;
+$font-line-height-base: 20px / $font-size-base !default;
+
+// Icon-font:
+$font-icons-name: 'icons' !default;
+$font-icons-dir: '../fonts/' !default;
+$font-icons-filename: 'icons' !default;
+
+$font-load:
+	($font-icons-name, $font-icons-dir, $font-icons-filename, false),
+;
+
+// Intro:
+$intro-shadow-color: #000000 !default;
+
+// Social:
+$social-icons: ('github', 'twitter', 'linkedin') !default;
