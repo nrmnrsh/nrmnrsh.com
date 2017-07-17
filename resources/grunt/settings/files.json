@@ -1,4 +1,8 @@
 {
+  "lngs": [
+    "en",
+    "de"
+  ],
   "release": {
     "base": "release/",
     "fonts": "release/fonts/",

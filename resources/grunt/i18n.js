@@ -17,7 +17,7 @@ module.exports = function(grunt) {
 				],
 				dest: '<%= files.sources.i18n %>',
 				options: {
-					lngs: ['en', 'de'],
+					lngs: grunt.config.get('files').lngs,
 					resource: {
 						loadPath: '<%= files.sources.i18n %>{{lng}}/translation.json',
 						savePath: '{{lng}}/translation.json',
