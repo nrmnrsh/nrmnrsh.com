@@ -4,11 +4,11 @@
 		<title>{{#if title}}{{title}}{{/if}}</title>
 		<meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0,width=device-width" />
 
-		<link rel="preload" href="./fonts/lora.woff" as="font" type="font/woff" crossorigin="crossorigin" />
-		<link rel="preload" href="./fonts/satisfy.woff" as="font" type="font/woff" crossorigin="crossorigin" />
-		<link rel="preload" href="./fonts/icons.woff" as="font" type="font/woff" crossorigin="crossorigin" />
+		<link rel="preload" href="{{assets}}fonts/lora.woff" as="font" type="font/woff" crossorigin="crossorigin" />
+		<link rel="preload" href="{{assets}}fonts/satisfy.woff" as="font" type="font/woff" crossorigin="crossorigin" />
+		<link rel="preload" href="{{assets}}fonts/icons.woff" as="font" type="font/woff" crossorigin="crossorigin" />
 
-		<link rel="stylesheet" type="text/css" href="./css/styles.css" />
+		<link rel="stylesheet" type="text/css" href="{{assets}}css/styles.css" />
 	</head>
 	<body itemprop="about" itemscope itemtype="http://schema.org/Person">
 		{{> body}}
@@ -18,6 +18,6 @@
 				window.ApplicationRunner.run(['app/Application']);
 			}
 		</script>
-		<script type="text/javascript" src="./js/Application.en.js" async defer onload="__run()"></script>
+		<script type="text/javascript" src="{{assets}}js/Application.en.js" async defer onload="__run()"></script>
 	</body>
 </html>
