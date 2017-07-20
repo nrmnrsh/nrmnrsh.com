@@ -49,6 +49,7 @@
     "grunt-systemjs-pluginbuilder": "^0.1.0",
     "grunt-webfont": "^1.4.0",
     "grunt-writefile": "^0.1.4",
+    "handlebars": "^4.0.10",
     "i18next-scanner": "^1.5.1",
     "jspm": "^0.16.53",
     "load-grunt-tasks": "^3.5.0",
