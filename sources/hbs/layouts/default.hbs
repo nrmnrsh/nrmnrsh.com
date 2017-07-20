@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html>
+<html itemscope itemtype="http://schema.org/ProfilePage">
 	<head>
 		<meta charset="utf-8">
 		<title>{{#if title}}{{title}}{{/if}}</title>
@@ -11,8 +10,8 @@
 
 		<link rel="stylesheet" type="text/css" href="./css/styles.css" />
 	</head>
-	<body>
-		{{> body }}
+	<body itemprop="about" itemscope itemtype="http://schema.org/Person">
+		{{> body}}
 
 		<script type="text/javascript">
 			function __run() {
