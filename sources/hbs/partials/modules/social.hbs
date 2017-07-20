@@ -1,16 +1,16 @@
 <div class="content content-social">
 	<div>
-		<h2>{{ context.headline }}</h2>
+		<h2>{{context.headline}}</h2>
 
 		<ul>
 			{{#each context.links}}
-				<li class="is-type-{{ this.type }}">
+				<li class="is-type-{{this.type}}">
 					<a
-						href="{{ this.href }}"
-						title="{{ this.title }}"
+						href="{{this.href}}"
+						title="{{this.title}}"
 						target="_blank"
 						rel="noopener bookmark">
-						<span>{{ this.label }}</span>
+						<span>{{this.label}}</span>
 					</a>
 				</li>
 			{{/each}}
