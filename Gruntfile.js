@@ -1,15 +1,17 @@
 module.exports = function(grunt) {
 
-	require('load-grunt-tasks')(grunt);
+	require('load-grunt-tasks')(grunt, {
+		pattern: [
+			'grunt-*',
+			'i18next-scanner',
+			'!grunt-assemble-sitemap',
+		]
+	});
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		settings: grunt.file.readJSON('resources/grunt/settings/settings.json')
 	});
-
-	// This grunt task needs to be loaded directly because the npm module name
-	// differs from the config name. So it can't be loaded via jit-grunt.
-	grunt.loadNpmTasks('i18next-scanner');
 
 	// Load grunt configurations:
 	grunt.loadTasks('resources/grunt');
