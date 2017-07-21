@@ -23,31 +23,6 @@
 		@include break-at(nth($content-breakpoints, 2)) {
 			padding: 0 2rem;
 		}
-
-		&:before,
-		&:after {
-			content: '';
-			speak: none;
-			display: block;
-			transform: translate(-50%, -50%);
-			position: absolute;
-			top: 50%;
-			left: 0;
-			width: 0.5em;
-			height: 0.5em;
-			border: 2px solid;
-			border-radius: 50%;
-		}
-
-		&:after {
-			left: 100%;
-		}
-
-		+ li {
-			&:before {
-				content: none;
-			}
-		}
 	}
 
 	a {
