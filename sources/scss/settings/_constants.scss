@@ -3,7 +3,7 @@ $content-max-width: 65rem !default;
 $content-breakpoints: (62rem, 65rem,) !default;
 
 // Overall colors:
-$color-background: #1B1B1B !default;
+$color-background: #0F141C !default;
 $color-text: #FFFFFF !default;
 $color-link: #00FFC5 !default;
 
@@ -43,5 +43,5 @@ $intro-shadow-color: #000000 !default;
 
 // Social:
 $social-background: $color-text !default;
-$social-color: $color-background !default;
+$social-color: lighten($color-background, 5%) !default;
 $social-icons: ('github', 'twitter', 'linkedin') !default;
