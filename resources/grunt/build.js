@@ -186,6 +186,18 @@ module.exports = function(grunt) {
 					src: ['*.hbs']
 				}]
 			},
+			buildxml: {
+				options: {
+					ext: '.xml'
+				},
+				files: [{
+					cwd: '<%= settings.sources.hbs %>',
+					dest: '<%= settings.release.html %>',
+					expand: true,
+					flatten: false,
+					src: ['*.xml']
+				}]
+			},
 			buildwebmanifest: {
 				options: {
 					ext: '.webmanifest'
