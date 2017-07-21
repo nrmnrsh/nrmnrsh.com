@@ -27,9 +27,15 @@
 
 	a {
 		@include icon('github', 'before');
+		transition: transform $transition-duration * 5;
 		padding: 1rem;
-		font-size: 3em;
+		font-size: 2.5em;
 		text-decoration: none;
+
+		&:hover {
+			transition: transform $transition-duration * 2;
+			transform: scale(1.15);
+		}
 	}
 
 	span {
