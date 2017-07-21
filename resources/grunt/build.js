@@ -165,8 +165,16 @@ module.exports = function(grunt) {
 				options: {
 					assets: '<%= settings.release.html %>',
 					data: ['<%= settings.sources.hbs %>/*.json'],
+					layouts: ['<%= settings.sources.hbs %>layouts/*.hbs'],
 					partials: ['<%= settings.sources.hbs %>partials/**/*.hbs'],
-					layouts: ['<%= settings.sources.hbs %>layouts/*.hbs']
+					plugins: [
+						'grunt-assemble-sitemap'
+					],
+					sitemap: {
+						priority: 1,
+						pretty: true,
+						relativedest: true
+					}
 				},
 				files: [{
 					cwd: '<%= settings.sources.hbs %>',

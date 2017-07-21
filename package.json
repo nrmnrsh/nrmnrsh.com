@@ -18,13 +18,14 @@
   "bugs": {
     "url": "https://github.com/nrmnrsh/nrmnrsh.com/issues"
   },
-  "homepage": "https://nrmnrsh.github.io/nrmnrsh.com/",
+  "homepage": "https://nrmnrsh.github.io/nrmnrsh.com",
   "preinstall": "brew install GraphicsMagick",
   "devDependencies": {
     "autoprefixer": "^6.6.1",
     "cssnano": "^3.7.1",
     "grunt": "^1.0.1",
     "grunt-assemble": "^0.6.3",
+    "grunt-assemble-sitemap": "^0.2.7",
     "grunt-cli": "^1.2.0",
     "grunt-contrib-clean": "^1.0.0",
     "grunt-contrib-concat": "^1.0.1",
