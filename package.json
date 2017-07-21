@@ -21,7 +21,7 @@
   "homepage": "https://nrmnrsh.github.io/nrmnrsh.com/",
   "preinstall": "brew install GraphicsMagick",
   "devDependencies": {
-    "autoprefixer": "6.3.6",
+    "autoprefixer": "^6.6.1",
     "cssnano": "^3.7.1",
     "grunt": "^1.0.1",
     "grunt-assemble": "^0.6.3",
