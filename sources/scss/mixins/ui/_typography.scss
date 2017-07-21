@@ -51,9 +51,37 @@
 	}
 }
 
-@mixin headline-primary() {
+@mixin headline-primary($use-animation: true) {
 	@include headline(40px, 50px, 70px);
 	@include font-primary();
+	display: inline-block;
+	position: relative;
+
+	@if $use-animation {
+		&:before {
+			animation: headline-primary $headline-primary-animation-duration infinite;
+			content: '';
+			speak: none;
+			display: block;
+			position: absolute;
+			bottom: -2px;
+			left: 0;
+			width: 100%;
+			border-bottom: 2px solid;
+		}
+	}
+}
+
+@keyframes headline-primary {
+	0%,
+	100% {
+		left: 0;
+	}
+
+	50% {
+		left: -10%;
+		width: 120%;
+	}
 }
 
 @mixin headline-secondary() {
