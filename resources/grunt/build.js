@@ -164,7 +164,7 @@ module.exports = function(grunt) {
 			build: {
 				options: {
 					assets: '<%= settings.release.html %>',
-					data: ['<%= settings.sources.hbs %>/*.json'],
+					data: ['<%= settings.sources.hbs %>*.json'],
 					layouts: ['<%= settings.sources.hbs %>layouts/*.hbs'],
 					partials: ['<%= settings.sources.hbs %>partials/**/*.hbs'],
 					plugins: [
