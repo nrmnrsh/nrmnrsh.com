@@ -161,12 +161,14 @@ module.exports = function(grunt) {
 		},
 
 		assemble: {
+			options: {
+				assets: '<%= settings.release.html %>',
+				data: ['<%= settings.sources.hbs %>*.json'],
+				layouts: ['<%= settings.sources.hbs %>layouts/*.hbs'],
+				partials: ['<%= settings.sources.hbs %>partials/**/*.hbs']
+			},
 			build: {
 				options: {
-					assets: '<%= settings.release.html %>',
-					data: ['<%= settings.sources.hbs %>*.json'],
-					layouts: ['<%= settings.sources.hbs %>layouts/*.hbs'],
-					partials: ['<%= settings.sources.hbs %>partials/**/*.hbs'],
 					plugins: [
 						'grunt-assemble-sitemap'
 					],
@@ -182,6 +184,18 @@ module.exports = function(grunt) {
 					expand: true,
 					flatten: false,
 					src: ['*.hbs']
+				}]
+			},
+			buildwebmanifest: {
+				options: {
+					ext: '.webmanifest'
+				},
+				files: [{
+					cwd: '<%= settings.sources.hbs %>',
+					dest: '<%= settings.release.html %>',
+					expand: true,
+					flatten: false,
+					src: ['*.webmanifest']
 				}]
 			}
 		},
