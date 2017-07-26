@@ -25,7 +25,7 @@ System.config({
     "jquery": "github:components/jquery@2.2.4",
     "jquery-qunit": "github:qunitjs/qunit@1.20.0",
     "lolex": "github:sinonjs/lolex@1.4.0",
-    "picnic": "github:moccu/picnic@0.7.1",
+    "picnic": "github:moccu/picnic@0.7.2",
     "sinon": "github:sinonjs/sinon@1.17.3",
     "sinon-qunit": "github:cjohansen/sinon-qunit@2.0.0",
     "text": "github:systemjs/plugin-text@0.0.2",
@@ -48,7 +48,7 @@ System.config({
     "github:jspm/nodelibs-vm@0.1.0": {
       "vm-browserify": "npm:vm-browserify@0.0.4"
     },
-    "github:moccu/picnic@0.7.1": {
+    "github:moccu/picnic@0.7.2": {
       "backbone": "npm:backbone@1.3.3",
       "backbone.geppetto": "npm:backbone.geppetto@0.7.1",
       "jquery": "github:components/jquery@2.2.4",

@@ -143,11 +143,8 @@ QUnit.test(
 			.registerEvent('some:event', {
 				category: 'foo-category',
 				action: 'bar-action',
-				label: 'baz-label'
-				// Bug in picnic's tracking registry:
-				// https://github.com/moccu/picnic/issues/44
-				// We do not pass a value here so far:
-				// value: '2'
+				label: 'baz-label',
+				value: 2
 			});
 		this.context.dispatch('some:event');
 		assert.deepEqual(this.gaCalls[4], [
@@ -156,7 +153,7 @@ QUnit.test(
 			'foo-category',
 			'bar-action',
 			'baz-label',
-			undefined
+			2
 		]);
 	}
 );

@@ -62,7 +62,7 @@
       "backbone.geppetto": "npm:backbone.geppetto@0.7.1",
       "i18next": "github:i18next/i18next@5.0.0",
       "jquery": "github:components/jquery@2.2.4",
-      "picnic": "github:moccu/picnic@0.7.1",
+      "picnic": "github:moccu/picnic@0.7.2",
       "text": "github:systemjs/plugin-text@^0.0.2",
       "underscore": "npm:underscore@1.8.3"
     },
