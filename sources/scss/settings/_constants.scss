@@ -50,3 +50,17 @@ $intro-headline-animation-duration: 25s !default;
 $social-background: $color-text !default;
 $social-color: lighten($color-background, 5%) !default;
 $social-icons: ('github', 'twitter', 'linkedin') !default;
+
+// Projects:
+$project-schemes: (
+	'dark': (
+		'background': $color-background,
+		'color': $color-text,
+		'shadow': true,
+	),
+	'light': (
+		'background': $color-text,
+		'color': lighten($color-background, 5%),
+		'shadow': false,
+	)
+) !default;

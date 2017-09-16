@@ -1,0 +1,53 @@
+.content-projects {
+	text-align: center;
+
+	h2 {
+		@include headline-primary();
+	}
+
+	h3 {
+		@include headline-secondary();
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	p {
+		margin: 0 auto 1rem;
+		max-width: 30rem;
+	}
+
+	li {
+		position: relative;
+		padding: 5rem 2rem 0;
+
+		&:before {
+			content: '';
+			speak: none;
+			display: block;
+			opacity: 0.5;
+			transform: translateX(-50%);
+			position: absolute;
+			top: 2rem;
+			left: 50%;
+			width: 100%;
+			max-width: 35rem;
+			border-bottom: 1px solid;
+		}
+	}
+
+	@each $name, $props in $project-schemes {
+		&.has-#{$name}-scheme {
+			$background: map-get($props, 'background');
+			$color: map-get($props, 'color');
+			$shadow: map-get($props, 'shadow');
+			background: $background;
+			color: $color;
+
+			@if $shadow {
+				@include shadow();
+			}
+		}
+	}
+}

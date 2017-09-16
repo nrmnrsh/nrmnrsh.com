@@ -23,5 +23,43 @@
         "href": "https://www.linkedin.com/in/nrmnrsh/"
       }
     ]
+  },
+  "opensource": {
+    "headline": "Open source",
+    "copy": "Lorem ipsum dolor sit amet.",
+    "projects": [
+      {
+        "name": "Lintspaces",
+        "details": "Lorem ipsum dolor sit amet.",
+        "url": "https://github.com/schorfES/node-lintspaces"
+      },
+      {
+        "name": "Grunt Lintspaces",
+        "details": "Lorem ipsum dolor sit amet.",
+        "url": "https://github.com/schorfES/grunt-lintspaces"
+      },
+      {
+        "name": "Picnic",
+        "details": "Lorem ipsum dolor sit amet.",
+        "url": "https://github.com/moccu/picnic"
+      }
+    ]
+  },
+  "references": {
+    "headline": "References",
+    "copy": "Lorem ipsum dolor sit amet.",
+    "projects": [
+      {
+        "name": "Foo",
+        "datePublished": "2017",
+        "details": "Lorem ipsum dolor sit amet.",
+        "url": "https://foo.bar/"
+      },
+      {
+        "name": "Baz",
+        "datePublished": "2016",
+        "details": "Lorem ipsum dolor sit amet."
+      }
+    ]
   }
 }
