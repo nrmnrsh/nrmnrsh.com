@@ -37,12 +37,14 @@ $font-load:
 	($font-primary-name, $font-primary-dir, $font-primary-filename, false),
 ;
 
+// Shadow (mixin)
+$shadow-color: #000000 !default;
+
 // Headlines:
 $headline-primary-animation-duration: 25s !default;
 
 // Intro:
 $intro-headline-animation-duration: 25s !default;
-$intro-shadow-color: #000000 !default;
 
 // Social:
 $social-background: $color-text !default;

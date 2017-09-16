@@ -1,6 +1,7 @@
 .content-intro {
 	// Using ep naturalblack background pattern.
 	// Taken from: https://www.toptal.com/designers/subtlepatterns/ep-natural-black/
+	@include shadow();
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -8,9 +9,6 @@
 	min-height: 90vh;
 	background: transparent url('../img/subtlepatterns-ep-naturalblack.png') repeat;
 	background-attachment: fixed;
-	box-shadow:
-		inset 0 -6rem 25vw $intro-shadow-color,
-		inset 0 -1rem 1rem $intro-shadow-color;
 	text-align: center;
 
 	@include media-retina() {
