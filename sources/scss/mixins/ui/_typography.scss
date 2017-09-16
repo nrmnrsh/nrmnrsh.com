@@ -87,4 +87,5 @@
 
 @mixin headline-secondary() {
 	@include headline(20px);
+	@include font-primary();
 }
