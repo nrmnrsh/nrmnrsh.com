@@ -42,7 +42,7 @@
 			$background: map-get($props, 'background');
 			$color: map-get($props, 'color');
 			$shadow: map-get($props, 'shadow');
-			background: $background;
+			@include render-background($background);
 			color: $color;
 
 			@if $shadow {

@@ -10,6 +10,18 @@ $color-background: #0F141C !default;
 $color-text: #FFFFFF !default;
 $color-link: #00FFC5 !default;
 
+// Backgrounds:
+$background-priamry: (
+	'background': $color-background,
+	'image@1x': '../img/subtlepatterns-ep-naturalblack.png',
+	'image@2x': '../img/subtlepatterns-ep-naturalblack@2x.png',
+	'attachment': fixed,
+	'position': center,
+	'repeat': repeat,
+	'width': 200px,
+	'height': 200px,
+) !default;
+
 // Font definitions
 $font-size-base: 14px !default;
 $font-line-height-base: 28px / $font-size-base !default;
@@ -40,11 +52,12 @@ $font-load:
 // Shadow (mixin)
 $shadow-color: #000000 !default;
 
-// Headlines:
+// Headlines (mixin):
 $headline-primary-animation-duration: 25s !default;
 
 // Intro:
 $intro-headline-animation-duration: 25s !default;
+$intro-background: $background-priamry !default;
 
 // Social:
 $social-background: $color-text !default;
@@ -54,12 +67,14 @@ $social-icons: ('github', 'twitter', 'linkedin') !default;
 // Projects:
 $project-schemes: (
 	'dark': (
-		'background': $color-background,
+		'background': $background-priamry,
 		'color': $color-text,
 		'shadow': true,
 	),
 	'light': (
-		'background': $color-text,
+		'background': (
+			'background': $color-text,
+		),
 		'color': lighten($color-background, 5%),
 		'shadow': false,
 	)

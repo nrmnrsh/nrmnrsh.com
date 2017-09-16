@@ -1,0 +1,26 @@
+@mixin render-background($bg) {
+	$background: map-get($bg, 'background') or transparent;
+	$image1x: map-get($bg, 'image@1x') or false;
+	$image2x: map-get($bg, 'image@2x') or false;
+	$attachment: map-get($bg, 'attachment') or scroll;
+	$repeat: map-get($bg, 'repeat') or no-repeat;
+	$position: map-get($bg, 'position') or center;
+	$width: map-get($bg, 'width') or false;
+	$height: map-get($bg, 'height') or false;
+
+	@if $image1x {
+		background: $background url($image1x) $repeat $attachment $position;
+
+		@if $image2x {
+			@include media-retina() {
+				background-image: url('../img/subtlepatterns-ep-naturalblack@2x.png');
+
+				@if $width or $height {
+					background-size: ($width or auto) ($height or auto);
+				}
+			}
+		}
+	} @else {
+		background: $background;
+	}
+}
