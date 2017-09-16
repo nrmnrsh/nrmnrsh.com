@@ -55,9 +55,10 @@
 	@include headline(40px, 50px, 70px);
 	@include font-primary();
 	display: inline-block;
-	position: relative;
 
 	@if $use-animation {
+		position: relative;
+
 		&:before {
 			animation: headline-primary $headline-primary-animation-duration infinite;
 			content: '';
