@@ -47,19 +47,7 @@
   },
   "references": {
     "headline": "References",
-    "copy": "Lorem ipsum dolor sit amet.",
-    "projects": [
-      {
-        "name": "Foo",
-        "datePublished": "2017",
-        "details": "Lorem ipsum dolor sit amet.",
-        "url": "https://foo.bar/"
-      },
-      {
-        "name": "Baz",
-        "datePublished": "2016",
-        "details": "Lorem ipsum dolor sit amet."
-      }
-    ]
+    "copy": "The references will follow as soon as possible.",
+    "projects": []
   }
 }
