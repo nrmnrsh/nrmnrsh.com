@@ -18,8 +18,14 @@
 		<meta name="msapplication-config" content="{{assets}}browserconfig.xml" />
 		<link rel="manifest" href="{{assets}}manifest.webmanifest" />
 	</head>
-	<body itemprop="about" itemscope itemtype="http://schema.org/Person">
-		{{> body}}
+	<body>
+		<article
+			role="main"
+			itemprop="about"
+			itemscope
+			itemtype="http://schema.org/Person">
+			{{> body}}
+		</article>
 
 		<script type="text/javascript">
 			function __run() {
