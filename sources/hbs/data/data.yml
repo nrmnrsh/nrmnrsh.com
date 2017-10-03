@@ -51,3 +51,110 @@ references:
   copy: These are the projects of the past years I've been worked on. All these websites
     are developed, concepted and designed by the deposited agency.
   projects:
+  - name: privée
+    note: by L’ORÉAL PARiS
+    details: "A relaunch of the CRM plattform by L’ORÉAL PARiS called ”privée”.
+      The first release was in 2013. Members can collect points called ”Beauty
+      Stars” by performing activities like polls and productreviews. Those
+      gained points can be redeemed for products in a ”shop”. This relaunch was
+      a technical and graphical chance for a new beginning. We ported the
+      previous features to the new plattform and added new features like fully
+      configurable surveys forms based on JSON schema and receipt uploads. Under
+      the hood we prepared the website for the usage of service workers and PWA
+      support."
+    url: https://privee.loreal-paris.de
+    datePublished: '2017-09-13'
+
+  - name: Eventmodules
+    note: by ZDF for Olympia 2016 in Rio & UEFA 2016
+    details: "A data driven video plattform for two of the big sports events in
+      2016 – the summer olympics and the UEFA european championship. This
+      website containes ticker- and teaserlists which uses a polling mechanism
+      for an automatic update. The user can use the website as second screen and
+      gets all informations with livestreams, latest news around certain sports,
+      teams or matches and the possebility to repeat importent scenes. The
+      plattform also contains an api to embed third party sport widgets. An
+      other nice feature is the singlepage navigation which enables page changes
+      using ”history api” and ”push/pop states” for an animated change between
+      to pages. This feature later on was backported to the open source picnic
+      library."
+    datePublished: '2016-01-01'
+
+  # - name: MenExpert
+  #   note: by L’ORÉAL
+  #   details:
+  #   datePublished: '2015-01-01'
+  #
+  # - name: Tippcenter
+  #   note: by ZDF
+  #   details:
+  #   datePublished: '2014-01-01'
+
+  - name: Mauerspecht
+    note: by ZDF
+    details: "In 2014, the fall of the Berlin Wall celebrated the 25th
+      anniversary. This great moment in the german history was an opening for
+      the ZDF to tear down the wall again using social media. The developed
+      plattform shows a 160km long wall. The user can scroll along the wall with
+      a lot of well known graffiti on it. The plattform aggregates tweets and
+      posts from facebook or instagram using a certain hastag. Each posting
+      demolishes the wall. At the end, the required amount of social media
+      postings wasn't reached to tear down the wall completely, but the campaign
+      itself was a total success. Back in 2014 there were no widely supported
+      WebGL rendering support (especially on mobile browsers) for the 3d
+      animation of the berlin wall. So I needed to implement a render algorithm
+      for canvas 2d, based on the ”ray tracing” algorithm."
+    url: https://www.youtube.com/watch?v=CAbTo70xo0Y
+    datePublished: '2014-10-09'
+
+  # - name: Liveblog
+  #   note: by ZDF
+  #   details:
+  #   datePublished: '2014-01-01'
+  #
+  # - name: Müllermeter
+  #   note: by ZDF
+  #   details:
+  #   datePublished: '2013-01-01'
+  #
+  # - name: Mauerfall
+  #   note: by RBB
+  #   details:
+  #   datePublished: '2013-01-01'
+  #
+  # - name: Wetten, dass..?
+  #   note: by ZDF
+  #   details:
+  #   datePublished: '2012-01-01'
+  #
+  # - name: Ideal
+  #   details:
+  #   datePublished: '2012-01-01'
+  #
+  # - name: Twindexx Configurator
+  #   note: by Bombardier
+  #   details:
+  #   datePublished: '2012-01-01'
+  #
+  # - name: Farewell comrades
+  #   note: by Arte
+  #   details:
+  #   datePublished: '2012-01-01'
+  #
+  # - name: Momente der Geschichte
+  #   note: by ZDF
+  #   details:
+  #   datePublished: '2011-01-01'
+  #
+  # - name: Lounge
+  #   note: by L’ORÉAL PARiS
+  #   details:
+  #   datePublished: '2011-01-01'
+  #
+  # - name: Dudes Factory
+  #   details:
+  #   datePublished: '2010-01-01'
+  #
+  # - name: Volkswagen 4.0
+  #   details:
+  #   datePublished: '2009-01-01'
