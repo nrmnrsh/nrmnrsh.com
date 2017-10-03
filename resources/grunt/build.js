@@ -163,7 +163,7 @@ module.exports = function(grunt) {
 		assemble: {
 			options: {
 				assets: '<%= settings.release.html %>',
-				data: '<%= settings.sources.hbs %>/**/*.json',
+				data: '<%= settings.sources.hbs %>/**/*.yml',
 				helpers: '<%= settings.sources.hbs %>helpers/*.js',
 				layoutdir: '<%= settings.sources.hbs %>layouts/',
 				partials: '<%= settings.sources.hbs %>partials/**/*.hbs',
