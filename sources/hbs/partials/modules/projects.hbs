@@ -5,7 +5,7 @@
 
 		<ul>
 			{{#each data.projects}}
-				<li>
+				<li id="{{slugify ../data.headline}}-{{slugify this.name}}">
 					<h3>
 						<span>
 							{{#if this.url}}
