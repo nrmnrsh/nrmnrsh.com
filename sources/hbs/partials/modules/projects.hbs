@@ -7,25 +7,32 @@
 			{{#each data.projects}}
 				<li>
 					<h3>
-						{{#if this.url}}
-							<a
-								href="{{this.url}}"
-								title="Open the ”{{this.name}}” website"
-								target="_blank"
-								rel="noopener">
-						{{/if}}
-							{{this.name}}
-						{{#if this.url}}
-							</a>
+						<span>
+							{{#if this.url}}
+								<a
+									href="{{this.url}}"
+									title="Open the ”{{this.name}}” website"
+									target="_blank"
+									rel="noopener">
+							{{/if}}
+								{{this.name}}
+							{{#if this.url}}
+								</a>
+							{{/if}}
+						</span>
+						{{#if this.note}}
+							<em>{{this.note}}</em>
 						{{/if}}
 					</h3>
 					{{#if this.datePublished}}
 						<time datetime="{{this.datePublished}}">
-							{{this.datePublished}}
+							{{moment this.datePublished format="Y"}}
 						</time>
 					{{/if}}
 
-					<p>{{this.details}}</p>
+					{{#if this.details}}
+						<p>{{this.details}}</p>
+					{{/if}}
 
 					{{#if this.url}}
 						<a

@@ -6,11 +6,29 @@
 	}
 
 	h3 {
-		@include headline-secondary();
+		margin: 0 0 0.5em;
+
+		span,
+		em {
+			display: block;
+		}
+
+		span {
+			@include headline-secondary();
+			margin: 0;
+		}
 	}
 
 	a {
 		text-decoration: none;
+	}
+
+	time {
+		display: inline-block;
+		margin: 1rem;
+		padding: 1.5rem;
+		border: 2px dotted;
+		border-radius: 50%;
 	}
 
 	p {
