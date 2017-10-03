@@ -1,10 +1,10 @@
 <div class="content content-projects has-{{scheme}}-scheme">
 	<div>
-		<h2>{{context.headline}}</h2>
-		<p>{{context.copy}}</p>
+		<h2>{{data.headline}}</h2>
+		<p>{{data.copy}}</p>
 
 		<ul>
-			{{#each context.projects}}
+			{{#each data.projects}}
 				<li>
 					<h3>
 						{{#if this.url}}

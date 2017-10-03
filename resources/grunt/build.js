@@ -163,9 +163,11 @@ module.exports = function(grunt) {
 		assemble: {
 			options: {
 				assets: '<%= settings.release.html %>',
-				data: ['<%= settings.sources.hbs %>*.json'],
-				layouts: ['<%= settings.sources.hbs %>layouts/*.hbs'],
-				partials: ['<%= settings.sources.hbs %>partials/**/*.hbs']
+				data: '<%= settings.sources.hbs %>/**/*.json',
+				helpers: '<%= settings.sources.hbs %>helpers/*.js',
+				layoutdir: '<%= settings.sources.hbs %>layouts/',
+				partials: '<%= settings.sources.hbs %>partials/**/*.hbs',
+				pathToRoot: '<%= settings.release.html %>'
 			},
 			build: {
 				options: {
@@ -179,11 +181,11 @@ module.exports = function(grunt) {
 					}
 				},
 				files: [{
-					cwd: '<%= settings.sources.hbs %>',
+					cwd: '<%= settings.sources.hbs %>pages/',
 					dest: '<%= settings.release.html %>',
 					expand: true,
 					flatten: false,
-					src: ['*.hbs']
+					src: ['**/*.hbs']
 				}]
 			},
 			buildxml: {
@@ -191,7 +193,7 @@ module.exports = function(grunt) {
 					ext: '.xml'
 				},
 				files: [{
-					cwd: '<%= settings.sources.hbs %>',
+					cwd: '<%= settings.sources.hbs %>pages/',
 					dest: '<%= settings.release.html %>',
 					expand: true,
 					flatten: false,
@@ -203,7 +205,7 @@ module.exports = function(grunt) {
 					ext: '.webmanifest'
 				},
 				files: [{
-					cwd: '<%= settings.sources.hbs %>',
+					cwd: '<%= settings.sources.hbs %>pages/',
 					dest: '<%= settings.release.html %>',
 					expand: true,
 					flatten: false,
