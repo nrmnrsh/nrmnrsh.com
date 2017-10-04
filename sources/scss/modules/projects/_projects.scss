@@ -23,12 +23,11 @@
 		text-decoration: none;
 	}
 
+	strong,
 	time {
 		display: inline-block;
-		margin: 1rem;
-		padding: 1.5rem;
-		border: 2px dotted;
-		border-radius: 50%;
+		margin: 0 0 1em;
+		font-style: italic;
 	}
 
 	p {

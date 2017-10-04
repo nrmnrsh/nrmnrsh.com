@@ -24,6 +24,11 @@
 							<em>{{this.note}}</em>
 						{{/if}}
 					</h3>
+
+					{{#if this.client}}
+						<strong>{{this.client}}</strong>{{#if this.datePublished}}, {{/if}}
+					{{/if}}
+
 					{{#if this.datePublished}}
 						<time datetime="{{this.datePublished}}">
 							{{moment this.datePublished format="Y"}}
@@ -36,6 +41,7 @@
 
 					{{#if this.url}}
 						<a
+							class="link"
 							href="{{this.url}}"
 							title="Open the ”{{this.name}}” website"
 							target="_blank"

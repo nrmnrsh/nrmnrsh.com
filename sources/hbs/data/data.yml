@@ -52,7 +52,7 @@ references:
     are developed, concepted and designed by the deposited agency.
   projects:
   - name: privée
-    note: by L’ORÉAL PARiS
+    client: L’ORÉAL PARiS
     details: "A relaunch of the CRM plattform by L’ORÉAL PARiS called ”privée”.
       The first release was in 2013. Members can collect points called ”Beauty
       Stars” by performing activities like polls and productreviews. Those
@@ -66,7 +66,8 @@ references:
     datePublished: '2017-09-13'
 
   - name: Eventmodules
-    note: by ZDF for Olympia 2016 in Rio & UEFA 2016
+    note: for Olympia 2016 in Rio & UEFA 2016
+    client: ZDF
     details: "A data driven video plattform for two of the big sports events in
       2016 – the summer olympics and the UEFA european championship. This
       website containes ticker- and teaserlists which uses a polling mechanism
@@ -82,16 +83,17 @@ references:
 
   # - name: MenExpert
   #   note: by L’ORÉAL
+  #   client: L’ORÉAL
   #   details:
   #   datePublished: '2015-01-01'
   #
   # - name: Tippcenter
-  #   note: by ZDF
+  #   note: by ZDFclient: ZDF
   #   details:
   #   datePublished: '2014-01-01'
 
   - name: Mauerspecht
-    note: by ZDF
+    client: ZDF
     details: "In 2014, the fall of the Berlin Wall celebrated the 25th
       anniversary. This great moment in the german history was an opening for
       the ZDF to tear down the wall again using social media. The developed
@@ -108,53 +110,56 @@ references:
     datePublished: '2014-10-09'
 
   # - name: Liveblog
-  #   note: by ZDF
+  #   client: ZDF
   #   details:
   #   datePublished: '2014-01-01'
   #
   # - name: Müllermeter
-  #   note: by ZDF
+  #   client: ZDF
   #   details:
   #   datePublished: '2013-01-01'
   #
   # - name: Mauerfall
-  #   note: by RBB
+  #   client: RBB
   #   details:
   #   datePublished: '2013-01-01'
   #
   # - name: Wetten, dass..?
-  #   note: by ZDF
+  #   client: ZDF
   #   details:
   #   datePublished: '2012-01-01'
   #
   # - name: Ideal
+  #   client: Ideal
   #   details:
   #   datePublished: '2012-01-01'
   #
   # - name: Twindexx Configurator
-  #   note: by Bombardier
+  #   client: Bombardier
   #   details:
   #   datePublished: '2012-01-01'
   #
   # - name: Farewell comrades
-  #   note: by Arte
+  #   client: Arte
   #   details:
   #   datePublished: '2012-01-01'
   #
   # - name: Momente der Geschichte
-  #   note: by ZDF
+  #   client: ZDF
   #   details:
   #   datePublished: '2011-01-01'
   #
   # - name: Lounge
-  #   note: by L’ORÉAL PARiS
+  #   client: L’ORÉAL PARiS
   #   details:
   #   datePublished: '2011-01-01'
   #
   # - name: Dudes Factory
+  #   client: Dudes Factory
   #   details:
   #   datePublished: '2010-01-01'
   #
   # - name: Volkswagen 4.0
+  #   client: VW
   #   details:
   #   datePublished: '2009-01-01'
