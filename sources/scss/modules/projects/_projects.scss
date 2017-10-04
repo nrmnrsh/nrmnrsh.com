@@ -6,7 +6,7 @@
 	}
 
 	h3 {
-		margin: 0 0 0.5em;
+		margin: 0 0 1em;
 
 		span,
 		em {
@@ -21,6 +21,12 @@
 
 	a {
 		text-decoration: none;
+
+		&:focus,
+		&:hover {
+			outline: none;
+			text-decoration: underline;
+		}
 	}
 
 	strong,
