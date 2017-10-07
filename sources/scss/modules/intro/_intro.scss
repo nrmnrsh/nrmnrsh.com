@@ -1,7 +1,7 @@
 .content-intro {
 	// Using ep naturalblack background pattern.
 	// Taken from: https://www.toptal.com/designers/subtlepatterns/ep-natural-black/
-	@include render-background($intro-background)
+	@include render-background($intro-background);
 	@include shadow();
 	display: flex;
 	flex-direction: column;
