@@ -6,6 +6,7 @@ module.exports = function(grunt) {
 			validate: {
 				src: [
 					'<%= settings.sources.js %>**/*.js',
+					'<%= settings.sources.hbs %>**/*.js',
 					'<%= settings.tests.js %>**/*.js'
 				],
 				options: {
@@ -18,6 +19,7 @@ module.exports = function(grunt) {
 			validate: {
 				src: [
 					'<%= settings.sources.js %>**/*.js',
+					'<%= settings.sources.hbs %>**/*.js',
 					'<%= settings.tests.js %>**/*.js'
 				],
 				options: {
@@ -30,6 +32,7 @@ module.exports = function(grunt) {
 			validate: {
 				src: [
 					'<%= settings.sources.hbs %>**/*.hbs',
+					'<%= settings.sources.hbs %>**/*.js',
 					'<%= settings.sources.scss %>**/*.scss',
 					'<%= settings.sources.js %>**/*.html',
 					'<%= settings.sources.js %>**/*.js',
