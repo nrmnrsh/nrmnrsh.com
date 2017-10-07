@@ -25,6 +25,11 @@ intro:
   copy: Hi! My name is Norman Rusch. I'm a senior web developer with focus on
     front end technologies from berlin. I love to write reusable and tested
     javascript, semantic and accessible html and modular css.
+  schema:
+    givenName: Norman
+    familyName: Rusch
+    jobTitle: senior web developer
+    workLocation: berlin
 
 social:
   headline: Follow me
