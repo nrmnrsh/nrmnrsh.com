@@ -13,7 +13,7 @@
 
 		@if $image2x {
 			@include media-retina() {
-				background-image: url('../img/subtlepatterns-ep-naturalblack@2x.png');
+				background-image: url($image2x);
 
 				@if $width or $height {
 					background-size: ($width or auto) ($height or auto);
