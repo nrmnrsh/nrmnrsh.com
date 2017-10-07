@@ -1,4 +1,24 @@
 ---
+meta:
+  seo_title: nrmnrsh.com ~ Norman Rusch
+  seo_description: The portfolio of Norman Rusch - senior web developer with
+    focus on front end technologies from berlin.
+
+  share_title: nrmnrsh.com
+  share_name: nrmnrsh ~ Norman Rusch
+  share_description: The portfolio of Norman Rusch - senior web developer with
+    focus on front end technologies from berlin.
+  share_url: http://nrmnrsh.com/
+  share_twitter_creator: "@nrmnrsh"
+  share_twitter_card: summary_large_image
+
+  app_title: nrmnrsh.com
+  app_short_title: nrmnrsh
+  app_description: The portfolio of Norman Rusch - senior web developer with
+    focus on front end technologies from berlin.
+  app_url: http://nrmnrsh.com/
+  app_color: "#0F141C"
+
 intro:
   headline: nrmnrsh.com
   subline: A webdeveloper's portfolio

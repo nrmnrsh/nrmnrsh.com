@@ -10,10 +10,58 @@
 
 		<link rel="stylesheet" type="text/css" href="{{assets}}css/styles.css" />
 
-		<title>{{#if title}}{{title}}{{/if}}</title>
+		<title>{{meta.seo_title}}</title>
+		<meta name="description" content="{{meta.seo_description}}" />
 		<meta name="robots" content="index, follow" />
 		<meta name="siteinfo" content="{{assets}}robots.txt" />
-		<meta name="theme-color" content="#0F141C" />
+
+		<meta name="twitter:creator" content="{{meta.share_twitter_creator}}" />
+		<meta name="twitter:card" content="{{meta.share_twitter_card}}" />
+		<meta name="twitter:url" content="{{meta.share_url}}" />
+		<meta name="twitter:image" content="{{assets}}img/meta/sharing.png" />
+		<meta name="twitter:title" content="{{meta.share_title}}" />
+		<meta name="twitter:description" content="{{meta.share_description}}" />
+
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="{{meta.share_title}}" />
+		<meta property="og:site_name" content="{{meta.share_name}}" />
+		<meta property="og:url" content="{{meta.share_url}}" />
+		<meta property="og:image" content="{{assets}}img/meta/sharing.png" />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="600" />
+		<meta property="og:description" content="{{meta.share_description}}" />
+
+		<meta itemprop="name" content="{{meta.share_title}}" />
+		<meta itemprop="url" content="{{meta.share_url}}" />
+		<meta itemprop="image" content="{{assets}}img/meta/sharing.png" />
+		<meta itemprop="description" content="{{meta.share_description}}" />
+
+		<meta name="application-name" content="{{meta.app_title}}" />
+		<meta name="msapplication-starturl" content="{{meta.app_url}}?utm_source=msapplication_starturl" />
+		<meta name="msapplication-TileColor" content="{{meta.app_color}}" />
+		<meta name="msapplication-TileImage" content="{{assets}}img/meta/ms-application-tile-image.jpg" />
+		<meta name="msapplication-square70x70logo" content="{{assets}}img/meta/ms-application-70x70.png" />
+		<meta name="msapplication-square150x150logo" content="{{assets}}img/meta/ms-application-150x150.png" />
+		<meta name="msapplication-wide310x150logo" content="{{assets}}img/meta/ms-application-310x150.png" />
+		<meta name="msapplication-square310x310logo" content="{{assets}}img/meta/ms-application-310x310.png" />
+
+		<meta name="apple-mobile-web-app-title" content="{{meta.app_title}}" />
+		<link rel="apple-touch-icon" href="{{assets}}img/meta/apple-touch-57x57.png" sizes="57x57" />
+		<link rel="apple-touch-icon" href="{{assets}}img/meta/apple-touch-72x72.png" sizes="72x72" />
+		<link rel="apple-touch-icon" href="{{assets}}img/meta/apple-touch-76x76.png" sizes="76x76" />
+		<link rel="apple-touch-icon" href="{{assets}}img/meta/apple-touch-114x114.png" sizes="114x114" />
+		<link rel="apple-touch-icon" href="{{assets}}img/meta/apple-touch-120x120.png" sizes="120x120" />
+		<link rel="apple-touch-icon" href="{{assets}}img/meta/apple-touch-144x144.png" sizes="144x144" />
+		<link rel="apple-touch-icon" href="{{assets}}img/meta/apple-touch-152x152.png" sizes="152x152" />
+		<link rel="apple-touch-icon" href="{{assets}}img/meta/apple-touch-180x180.png" sizes="180x180" />
+		<link rel="apple-touch-icon" href="{{assets}}img/meta/apple-touch-192x192.png" sizes="192x192" />
+
+		<link rel="shortcut icon" href="{{assets}}img/meta/favicon.ico" />
+		<link rel="icon" type="image/png" sizes="16x16" href="{{assets}}img/meta/favicon-16x16.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="{{assets}}img/meta/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="96x96" href="{{assets}}img/meta/favicon-96x96.png" />
+
+		<meta name="theme-color" content="{{meta.app_color}}" />
 
 		<meta name="msapplication-config" content="{{assets}}browserconfig.xml" />
 		<link rel="manifest" href="{{assets}}manifest.webmanifest" />
