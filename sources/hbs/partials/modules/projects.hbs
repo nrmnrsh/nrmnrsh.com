@@ -27,7 +27,7 @@
 
 					{{#if this.datePublished}}
 						<time datetime="{{this.datePublished}}">
-							{{moment this.datePublished format="Y"}}
+							{{moment this.datePublished format='Y'}}
 						</time>
 					{{/if}}
 
@@ -76,7 +76,7 @@
 							title="Open the ”{{this.name}}” website"
 							target="_blank"
 							rel="noopener">
-							{{default url_label "Visit project"}}
+							{{default url_label 'Visit project'}}
 						</a>
 					{{/if}}
 				</li>
