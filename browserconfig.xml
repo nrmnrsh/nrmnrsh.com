@@ -7,7 +7,7 @@
 			<wide310x150logo src="./img/meta/ms-application-310x150.png"/>
 			<square310x310logo src="./img/meta/ms-application-310x310.png"/>
 			<TileImage src="./img/meta/ms-application-tile-image.jpg" />
-			<TileColor>#000000</TileColor>
+			<TileColor>#0F141C</TileColor>
 		</tile>
 	</msapplication>
 </browserconfig>
