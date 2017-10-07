@@ -25,10 +25,6 @@
 						{{/if}}
 					</h3>
 
-					{{#if this.client}}
-						<strong>{{this.client}}</strong>{{#if this.datePublished}}, {{/if}}
-					{{/if}}
-
 					{{#if this.datePublished}}
 						<time datetime="{{this.datePublished}}">
 							{{moment this.datePublished format="Y"}}
@@ -39,6 +35,40 @@
 						<p>{{this.details}}</p>
 					{{/if}}
 
+					{{#if this.client}}
+						<div class="client">
+							Client:
+							{{#if this.client_url}}
+								<a
+									href="{{this.client_url}}"
+									title="Open the ”{{this.client}}” website"
+									target="_blank"
+									rel="noopener">
+							{{/if}}
+							{{this.client}}
+							{{#if this.client_url}}
+								</a>
+							{{/if}}
+						</div>
+					{{/if}}
+
+					{{#if this.agency}}
+						<div class="agency">
+							Agency:
+							{{#if this.agency_url}}
+								<a
+									href="{{this.agency_url}}"
+									title="Open the ”{{this.agency}}” website"
+									target="_blank"
+									rel="noopener">
+							{{/if}}
+							{{this.agency}}
+							{{#if this.agency_url}}
+								</a>
+							{{/if}}
+						</div>
+					{{/if}}
+
 					{{#if this.url}}
 						<a
 							class="link"
@@ -46,7 +76,7 @@
 							title="Open the ”{{this.name}}” website"
 							target="_blank"
 							rel="noopener">
-							Visit project
+							{{default url_label "Visit project"}}
 						</a>
 					{{/if}}
 				</li>
