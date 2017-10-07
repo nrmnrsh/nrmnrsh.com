@@ -77,118 +77,178 @@ opensource:
 
 references:
   headline: References
-  copy: These are the projects of the past years I've been worked on. All these
-    websites are developed, concepted and designed by the deposited agency.
+  copy: These are some of the projects from the past years I've been worked on.
+    All these websites are developed, concepted and designed by the specified
+    agency.
   projects:
   - name: privée
     client: L’ORÉAL PARiS
-    details: "A relaunch of the CRM plattform by L’ORÉAL PARiS called ”privée”.
-      The first release was in 2013. Members can collect points called ”Beauty
-      Stars” by performing activities like polls and productreviews. Those
-      gained points can be redeemed for products in a ”shop”. This relaunch was
-      a technical and graphical chance for a new beginning. We ported the
-      previous features to the new plattform and added new features like fully
-      configurable surveys forms based on JSON schema and receipt uploads. Under
-      the hood we prepared the website for the usage of service workers and PWA
-      support."
+    client_url: http://loreal-paris.de/
+    agency: Moccu
+    agency_url: https://www.moccu.com/
+    # details: "A relaunch of the CRM plattform by L’ORÉAL PARiS called ”privée”.
+    #   The first release was in 2013. Members can collect points called ”Beauty
+    #   Stars” by performing activities like polls and productreviews. Those
+    #   gained points can be redeemed for products in a ”shop”. This relaunch was
+    #   a technical and graphical chance for a new beginning. We ported the
+    #   previous features to the new plattform and added new features like fully
+    #   configurable surveys forms based on JSON schema and receipt uploads. Under
+    #   the hood we prepared the website for the usage of service workers and PWA
+    #   support."
     url: https://privee.loreal-paris.de
+    url_label: Visit website
     datePublished: '2017-09-13'
 
   - name: Eventmodules
     note: for Olympia 2016 in Rio & UEFA 2016
     client: ZDF
-    details: "A data driven video plattform for two of the big sports events in
-      2016 – the summer olympics and the UEFA european championship. This
-      website containes ticker- and teaserlists which uses a polling mechanism
-      for an automatic update. The user can use the website as second screen and
-      gets all informations with livestreams, latest news around certain sports,
-      teams or matches and the possebility to repeat importent scenes. The
-      plattform also contains an api to embed third party sport widgets. An
-      other nice feature is the singlepage navigation which enables page changes
-      using ”history api” and ”push/pop states” for an animated change between
-      to pages. This feature later on was backported to the open source picnic
-      library."
+    client_url: https://www.zdf.de/
+    agency: Moccu
+    agency_url: https://www.moccu.com/
+    # details: "A data driven video plattform for two of the big sports events in
+    #   2016 – the summer olympics and the UEFA european championship. This
+    #   website containes ticker- and teaserlists which uses a polling mechanism
+    #   for an automatic update. The user can use the website as second screen and
+    #   gets all informations with livestreams, latest news around certain sports,
+    #   teams or matches and the possebility to repeat importent scenes. The
+    #   plattform also contains an api to embed third party sport widgets. An
+    #   other nice feature is the singlepage navigation which enables page changes
+    #   using ”history api” and ”push/pop states” for an animated change between
+    #   to pages. This feature later on was backported to the open source picnic
+    #   library."
     datePublished: '2016-01-01'
 
-  # - name: MenExpert
-  #   note: by L’ORÉAL
-  #   client: L’ORÉAL
-  #   details:
-  #   datePublished: '2015-01-01'
-  #
-  # - name: Tippcenter
-  #   note: by ZDFclient: ZDF
-  #   details:
-  #   datePublished: '2014-01-01'
+  - name: Moccu Agency Website
+    agency: Moccu
+    agency_url: https://www.moccu.com/
+    url: https://www.moccu.com/
+    url_label: Visit website
+    datePublished: '2015-06-09'
+
+  - name: MenExpert
+    client: L’ORÉAL
+    client_url: https://www.menexpert.de/
+    agency: Moccu
+    agency_url: https://www.moccu.com/
+    url: https://www.menexpert.de/
+    url_label: Visit website
+    datePublished: '2014-11-26'
+
+  - name: Tippcenter
+    client: ZDF
+    client_url: https://www.zdf.de/
+    agency: Moccu
+    agency_url: https://www.moccu.com/
+    url: https://tippcenter.zdf.de/
+    url_label: Visit website
+    datePublished: '2014-01-01'
 
   - name: Mauerspecht
     client: ZDF
-    details: "In 2014, the fall of the Berlin Wall celebrated the 25th
-      anniversary. This great moment in the german history was an opening for
-      the ZDF to tear down the wall again using social media. The developed
-      plattform shows a 160km long wall. The user can scroll along the wall with
-      a lot of well known graffiti on it. The plattform aggregates tweets and
-      posts from facebook or instagram using a certain hastag. Each posting
-      demolishes the wall. At the end, the required amount of social media
-      postings wasn't reached to tear down the wall completely, but the campaign
-      itself was a total success. Back in 2014 there were no widely supported
-      WebGL rendering support (especially on mobile browsers) for the 3d
-      animation of the berlin wall. So I needed to implement a render algorithm
-      for canvas 2d, based on the ”ray tracing” algorithm."
+    client_url: https://www.zdf.de/
+    agency: Moccu
+    agency_url: https://www.moccu.com/
+    # details: "In 2014, the fall of the Berlin Wall celebrated the 25th
+    #   anniversary. This great moment in the german history was an opening for
+    #   the ZDF to tear down the wall again using social media. The developed
+    #   plattform shows a 160km long wall. The user can scroll along the wall with
+    #   a lot of well known graffiti on it. The plattform aggregates tweets and
+    #   posts from facebook or instagram using a certain hastag. Each posting
+    #   demolishes the wall. At the end, the required amount of social media
+    #   postings wasn't reached to tear down the wall completely, but the campaign
+    #   itself was a total success. Back in 2014 there were no widely supported
+    #   WebGL rendering support (especially on mobile browsers) for the 3d
+    #   animation of the berlin wall. So I needed to implement a render algorithm
+    #   for canvas 2d, based on the ”ray tracing” algorithm."
     url: https://www.youtube.com/watch?v=CAbTo70xo0Y
+    url_label: Watch video
     datePublished: '2014-10-09'
 
-  # - name: Liveblog
-  #   client: ZDF
-  #   details:
-  #   datePublished: '2014-01-01'
-  #
-  # - name: Müllermeter
-  #   client: ZDF
-  #   details:
-  #   datePublished: '2013-01-01'
-  #
-  # - name: Mauerfall
-  #   client: RBB
-  #   details:
-  #   datePublished: '2013-01-01'
-  #
-  # - name: Wetten, dass..?
-  #   client: ZDF
-  #   details:
-  #   datePublished: '2012-01-01'
-  #
-  # - name: Ideal
-  #   client: Ideal
-  #   details:
-  #   datePublished: '2012-01-01'
-  #
-  # - name: Twindexx Configurator
-  #   client: Bombardier
-  #   details:
-  #   datePublished: '2012-01-01'
-  #
-  # - name: Farewell comrades
-  #   client: Arte
-  #   details:
-  #   datePublished: '2012-01-01'
-  #
-  # - name: Momente der Geschichte
-  #   client: ZDF
-  #   details:
-  #   datePublished: '2011-01-01'
-  #
-  # - name: Lounge
-  #   client: L’ORÉAL PARiS
-  #   details:
-  #   datePublished: '2011-01-01'
-  #
-  # - name: Dudes Factory
-  #   client: Dudes Factory
-  #   details:
-  #   datePublished: '2010-01-01'
-  #
-  # - name: Volkswagen 4.0
-  #   client: VW
-  #   details:
-  #   datePublished: '2009-01-01'
+  - name: Liveblog
+    client: ZDF
+    client_url: https://www.zdf.de/
+    agency: Moccu
+    agency_url: https://www.moccu.com/
+    datePublished: '2014-01-01'
+
+  - name: Müllermeter
+    client: ZDF
+    client_url: https://www.zdf.de/
+    agency: Moccu
+    agency_url: https://www.moccu.com/
+    url: http://muellermeter.zdf.de/
+    url_label: Visit website
+    datePublished: '2013-01-01'
+
+  - name: Mauerfall
+    client: rbb Rundfunk Berlin-Brandenburg
+    client_url: https://www.rbb-online.de/
+    agency: Moccu
+    agency_url: https://www.moccu.com/
+    url: https://www.berlin-mauer.de/
+    url_label: Visit website
+    datePublished: '2013-01-01'
+
+  - name: Wetten, dass..?
+    client: ZDF
+    client_url: https://www.zdf.de/
+    agency: Moccu
+    agency_url: https://www.moccu.com/
+    datePublished: '2012-01-01'
+
+  - name: Ideal
+    client: Ideal
+    client_url: http://www.ideal.de/
+    agency: Moccu
+    agency_url: https://www.moccu.com/
+    url: http://www.ideal.de/
+    url_label: Visit website
+    datePublished: '2012-01-01'
+
+  - name: Twindexx Configurator
+    client: Bombardier
+    client_url: http://de.bombardier.com/
+    agency: Moccu
+    agency_url: https://www.moccu.com/
+    datePublished: '2012-01-01'
+
+  - name: Farewell comrades
+    client: Arte
+    client_url: https://www.arte.tv/de/
+    details: You need flash enabled to get the content of this website.
+    agency: Moccu
+    agency_url: https://www.moccu.com/
+    url: http://www.lebtwohlgenossen.de/de/flash/
+    url_label: Visit website
+    datePublished: '2012-01-01'
+
+  - name: Momente der Geschichte
+    client: ZDF
+    client_url: https://www.zdf.de/
+    agency: Moccu
+    agency_url: https://www.moccu.com/
+    url: https://momentedergeschichte.zdf.de/
+    url_label: Visit website
+    datePublished: '2011-01-01'
+
+  - name: Lounge
+    client: L’ORÉAL PARiS
+    client_url: http://loreal-paris.de/
+    agency: Moccu
+    agency_url: https://www.moccu.com/
+    url: http://lounge.loreal-paris.de/
+    url_label: Visit website
+    datePublished: '2011-01-01'
+
+  - name: Dudes Factory shop & tshirt generator
+    client: Dudes Factory
+    client_url: http://dudes-factory.com/
+    agency: Moccu
+    agency_url: https://www.moccu.com/
+    datePublished: '2010-01-01'
+
+  - name: Volkswagen.de 4.0
+    client: Volkswagen
+    client_url: https://www.volkswagen.de/
+    agency: Argonauten G2
+    datePublished: '2009-01-01'
