@@ -1,0 +1,4 @@
+.content-footer {
+	@include render-background($footer-background);
+	@include shadow();
+}
