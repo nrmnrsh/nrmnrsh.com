@@ -35,6 +35,7 @@ module.exports = function(grunt) {
 	]);
 
 	grunt.registerTask('optimize', [
+		'critical:optimize',
 		'uglify:optimize',
 		'imagemin:optimize',
 		'svgmin:optimize',

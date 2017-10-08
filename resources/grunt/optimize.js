@@ -2,6 +2,32 @@ module.exports = function(grunt) {
 
 	grunt.config.merge({
 
+		critical: {
+			optimize: {
+				options: {
+					base: './',
+					css: '<%= settings.release.css %>*.css',
+					width: 320,
+					height: 400,
+					minify: true,
+					inline: true,
+					extract: true,
+					ignore: [
+						/\.is-ready/,
+						/-webp/,
+						/keyframes/,
+						/@font-face/
+					]
+				},
+				files: [{
+					expand: true,
+					cwd: '<%= settings.release.html %>',
+					src: ['*.html'],
+					dest: '<%= settings.release.html %>'
+				}]
+			}
+		},
+
 		uglify: {
 			optimize: {
 				options: {
