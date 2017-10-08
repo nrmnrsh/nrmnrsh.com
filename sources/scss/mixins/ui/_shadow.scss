@@ -1,6 +1,6 @@
 %shadow {
 	.is-ready & {
-		animation: shadow 3s $ready-delay;
+		animation: shadow 3s $ready-delay forwards;
 	}
 }
 
