@@ -23,8 +23,8 @@ $background-priamry: (
 ) !default;
 
 // Font definitions
-$font-size-base: 14px !default;
-$font-line-height-base: 28px / $font-size-base !default;
+$font-size-base: 16px !default;
+$font-line-height-base: 30px / $font-size-base !default;
 
 // Icon-font:
 $font-icons-name: 'icons' !default;
@@ -32,10 +32,7 @@ $font-icons-dir: '../fonts/' !default;
 $font-icons-filename: 'icons' !default;
 
 // Default font:
-$font-default-name: 'lora' !default;
-$font-default-family: 'lora', serif !default;
-$font-default-dir: '../fonts/' !default;
-$font-default-filename: 'lora' !default;
+$font-default-family: Georgia, serif !default;
 
 // Primary font:
 $font-primary-name: 'satisfy' !default;
@@ -45,7 +42,6 @@ $font-primary-filename: 'satisfy' !default;
 
 $font-load:
 	($font-icons-name, $font-icons-dir, $font-icons-filename, false),
-	($font-default-name, $font-default-dir, $font-default-filename, false),
 	($font-primary-name, $font-primary-dir, $font-primary-filename, false),
 ;
 

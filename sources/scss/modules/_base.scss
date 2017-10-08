@@ -1,17 +1,17 @@
 .content {
 	> div {
 		margin: 0 auto;
-		padding: 4rem 2rem;
+		padding: 3.5rem 2rem;
 		width: 100%;
 		max-width: $content-max-width;
 		text-align: center;
 
 		@include break-at(nth($content-breakpoints, 1)) {
-			padding: 6rem 2rem;
+			padding: 5rem 2rem;
 		}
 
 		@include break-at(nth($content-breakpoints, 2)) {
-			padding: 8rem 2rem;
+			padding: 6.5rem 2rem;
 		}
 	}
 }
