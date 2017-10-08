@@ -51,12 +51,14 @@
 	}
 }
 
-@mixin headline-primary($use-animation: true) {
+%headline-primary {
 	@include headline(40px, 50px, 70px);
 	@include font-primary();
 	display: inline-block;
+}
 
-	@if $use-animation {
+%headline-primary-animation {
+	.is-ready & {
 		position: relative;
 
 		&:before {
@@ -73,6 +75,14 @@
 	}
 }
 
+@mixin headline-primary($use-animation: true) {
+	@extend %headline-primary;
+
+	@if $use-animation {
+		@extend %headline-primary-animation;
+	}
+}
+
 @keyframes headline-primary {
 	0%,
 	100% {
@@ -85,7 +95,11 @@
 	}
 }
 
-@mixin headline-secondary() {
+%headline-secondary {
 	@include headline(20px);
 	@include font-primary();
+}
+
+@mixin headline-secondary() {
+	@extend %headline-secondary;
 }
