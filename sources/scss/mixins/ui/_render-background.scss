@@ -9,14 +9,16 @@
 	$height: map-get($bg, 'height') or false;
 
 	@if $image1x {
-		background: $background url($image1x) $repeat $attachment $position;
+		.is-ready & {
+			background: $background url($image1x) $repeat $attachment $position;
 
-		@if $image2x {
-			@include media-retina() {
-				background-image: url($image2x);
+			@if $image2x {
+				@include media-retina() {
+					background-image: url($image2x);
 
-				@if $width or $height {
-					background-size: ($width or auto) ($height or auto);
+					@if $width or $height {
+						background-size: ($width or auto) ($height or auto);
+					}
 				}
 			}
 		}
