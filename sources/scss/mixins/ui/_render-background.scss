@@ -2,6 +2,8 @@
 	$background: map-get($bg, 'background') or transparent;
 	$image1x: map-get($bg, 'image@1x') or false;
 	$image2x: map-get($bg, 'image@2x') or false;
+	$image1x-webp: map-get($bg, 'image@1x-webp') or false;
+	$image2x-webp: map-get($bg, 'image@2x-webp') or false;
 	$attachment: map-get($bg, 'attachment') or scroll;
 	$repeat: map-get($bg, 'repeat') or no-repeat;
 	$position: map-get($bg, 'position') or center;
@@ -9,16 +11,38 @@
 	$height: map-get($bg, 'height') or false;
 
 	@if $image1x {
-		.is-ready & {
-			background: $background url($image1x) $repeat $attachment $position;
+		@if $image1x-webp {
+			.supports-webp & {
+				background: $background url($image1x-webp) $repeat $attachment $position;
+			}
 
-			@if $image2x {
-				@include media-retina() {
-					background-image: url($image2x);
+			.supports-no-webp & {
+				background: $background url($image1x) $repeat $attachment $position;
+			}
+		} @else {
+			.is-ready & {
+				background: $background url($image1x) $repeat $attachment $position;
+			}
+		}
 
-					@if $width or $height {
-						background-size: ($width or auto) ($height or auto);
+		@if $image2x {
+			@include media-retina() {
+				@if $image2x-webp {
+					.supports-webp & {
+						background-image: url($image2x-webp);
 					}
+
+					.supports-no-webp & {
+						background-image: url($image2x);
+					}
+				} @else {
+					.is-ready & {
+						background-image: url($image2x);
+					}
+				}
+
+				@if $width or $height {
+					background-size: ($width or auto) ($height or auto);
 				}
 			}
 		}
