@@ -26,11 +26,6 @@ $background-priamry: (
 $font-size-base: 16px !default;
 $font-line-height-base: 30px / $font-size-base !default;
 
-// Icon-font:
-$font-icons-name: 'icons' !default;
-$font-icons-dir: '../fonts/' !default;
-$font-icons-filename: 'icons' !default;
-
 // Default font:
 $font-default-family: Georgia, serif !default;
 
@@ -40,9 +35,14 @@ $font-primary-family: 'satisfy', serif !default;
 $font-primary-dir: '../fonts/' !default;
 $font-primary-filename: 'satisfy' !default;
 
+// Icon-font:
+$font-icons-name: 'icons' !default;
+$font-icons-dir: '../fonts/' !default;
+$font-icons-filename: 'icons' !default;
+
 $font-load:
-	($font-icons-name, $font-icons-dir, $font-icons-filename, false),
 	($font-primary-name, $font-primary-dir, $font-primary-filename, false),
+	($font-icons-name, $font-icons-dir, $font-icons-filename, false),
 ;
 
 // Shadow (mixin)
