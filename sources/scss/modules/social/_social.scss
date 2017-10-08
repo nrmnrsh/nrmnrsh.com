@@ -38,7 +38,11 @@
 	}
 
 	span {
-		@include invisible();
+		font-size: 0.4em;
+
+		.is-ready & {
+			@include invisible();
+		}
 	}
 
 	@each $icon in $social-icons {

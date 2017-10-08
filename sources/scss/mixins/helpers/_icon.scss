@@ -1,4 +1,4 @@
-@mixin icon-pseudoclass() {
+%icon-pseudoclass {
 	speak: none;
 	display: inline-block;
 	width: 1em;
@@ -14,21 +14,19 @@
 	vertical-align: middle;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	@content;
 }
 
 @mixin icon($name, $position: 'before') {
-	&:#{$position} {
-		@include icon-pseudoclass() {
-			@content;
-		};
+	.is-ready &:#{$position} {
+		@extend %icon-pseudoclass;
+		@content;
 	}
 
 	@include icon-sign($name, $position);
 }
 
 @mixin icon-sign($name, $position: 'before', $important: false) {
-	&:#{$position} {
+	.is-ready &:#{$position} {
 		@each $icon in $icons {
 			@if $name == nth($icon, 1) {
 				content: nth($icon, 2);
