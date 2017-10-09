@@ -79,37 +79,34 @@
 
 		<script type="text/javascript">
 			(function() {
-				window.addEventListener('load', onLoad);
-				function onLoad() {
-					var
-						doc = document;
-						htmlEl = doc.documentElement,
-						scriptEl = doc.createElement('script'),
-						imageWebpEl = new Image()
-					;
+				var
+					doc = document;
+					htmlEl = doc.documentElement,
+					scriptEl = doc.createElement('script'),
+					imageWebpEl = new Image()
+				;
 
-					// Attach 'is-ready' class for loading resources async from
-					// css and start animations
-					htmlEl.className = htmlEl.className + ' is-ready';
+				// Attach 'is-ready' class for loading resources async from
+				// css and start animations
+				htmlEl.className = htmlEl.className + ' is-ready';
 
-					// Detect webp support:
-					imageWebpEl.onerror = function() {
-						htmlEl.className += ' supports-no-webp';
-					};
-					imageWebpEl.onload = function() {
-						htmlEl.className += ' supports-webp';
-					};
-					imageWebpEl.src = 'data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=';
+				// Detect webp support:
+				imageWebpEl.onerror = function() {
+					htmlEl.className += ' supports-no-webp';
+				};
+				imageWebpEl.onload = function() {
+					htmlEl.className += ' supports-webp';
+				};
+				imageWebpEl.src = 'data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=';
 
-					// Lazyload app
-					scriptEl.async = true;
-					scriptEl.defer = true;
-					scriptEl.src = '{{assets}}js/Application.en.js';
-					scriptEl.onload = function() {
-						window.ApplicationRunner.run(['app/Application']);
-					};
-					htmlEl.appendChild(scriptEl);
-				}
+				// Lazyload app
+				scriptEl.async = true;
+				scriptEl.defer = true;
+				scriptEl.src = '{{assets}}js/Application.en.js';
+				scriptEl.onload = function() {
+					window.ApplicationRunner.run(['app/Application']);
+				};
+				htmlEl.appendChild(scriptEl);
 			})();
 		</script>
 	</body>
