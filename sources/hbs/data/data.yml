@@ -3,35 +3,35 @@ meta:
   base_url: https://nrmnrsh.github.io/nrmnrsh.com/
 
   seo_title: nrmnrsh.com ~ Norman Rusch
-  seo_description: The portfolio of Norman Rusch - senior web developer with
-    focus on front end technologies from berlin.
+  seo_description: The portfolio of Norman Rusch - senior web developer
+    focusing on front end technologies from Berlin.
 
   share_title: nrmnrsh.com
   share_name: nrmnrsh ~ Norman Rusch
-  share_description: The portfolio of Norman Rusch - senior web developer with
-    focus on front end technologies from berlin.
+  share_description: The portfolio of Norman Rusch - senior web developer
+    focusing on front end technologies from Berlin.
   share_url: http://nrmnrsh.com/
   share_twitter_creator: "@nrmnrsh"
   share_twitter_card: summary_large_image
 
   app_title: nrmnrsh.com
   app_short_title: nrmnrsh
-  app_description: The portfolio of Norman Rusch - senior web developer with
-    focus on front end technologies from berlin.
+  app_description: The portfolio of Norman Rusch - senior web developer
+    focusing on front end technologies from Berlin.
   app_url: http://nrmnrsh.com/
   app_color: "#0F141C"
 
 intro:
   headline: nrmnrsh.com
   subline: A webdeveloper's portfolio
-  copy: Hi! My name is Norman Rusch. I'm a senior web developer with focus on
-    front end technologies from berlin. I love to write reusable and tested
+  copy: Hi! My name is Norman Rusch. I'm a senior web developer focusing on
+    front end technologies from Berlin. I love to write reusable and tested
     javascript, semantic and accessible html and modular css.
   schema:
     givenName: Norman
     familyName: Rusch
     jobTitle: senior web developer
-    workLocation: berlin
+    workLocation: Berlin
 
 social:
   headline: Follow me
@@ -50,9 +50,10 @@ social:
 
 opensource:
   headline: Open source
-  copy: This is a list of some of my open source projects and contributions.
-    There many other projects on GitHub which are not listed here. So if you're
-    interested in some more projects take a look at my GitHub profile page.
+  copy: Below is a list of some of my open source projects and contributions.
+    There are many other projects on GitHub which are not listed here. So if
+    you're interested in some more projects, please have a look at my GitHub
+    profile page.
   projects:
   - name: Lintspaces
     details: Lintspaces or better ”node-lintspaces” is a javascript module for
@@ -73,7 +74,7 @@ opensource:
 
   - name: Picnic
     details: Depending on the stack we use at an agency called Moccu based in
-      berlin, this is a set of common front end features. These features are
+      Berlin, this is a set of common front end features. These features are
       things like an overlay, accordion or different kind of media players such
       as core features to render templates and data in the given technology
       stack and more complex user flows like an ajax-based user page navigation.
@@ -84,8 +85,8 @@ opensource:
 
 references:
   headline: References
-  copy: These are some of the projects from the past years I've been worked on.
-    All these websites are developed, concepted and designed by the specified
+  copy: These are some of the projects from the past years I have worked on.
+    All these web pages were developed, concepted and designed by the specified
     agency.
   projects:
   - name: privée
@@ -165,7 +166,7 @@ references:
     #   postings wasn't reached to tear down the wall completely, but the campaign
     #   itself was a total success. Back in 2014 there were no widely supported
     #   WebGL rendering support (especially on mobile browsers) for the 3d
-    #   animation of the berlin wall. So I needed to implement a render algorithm
+    #   animation of the Berlin wall. So I needed to implement a render algorithm
     #   for canvas 2d, based on the ”ray tracing” algorithm."
     url: https://www.youtube.com/watch?v=CAbTo70xo0Y
     url_label: Watch video
@@ -192,7 +193,7 @@ references:
     client_url: https://www.rbb-online.de/
     agency: Moccu
     agency_url: https://www.moccu.com/
-    url: https://www.berlin-mauer.de/
+    url: https://www.Berlin-mauer.de/
     url_label: Visit website
     datePublished: '2013-01-01'
 
