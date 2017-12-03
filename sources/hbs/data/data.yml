@@ -31,6 +31,9 @@ intro:
     givenName: Norman
     familyName: Rusch
     jobTitle: senior web developer
+    description: focusing on front end technologies
+    disambiguatingDescription: I love to write reusable and tested javascript,
+      semantic and accessible html and modular css
     workLocation: Berlin
 
 social:
