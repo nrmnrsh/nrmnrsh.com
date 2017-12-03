@@ -1,7 +1,7 @@
 {
   "name": "nrmnrsh.com",
   "short_name": "nrmnrsh",
-  "description": "The portfolio of Norman Rusch - senior web developer focusing on front end technologies from Berlin.",
+  "description": "The portfolio of Norman Rusch - senior web developer from Berlin focusing on front end technologies.",
   "start_url": "http://nrmnrsh.com/?utm_source=web_app_manifest",
   "display": "standalone",
   "background_color": "#0F141C",
