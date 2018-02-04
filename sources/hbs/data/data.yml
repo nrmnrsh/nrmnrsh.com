@@ -92,6 +92,18 @@ references:
     All these web pages were developed, concepted and designed by the specified
     agency.
   projects:
+  - name: Eventmodule
+    note: for the 2018 olympic winter games
+    client: ZDF
+    client_url: https://www.zdf.de/
+    agency: Moccu
+    agency_url: https://www.moccu.com/
+    # details: "A technical and visual update of the existing data driven video
+    #   plattform. This time for the 2018 olympic winter games in pyeongchang.
+    url: https://olympia.zdf.de
+    url_label: Visit website
+    datePublished: '2018-01-16'
+
   - name: privée
     client: L’ORÉAL PARiS
     client_url: http://loreal-paris.de/
@@ -117,7 +129,7 @@ references:
     agency: Moccu
     agency_url: https://www.moccu.com/
     # details: "A data driven video plattform for two of the big sports events in
-    #   2016 – the summer olympics and the UEFA european championship. This
+    #   2016 – the olympic games and the UEFA european championship. This
     #   website containes ticker- and teaserlists which uses a polling mechanism
     #   for an automatic update. The user can use the website as second screen and
     #   gets all informations with livestreams, latest news around certain sports,
@@ -127,7 +139,7 @@ references:
     #   using ”history api” and ”push/pop states” for an animated change between
     #   to pages. This feature later on was backported to the open source picnic
     #   library."
-    datePublished: '2016-01-01'
+    datePublished: '2016-07-28'
 
   - name: Moccu Agency Website
     agency: Moccu
