@@ -13,7 +13,7 @@
 									href="{{this.url}}"
 									title="Open the ”{{this.name}}” website"
 									target="_blank"
-									rel="noopener">
+									rel="noopener noreferrer">
 							{{/if}}
 								{{this.name}}
 							{{#if this.url}}
@@ -43,7 +43,7 @@
 									href="{{this.client_url}}"
 									title="Open the ”{{this.client}}” website"
 									target="_blank"
-									rel="noopener">
+									rel="noopener noreferrer">
 							{{/if}}
 							{{this.client}}
 							{{#if this.client_url}}
@@ -60,7 +60,7 @@
 									href="{{this.agency_url}}"
 									title="Open the ”{{this.agency}}” website"
 									target="_blank"
-									rel="noopener">
+									rel="noopener noreferrer">
 							{{/if}}
 							{{this.agency}}
 							{{#if this.agency_url}}
@@ -75,7 +75,7 @@
 							href="{{this.url}}"
 							title="Open the ”{{this.name}}” website"
 							target="_blank"
-							rel="noopener">
+							rel="noopener noreferrer">
 							{{default url_label 'Visit project'}}
 						</a>
 					{{/if}}
