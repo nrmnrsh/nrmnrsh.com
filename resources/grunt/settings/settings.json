@@ -1,30 +1,14 @@
 {
-  "lngs": [
-    "en",
-    "de"
-  ],
   "release": {
     "base": "release/",
     "fonts": "release/fonts/",
-    "css": "release/css/",
-    "js": "release/js/",
     "img": "release/img/",
     "html": "release/"
   },
-  "build": {
-    "i18n": "sources/js/build/i18n/",
-    "js": "sources/js/build/"
-  },
   "sources": {
-    "jspm": "jspm_packages/",
-    "scss": "sources/scss/",
     "fonts": "sources/fonts/",
-    "i18n": "sources/js/i18n/",
-    "js": "sources/js/src/",
-    "hbs": "sources/hbs/",
-    "img": "sources/img/"
-  },
-  "tests": {
-    "js": "sources/js/tests/"
+    "scss": "sources/scss/",
+    "img": "sources/img/",
+    "hbs": "sources/hbs/"
   }
 }
