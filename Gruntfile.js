@@ -32,10 +32,6 @@ module.exports = function(grunt) {
 	]);
 
 	grunt.registerTask('release', [
-		'validate',
-		'test',
-		'build',
-		'optimize',
 		'gh-pages:release'
 	]);
 };

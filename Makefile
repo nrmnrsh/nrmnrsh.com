@@ -1,4 +1,4 @@
-.PHONY: validate
+.PHONY: validate build release
 
 validate:
 	./node_modules/.bin/eslint\
@@ -24,3 +24,10 @@ validate:
 		--verbose \
 		--no-exit \
 		"./sources/scss/**/*.scss"
+
+build: validate
+	grunt build
+	webpack --mode production
+
+release: build
+	grunt optimize release
