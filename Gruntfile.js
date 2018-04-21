@@ -17,7 +17,6 @@ module.exports = function(grunt) {
 	grunt.loadTasks('resources/grunt');
 
 	grunt.registerTask('validate', [
-		'jshint:validate',
 		'jscs:validate',
 		'lintspaces:validate',
 		'sasslint:validate'
@@ -25,7 +24,6 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('optimize', [
 		'critical:optimize',
-		'uglify:optimize',
 		'imagemin:optimize',
 		'svgmin:optimize',
 		'htmlmin:optimize'
