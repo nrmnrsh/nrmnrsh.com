@@ -33,6 +33,7 @@ build: validate
 optimize:
 	cat release/index.html | ./node_modules/.bin/critical \
 		--base release/ \
+		--ignore '@font-face' \
 		--inline > release/index.critical.html
 
 	mv release/index.critical.html release/index.html
