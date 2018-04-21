@@ -18,7 +18,7 @@ meta:
   app_short_title: nrmnrsh
   app_description: The portfolio of Norman Rusch - senior web developer
     from Berlin focusing on front end technologies.
-  app_url: http://nrmnrsh.com/
+  app_url: https://nrmnrsh.github.io/nrmnrsh.com/
   app_color: "#0F141C"
 
 intro:
