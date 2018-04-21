@@ -22,4 +22,4 @@
 		script.onload = () => html.classList.add('is-ready');
 		doc.body.appendChild(script);
 	});
-})('/js/app.pkg.js');
+})('./js/app.pkg.js');
