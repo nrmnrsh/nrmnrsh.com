@@ -65,7 +65,9 @@
 			color: $color;
 
 			@if $shadow {
-				@include shadow();
+				box-shadow:
+					inset 0 -6rem 25vw $shadow-color,
+					inset 0 -1rem 1rem $shadow-color;
 			}
 		}
 	}
