@@ -20,17 +20,6 @@
 	);
 }
 
-// Font-Families
-// -----------------------------------------------------------------------------
-
-@mixin font-default() {
-	font-family: $font-default-family;
-}
-
-@mixin font-primary() {
-	font-family: $font-primary-family;
-}
-
 // Headlines
 // -----------------------------------------------------------------------------
 
@@ -55,8 +44,8 @@
 
 %headline-primary {
 	@include headline(40px, 50px, 70px);
-	@include font-primary();
 	display: inline-block;
+	font-family: $font-primary-family;
 }
 
 %headline-primary-animation {
@@ -99,7 +88,7 @@
 
 %headline-secondary {
 	@include headline(20px);
-	@include font-primary();
+	font-family: $font-primary-family;
 }
 
 @mixin headline-secondary() {
