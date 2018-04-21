@@ -1,21 +1,23 @@
-// Font-Loader
-// -----------------------------------------------------------------------------
-
-@mixin load-font($name, $dir, $filename, $swap: false) {
+@mixin load-font($name, $weight, $display, $dir, $filename) {
 	@font-face {
 		font-family: $name;
-		font-weight: 400;
+		font-weight: $weight;
 		font-style: normal;
-		src: url('#{$dir}#{$filename}.woff') format('woff');
-		@if ($swap) {
-			font-display: swap;
-		}
+		font-display: $display;
+		src: url('#{$dir}#{$filename}.woff2') format('woff2'),
+			url('#{$dir}#{$filename}.woff') format('woff');
 	}
 }
 
 // Load configured fonts:
 @each $font in $font-load {
-	@include load-font(nth($font, 1), nth($font, 2), nth($font, 3), nth($font, 4));
+	@include load-font(
+		nth($font, 1), // name
+		nth($font, 2), // weight
+		nth($font, 3), // display
+		nth($font, 4), // from directory
+		nth($font, 5) // filename
+	);
 }
 
 // Font-Families

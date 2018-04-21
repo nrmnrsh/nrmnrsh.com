@@ -34,18 +34,22 @@ $font-default-family: Georgia, serif !default;
 
 // Primary font:
 $font-primary-name: 'satisfy' !default;
-$font-primary-family: 'satisfy', serif !default;
+$font-primary-family: 'satisfy', Verdana, Arial, sans-serif !default;
+$font-primary-weight: 400 !default;
 $font-primary-dir: '../fonts/' !default;
 $font-primary-filename: 'satisfy' !default;
+$font-primary-display: block !default;
 
 // Icon-font:
 $font-icons-name: 'icons' !default;
+$font-icons-weight: 400 !default;
 $font-icons-dir: '../fonts/' !default;
 $font-icons-filename: 'icons' !default;
+$font-icons-display: !default;
 
 $font-load:
-	($font-primary-name, $font-primary-dir, $font-primary-filename, false),
-	($font-icons-name, $font-icons-dir, $font-icons-filename, false),
+	($font-primary-name, $font-primary-weight, $font-primary-display, $font-primary-dir, $font-primary-filename),
+	($font-icons-name, $font-icons-weight, $font-icons-display, $font-icons-dir, $font-icons-filename),
 ;
 
 // Shadow (mixin)
