@@ -11,9 +11,9 @@
 	webp.src = 'data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=';
 
 	Promise.all([
-		// (!!window.WeakMap || import('weakmap-polyfill')),
+		(!!window.WeakMap || import('weakmap-polyfill')),
 		// (!!window.Proxy || import('proxy-polyfill')),
-		// (!!window.IntersectionObserver || import('intersection-observer')),
+		(!!window.IntersectionObserver || import('intersection-observer')),
 	]).then(() => {
 		var script = document.createElement('script');
 		script.type = 'text/javascript';
