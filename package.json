@@ -23,6 +23,7 @@
   "dependencies": {
     "intersection-observer": "^0.5.0",
     "node-reset-scss": "^1.0.1",
+    "pacto": "^0.1.0",
     "weakmap-polyfill": "^2.0.0"
   },
   "devDependencies": {
@@ -58,7 +59,6 @@
     "live-server": "^1.2.0",
     "load-grunt-tasks": "^3.5.0",
     "node-sass": "^4.8.3",
-    "pacto": "^0.1.0",
     "postcss-loader": "^2.1.4",
     "sass-lint": "^1.12.1",
     "sass-loader": "^7.0.1",
