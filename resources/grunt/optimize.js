@@ -28,25 +28,6 @@ module.exports = function(grunt) {
 			}
 		},
 
-		uglify: {
-			optimize: {
-				options: {
-					mangle: true,
-					compress: true,
-					report: 'gzip',
-					sourceMap: true,
-					preserveComments: false,
-					quoteStyle: 1
-				},
-				files: [{
-					expand: true,
-					src: ['*.js'],
-					dest: '<%= settings.release.js %>',
-					cwd: '<%= settings.release.js %>'
-				}]
-			}
-		},
-
 		imagemin: {
 			optimize: {
 				files: [{

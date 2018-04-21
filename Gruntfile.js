@@ -23,17 +23,6 @@ module.exports = function(grunt) {
 		'sasslint:validate'
 	]);
 
-	grunt.registerTask('test', [
-		'writefile:test',
-		'connect:test',
-		'qunit:test'
-	]);
-
-	grunt.registerTask('i18n',[
-		'i18next:i18n',
-		'i18n2js'
-	]);
-
 	grunt.registerTask('optimize', [
 		'critical:optimize',
 		'uglify:optimize',
@@ -45,25 +34,14 @@ module.exports = function(grunt) {
 	grunt.registerTask('build', [
 		'clean:build',
 
-		// Translations:
-		'i18n',
-
-		// Javascript
-		'pluginbuilder:build',
-		'modernizr:build',
-		'concat:build',
-
-		// Stylesheets
+		// Webfont
 		'webfont:build',
-		'sass:build',
-		'postcss:build',
 
 		// Templates
 		'assemble:*',
 
 		// Assets like images etc.
 		'copy:build'
-		//'responsive_images:build'
 	]);
 
 	grunt.registerTask('release', [

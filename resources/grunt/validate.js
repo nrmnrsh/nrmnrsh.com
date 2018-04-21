@@ -2,19 +2,6 @@ module.exports = function(grunt) {
 
 	grunt.config.merge({
 
-		jshint: {
-			validate: {
-				src: [
-					'<%= settings.sources.js %>**/*.js',
-					'<%= settings.sources.hbs %>**/*.js',
-					'<%= settings.tests.js %>**/*.js'
-				],
-				options: {
-					jshintrc: '.jshintrc'
-				}
-			}
-		},
-
 		jscs: {
 			validate: {
 				src: [
