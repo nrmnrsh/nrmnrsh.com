@@ -15,12 +15,6 @@ module.exports = function(grunt) {
 	// Load grunt configurations:
 	grunt.loadTasks('resources/grunt');
 
-	grunt.registerTask('validate', [
-		'jscs:validate',
-		'lintspaces:validate',
-		'sasslint:validate'
-	]);
-
 	grunt.registerTask('optimize', [
 		'processhtml:optimize',
 		'critical:optimize',

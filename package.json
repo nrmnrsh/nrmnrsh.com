@@ -4,7 +4,7 @@
   "description": "The portfolio website of Norman Rusch",
   "main": "Gruntfile.js",
   "scripts": {
-    "test": "grunt validate"
+    "test": "make validate"
   },
   "repository": {
     "type": "git",
@@ -48,19 +48,18 @@
     "grunt-contrib-watch": "^1.0.0",
     "grunt-critical": "^0.2.2",
     "grunt-gh-pages": "^2.0.0",
-    "grunt-jscs": "^3.0.1",
-    "grunt-lintspaces": "^0.8.0",
     "grunt-processhtml": "^0.4.1",
-    "grunt-sass-lint": "^0.2.0",
     "grunt-shell": "2.1.0",
     "grunt-svgmin": "^5.0.0",
     "grunt-webfont": "^1.6.0",
     "handlebars": "^4.0.10",
     "helper-slugify": "^0.2.0",
+    "lintspaces-cli": "^0.6.0",
     "live-server": "^1.2.0",
     "load-grunt-tasks": "^3.5.0",
     "node-sass": "^4.8.3",
     "postcss-loader": "^2.1.4",
+    "sass-lint": "^1.12.1",
     "sass-loader": "^7.0.1",
     "webpack": "^4.6.0",
     "webpack-cli": "^2.0.15",
