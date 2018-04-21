@@ -52,7 +52,6 @@
     "grunt-shell": "2.1.0",
     "grunt-svgmin": "^5.0.0",
     "grunt-webfont": "^1.6.0",
-    "handlebars": "^4.0.10",
     "helper-slugify": "^0.2.0",
     "lintspaces-cli": "^0.6.0",
     "live-server": "^1.2.0",
