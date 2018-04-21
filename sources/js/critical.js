@@ -9,9 +9,8 @@
 	webp.src = 'data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=';
 
 	Promise.all([
-		(!!window.WeakMap || import('weakmap-polyfill')),
-		// (!!window.Proxy || import('proxy-polyfill')),
-		(!!window.IntersectionObserver || import('intersection-observer')),
+		(!!window.WeakMap || import(/* webpackChunkName: "weakmap-polyfill" */ 'weakmap-polyfill')),
+		(!!window.IntersectionObserver || import(/* webpackChunkName: "intersectionobserver-polyfill" */ 'intersection-observer'))
 	]).then(() => {
 		var script = doc.createElement('script');
 		script.type = 'text/javascript';

@@ -26,8 +26,18 @@ validate:
 		"./sources/scss/**/*.scss"
 
 build: validate
-	grunt build
-	webpack --mode production
+	./node_modules/.bin/grunt build
 
-release: build
-	grunt optimize release
+	./node_modules/.bin/webpack --mode production
+
+optimize:
+	cat release/index.html | ./node_modules/.bin/critical \
+		--base release/ \
+		--inline > release/index.critical.html
+
+	mv release/index.critical.html release/index.html
+
+	./node_modules/.bin/grunt optimize
+
+release: build optimize
+	./node_modules/.bin/grunt release

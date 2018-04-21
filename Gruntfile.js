@@ -17,7 +17,6 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('optimize', [
 		'processhtml:optimize',
-		'critical:optimize',
 		'imagemin:optimize',
 		'svgmin:optimize',
 		'htmlmin:optimize'
@@ -27,7 +26,6 @@ module.exports = function(grunt) {
 		'clean:build',
 		'webfont:build',
 		'assemble:*',
-		'shell:build',
 		'copy:build'
 	]);
 

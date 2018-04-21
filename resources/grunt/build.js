@@ -96,12 +96,6 @@ module.exports = function(grunt) {
 					src: ['*.webmanifest']
 				}]
 			}
-		},
-
-		shell: {
-			build: {
-				command: './node_modules/.bin/webpack --mode production'
-			}
 		}
 
 	});
