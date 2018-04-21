@@ -4,15 +4,12 @@ const GA_PROPERTY = 'UA-17711526-1';
 export class Action {
 
 	run() {
-		const
-			doc = document,
-			script = doc.createElement('script')
-		;
-		script.async = true;
-		script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_PROPERTY}`;
-
 		this._setup();
-		doc.head.appendChild(script);
+		if (document.readyState === 'complete') {
+			this._load();
+		} else {
+			window.addEventListener('load', this._load.bind(this));
+		}
 	}
 
 	_setup() {
@@ -23,6 +20,16 @@ export class Action {
 		};
 		win.gtag('js', new Date());
 		win.gtag('config', GA_PROPERTY, {'anonymize_ip': true});
+	}
+
+	_load() {
+		const
+			doc = document,
+			script = doc.createElement('script')
+		;
+		script.async = true;
+		script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_PROPERTY}`;
+		doc.head.appendChild(script);
 	}
 
 }
