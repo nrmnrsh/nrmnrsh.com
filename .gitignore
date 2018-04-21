@@ -1,4 +1,5 @@
 # Directories
+.grunt/
 release/
 node_modules/
 
