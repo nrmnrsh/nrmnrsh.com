@@ -1,13 +1,10 @@
 # Directories
-.git/
-.grunt/
-build/
 release/
 node_modules/
-jspm_packages/
 
 # Files
 .DS_Store
 Thumbs.db
 *.sublime-*
 sources/scss/settings/_icons.scss
+sources/fonts/icons.*

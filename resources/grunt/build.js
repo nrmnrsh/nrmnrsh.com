@@ -28,7 +28,7 @@ module.exports = function(grunt) {
 		webfont: {
 			build: {
 				src: 'resources/icons/*.svg',
-				dest: '<%= settings.release.fonts %>',
+				dest: '<%= settings.sources.fonts %>',
 				destCss: '<%= settings.sources.scss %>settings/',
 				options: {
 					fontBaseName: 'icons',
@@ -95,6 +95,12 @@ module.exports = function(grunt) {
 					flatten: false,
 					src: ['*.webmanifest']
 				}]
+			}
+		},
+
+		shell: {
+			build: {
+				command: './node_modules/.bin/webpack --mode production'
 			}
 		}
 

@@ -2,6 +2,18 @@ module.exports = function(grunt) {
 
 	grunt.config.merge({
 
+		processhtml: {
+			optimize: {
+				files: [{
+					cwd: '<%= settings.release.html %>',
+					dest: '<%= settings.release.html %>',
+					expand: true,
+					flatten: false,
+					src: ['**/*.html']
+				}]
+			}
+		},
+
 		critical: {
 			optimize: {
 				options: {

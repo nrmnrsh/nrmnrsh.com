@@ -3,7 +3,6 @@ module.exports = function(grunt) {
 	require('load-grunt-tasks')(grunt, {
 		pattern: [
 			'grunt-*',
-			'i18next-scanner',
 			'!grunt-assemble-sitemap',
 		]
 	});
@@ -23,6 +22,7 @@ module.exports = function(grunt) {
 	]);
 
 	grunt.registerTask('optimize', [
+		'processhtml:optimize',
 		'critical:optimize',
 		'imagemin:optimize',
 		'svgmin:optimize',
@@ -31,14 +31,9 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('build', [
 		'clean:build',
-
-		// Webfont
 		'webfont:build',
-
-		// Templates
 		'assemble:*',
-
-		// Assets like images etc.
+		'shell:build',
 		'copy:build'
 	]);
 
