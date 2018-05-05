@@ -37,7 +37,8 @@ module.exports = (env, argv) => {
 			output: {
 				filename: '[name].pkg.js',
 				path: path.join(__dirname, 'release', 'js'),
-				chunkFilename: '[name]-[chunkhash].js'
+				chunkFilename: '[name]-[chunkhash].js',
+				publicPath: './js/'
 			},
 			module: {
 				rules: [{
