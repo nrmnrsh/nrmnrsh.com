@@ -5,6 +5,7 @@
 	"start_url": "https://nrmnrsh.github.io/nrmnrsh.com/?utm_source=web_app_manifest",
 	"display": "standalone",
 	"background_color": "#0F141C",
+	"theme_color": "#0F141C",
 	"icons": [{
 		"src": "./img/meta/appicon-36x36.png",
 		"sizes": "36x36",
