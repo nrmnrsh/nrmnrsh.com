@@ -5,6 +5,7 @@
 	"start_url": "{{meta.app_url}}?utm_source=web_app_manifest",
 	"display": "standalone",
 	"background_color": "{{meta.app_color}}",
+	"theme_color": "{{meta.app_color}}",
 	"icons": [{
 		"src": "{{assets}}img/meta/appicon-36x36.png",
 		"sizes": "36x36",
