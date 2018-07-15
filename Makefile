@@ -1,4 +1,10 @@
-.PHONY: validate build release
+.PHONY: tests validate build release
+
+tests:
+	./node_modules/.bin/jest \
+		sources/js/ \
+		-- verbose \
+		-- coverage
 
 validate:
 	./node_modules/.bin/eslint\
