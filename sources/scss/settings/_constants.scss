@@ -9,7 +9,6 @@ $ready-delay: 2s !default;
 // Overall colors:
 $color-background: #0F141C !default;
 $color-text: #FFFFFF !default;
-$color-link: #00FFC5 !default;
 
 // Backgrounds:
 $background-priamry: (
@@ -74,14 +73,18 @@ $project-schemes: (
 		'color': $color-text,
 		'shadow': true,
 	),
-	'light': (
-		'background': (
-			'background': $color-text,
-		),
-		'color': lighten($color-background, 5%),
-		'shadow': false,
-	)
+	// 'light': (
+	// 	'background': (
+	// 		'background': $color-text,
+	// 	),
+	// 	'color': lighten($color-background, 5%),
+	// 	'shadow': false,
+	// )
 ) !default;
+
+// Brands:
+$brands-background: $color-text !default;
+$brands-color: lighten($color-background, 5%) !default;
 
 // Footer:
 $footer-background: $background-priamry !default;

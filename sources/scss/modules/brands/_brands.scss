@@ -1,0 +1,36 @@
+.content-brands {
+	background: $brands-background;
+	color: $brands-color;
+
+	h2 {
+		@include headline-primary();
+	}
+
+	p {
+		margin: 0 auto 1rem;
+		max-width: 31rem;
+	}
+
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin: 0 auto;
+		max-width: 23rem;
+	}
+
+	li {
+		padding: 0 1.5rem;
+		width: 50%;
+	}
+
+	path,
+	rect,
+	polygon {
+		fill: $brands-color;
+	}
+
+	[itemprop='name'] {
+		@include invisible();
+	}
+}

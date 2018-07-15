@@ -1,0 +1,20 @@
+<section class="content content-brands">
+	<div>
+		<h2>{{data.headline}}</h2>
+		<p>{{data.copy}}</p>
+
+		<ul>
+			{{#each data.brands}}
+				<li id="{{slugify ../data.headline}}-{{slugify this.name}}" itemprop="brand" itemscope itemtype="http://schema.org/Brand">
+					<span itemprop="name">{{this.name}}</span>
+
+					<div title="{{this.name}}" role="presentation" itemprop="logo">
+						<!-- build:include img/brands/{{this.logo}}.svg -->
+						<img src="img/brands/{{this.logo}}.svg" alt="{{this.name}}" />
+						<!-- /build -->
+					</div>
+				</li>
+			{{/each}}
+		</ul>
+	</div>
+</section>
