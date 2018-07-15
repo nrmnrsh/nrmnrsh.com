@@ -1,5 +1,5 @@
 import {Context} from 'pacto';
-import {Action as Analytics} from 'modules/analytics/actions/Initialize';
+import {Action as Analytics} from 'modules/analytics/actions/InitializeLazy';
 
 
 const context = new Context();

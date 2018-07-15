@@ -1,35 +1,111 @@
-const GA_PROPERTY = 'UA-17711526-1';
+import {Action as TrackEvent} from 'modules/analytics/actions/TrackEvent';
+import {Scrolldepth} from 'modules/analytics/services/Scrolldepth';
+import {Registry} from 'modules/analytics/services/Registry';
+
+
+const
+	ANALYTICS_PROPERTY = 'UA-17711526-1',
+	ANALYTICS_SOURCE = 'https://www.google-analytics.com/analytics.js',
+	ANALYTICS_INTIAL_CALLS = [
+		['set', 'anonymizeIp', true],
+		['send', 'pageview']
+	],
+	NAMESPACE = 'analytics:',
+	NAMESPACE_REGISTRY = NAMESPACE + 'registry',
+	EVENT_TRACKEVENT = NAMESPACE + 'trackevent',
+	VALUE_NONINTERACTION_TRUE = {
+		nonInteraction: true
+	},
+	VALUE_NONINTERACTION_FALSE =  {
+		nonInteraction: false
+	}
+;
+
+
+function __getPathname() {
+	return window.location.pathname;
+}
+
+function __getParentElement(el, selector) {
+	const all = [...document.querySelectorAll(selector)];
+	let current = el;
+
+	while (current) {
+		if (all.includes(current)) {
+			return current;
+		}
+		current = current.parentElement;
+	}
+
+	return null;
+}
 
 
 export class Action {
 
 	run() {
+		this._load();
 		this._setup();
-		if (document.readyState === 'complete') {
-			this._load();
-		} else {
-			window.addEventListener('load', this._load.bind(this));
-		}
-	}
-
-	_setup() {
-		const win = window;
-		win.dataLayer = win.dataLayer || [];
-		win.gtag = function() {
-			win.dataLayer.push(arguments);
-		};
-		win.gtag('js', new Date());
-		win.gtag('config', GA_PROPERTY, {'anonymize_ip': true});
 	}
 
 	_load() {
 		const
-			doc = document,
-			script = doc.createElement('script')
+			script = document.createElement('script'),
+			ga = window.ga || function() {
+				(ga.q = ga.q || []).push(Array.apply(null, arguments));
+			}
 		;
+		ga.l = 1 * new Date();
+		window.GoogleAnalyticsObject = 'ga';
+		window.ga = ga;
+
 		script.async = true;
-		script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_PROPERTY}`;
-		doc.head.appendChild(script);
+		script.src = ANALYTICS_SOURCE;
+		document.head.appendChild(script);
+
+		ga('create', ANALYTICS_PROPERTY, 'auto');
+		ANALYTICS_INTIAL_CALLS.forEach(args => ga.apply(null, args));
+	}
+
+	_setup() {
+		const
+			{context} = this,
+			registry = new Registry({context, trackEventType: EVENT_TRACKEVENT})
+		;
+
+		context.actions.add(EVENT_TRACKEVENT, TrackEvent);
+		context.values.add(NAMESPACE_REGISTRY, registry);
+
+		// Register events from the scrolldepth service:
+		new Scrolldepth({context});
+		registry.registerEvent('scrolldepth:percentage', {
+			category: 'scrolldepth',
+			action: '.percentage',
+			label: __getPathname,
+			value: (data) => {
+				return data.percentage < 75 ?
+					VALUE_NONINTERACTION_TRUE :
+					VALUE_NONINTERACTION_FALSE;
+			}
+		});
+
+		// Register global click handler to catch click events for specific
+		// elements. Do not attach clickhandlers directly to the selector
+		// because the singlepage behaviour will result in lost references and
+		// new elements won't be attached.
+		document.body.addEventListener('click', (event) => {
+			// Track outbound links:
+			const el = __getParentElement(event.target, '[href^="http"]');
+			if (el) {
+				context.trigger(EVENT_TRACKEVENT, {
+					category: 'outbound',
+					action: 'click',
+					label: el.href,
+					value: VALUE_NONINTERACTION_TRUE
+				});
+				return;
+			}
+		});
 	}
 
 }
