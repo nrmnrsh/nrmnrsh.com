@@ -34,7 +34,7 @@ validate:
 		--no-exit \
 		"./sources/scss/**/*.scss"
 
-build: validate
+build: tests validate
 	./node_modules/.bin/grunt build
 
 	./node_modules/.bin/webpack --mode production
