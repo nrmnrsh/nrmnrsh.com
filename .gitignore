@@ -1,5 +1,6 @@
 # Directories
 .grunt/
+coverage/
 release/
 node_modules/
 

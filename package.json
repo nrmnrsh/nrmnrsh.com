@@ -77,6 +77,8 @@
       "node_modules",
       "sources/js"
     ],
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true,
     "coveragePathIgnorePatterns": [
       "/node_modules/",
       "/__fixtures__/"
