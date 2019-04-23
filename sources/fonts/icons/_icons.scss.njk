@@ -1,0 +1,8 @@
+// DO NOT ADD ANY ICONS HERE!
+// This is generated automatically through a npm task. Just put .svg's into
+// the "icons" folder placed in each "resources" folder.
+// The font is genereated by the task: "npm run webfonts".
+
+$icons: ({% for glyph in glyphs %}
+	'{{ glyph.name }}': '\{{ glyph.unicode[0].charCodeAt(0).toString(16).toUpperCase() }}',{% endfor %}
+);
