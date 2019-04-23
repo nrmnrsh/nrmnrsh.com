@@ -29,4 +29,9 @@ module.exports.slugify = function(str) {
 
 module.exports.year = function() {
 	return (new Date()).getFullYear();
-}
+};
+
+
+module.exports.datetime = function() {
+	return (new Date()).toISOString();
+};
