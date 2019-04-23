@@ -1,4 +1,8 @@
-.PHONY: tests coverage validate build release
+.PHONY: clean tests coverage validate webfont webpack critical optimize build release
+
+clean:
+	rm -rf ./coverage/
+	rm -rf ./web/
 
 tests:
 	./node_modules/.bin/jest \
@@ -42,18 +46,48 @@ webfont:
 		--config "./webfont.config.js" \
 		--dest "./sources/fonts/"
 
-build: tests validate webfont
+webpack:
 	./node_modules/.bin/webpack --mode production
 
-optimize:
-	cat release/index.html | ./node_modules/.bin/critical \
-		--base release/ \
+	mv ./web/browserconfig.xml.html ./web/browserconfig.xml
+	mv ./web/manifest.webmanifest.html ./web/manifest.webmanifest
+
+critical:
+	sed -i.bak \
+		"s/critical.pkg.js.map/\/web\/js\/critical.pkg.js.map/g" \
+		"./web/js/critical.pkg.js" && \
+	rm ./web/js/critical.pkg.js.bak
+
+	cat ./web/index.html | ./node_modules/.bin/critical \
+		--base ./web/ \
 		--ignore '@font-face' \
-		--inline > release/index.critical.html
+		--inline > ./web/index.critical.html
 
-	mv release/index.critical.html release/index.html
+	mv ./web/index.critical.html ./web/index.html
 
-	./node_modules/.bin/grunt optimize
+optimize:
+	imagemin ./web/img/backgrounds --out-dir=web/img/backgrounds
+	imagemin ./web/img/meta --out-dir=web/img/meta
 
-release: build optimize
+	svgo -f ./web/img/brands
+
+	htmlprocessor ./web/index.html -o ./web/index.processed.html
+
+	html-minifier \
+		--collapse-whitespace \
+		--remove-comments \
+		--remove-redundant-attributes \
+		--remove-script-type-attributes \
+		--remove-tag-whitespace \
+		--use-short-doctype \
+		--minify-css true \
+		--minify-js true \
+		./web/index.processed.html > ./web/index.min.html
+
+	mv ./web/index.min.html ./web/index.html
+	rm ./web/index.processed.html
+
+build: clean validate tests webfont webpack critical optimize
+
+release: build
 	./node_modules/.bin/grunt release

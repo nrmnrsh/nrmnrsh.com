@@ -3,7 +3,8 @@ const
 	merge = require('webpack-merge'),
 	path = require('path'),
 
-	AssembleWebpack = require('assemble-webpack')
+	AssembleWebpack = require('assemble-webpack'),
+	CopyWebpackPlugin = require('copy-webpack-plugin')
 ;
 
 
@@ -34,7 +35,13 @@ module.exports = (env, argv) => {
 					partialsLayout: ['./sources/hbs/partials/**/*.hbs'],
 					partialsData: ['./sources/hbs/data/**/*.json'],
 					helpers: ['./sources/hbs/helpers/*.js']
-				})
+				}),
+				new CopyWebpackPlugin([
+					{
+						from: path.resolve(__dirname, 'sources', 'img'),
+						to: 'img/'
+					}
+				])
 			]
 		}
 	);
