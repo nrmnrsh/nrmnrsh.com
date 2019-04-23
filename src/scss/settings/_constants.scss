@@ -51,9 +51,6 @@ $font-load:
 	($font-icons-name, $font-icons-weight, $font-icons-display, $font-icons-dir, $font-icons-filename),
 ;
 
-// Shadow (mixin)
-$shadow-color: #000000 !default;
-
 // Headlines (mixin):
 $headline-primary-animation-duration: 25s !default;
 
@@ -71,14 +68,12 @@ $project-schemes: (
 	'dark': (
 		'background': $background-priamry,
 		'color': $color-text,
-		'shadow': true,
 	),
 	// 'light': (
 	// 	'background': (
 	// 		'background': $color-text,
 	// 	),
 	// 	'color': lighten($color-background, 5%),
-	// 	'shadow': false,
 	// )
 ) !default;
 

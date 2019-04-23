@@ -60,15 +60,8 @@
 		&.has-#{$name}-scheme {
 			$background: map-get($props, 'background');
 			$color: map-get($props, 'color');
-			$shadow: map-get($props, 'shadow');
 			@include render-background($background);
 			color: $color;
-
-			@if $shadow {
-				box-shadow:
-					inset 0 -6rem 25vw $shadow-color,
-					inset 0 -1rem 1rem $shadow-color;
-			}
 		}
 	}
 }
