@@ -6,7 +6,7 @@ clean:
 
 tests:
 	./node_modules/.bin/jest \
-		src/js/ \
+		src/ \
 		-- verbose \
 		-- coverage
 
