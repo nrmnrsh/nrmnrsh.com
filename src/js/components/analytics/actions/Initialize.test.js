@@ -1,5 +1,6 @@
 import MockDate from 'mockdate';
 import {Context} from 'pacto';
+
 import {Action} from './Initialize';
 import {Action as TrackEvent} from './TrackEvent';
 import {Registry} from '../services/Registry';
