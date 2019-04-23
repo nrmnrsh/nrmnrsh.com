@@ -90,4 +90,8 @@ optimize:
 build: clean validate tests webfont webpack critical optimize
 
 release: build
-	./node_modules/.bin/grunt release
+	./node_modules/.bin/bump \
+		--commit "Release v%s" \
+		--tag \
+		--all
+	gh-pages -d ./web/
