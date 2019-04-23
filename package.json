@@ -2,7 +2,7 @@
   "name": "nrmnrsh.com",
   "version": "1.0.0",
   "description": "The portfolio website of Norman Rusch",
-  "main": "Gruntfile.js",
+  "private": true,
   "scripts": {
     "test": "make tests coverage validate"
   },
