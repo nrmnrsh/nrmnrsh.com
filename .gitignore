@@ -1,8 +1,7 @@
 # Directories
-.grunt/
 coverage/
-release/
 node_modules/
+web/
 
 # Files
 .DS_Store

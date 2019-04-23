@@ -1,0 +1,38 @@
+{
+  "headline": "Worked for",
+  "copy": "These are some of the most valuable brands I could work for in the past years. All these brands are clients of that agencies I worked for.",
+  "brands": [
+    {
+      "name": "ZDF – Zweites Deutsches Fernsehen",
+      "logo": "zdf"
+    },
+    {
+      "name": "L'ORÉAL PARiS",
+      "logo": "lorealparis"
+    },
+    {
+      "name": "RBB – Rundfunk Berlin Brandenburg",
+      "logo": "rbb"
+    },
+    {
+      "name": "Arte",
+      "logo": "arte"
+    },
+    {
+      "name": "Bombardier Transportation",
+      "logo": "bombardier"
+    },
+    {
+      "name": "Ideal",
+      "logo": "ideal"
+    },
+    {
+      "name": "Volkswagen",
+      "logo": "volkswagen"
+    },
+    {
+      "name": "Coca Cola",
+      "logo": "cocacola"
+    }
+  ]
+}
