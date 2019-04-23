@@ -34,9 +34,15 @@ validate:
 		--no-exit \
 		"./sources/scss/**/*.scss"
 
-build: tests validate
-	./node_modules/.bin/grunt build
+webfont:
+	sh -c 'if [ ! -d "./sources/fonts" ]; then mkdir ./sources/fonts; fi'
 
+	./node_modules/.bin/webfont \
+		"./sources/fonts/icons/*.svg" \
+		--config "./webfont.config.js" \
+		--dest "./sources/fonts/"
+
+build: tests validate webfont
 	./node_modules/.bin/webpack --mode production
 
 optimize:
