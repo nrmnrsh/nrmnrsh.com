@@ -24,7 +24,7 @@ describe('The analytics initialize action', () => {
 	}
 
 	beforeEach(() => {
-		advanceTo(new Date(2018, 11, 25, 0, 0 ,0));
+		advanceTo(new Date(Date.UTC(2018, 11, 25, 0, 0 ,0)));
 
 		context = new Context();
 		context.actions.add(EVENT_NAME, Action);

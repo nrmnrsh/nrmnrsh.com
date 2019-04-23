@@ -93,7 +93,7 @@ describe('The assemble helpers', () => {
 	describe('year helper', () => {
 
 		beforeEach(() => {
-			advanceTo(new Date(2018, 11, 25, 0, 0 ,0));
+			advanceTo(new Date(Date.UTC(2018, 11, 25, 0, 0 ,0)));
 		});
 
 		afterEach(() => {
@@ -109,7 +109,7 @@ describe('The assemble helpers', () => {
 	describe('datetime helper', () => {
 
 		beforeEach(() => {
-			advanceTo(new Date(2018, 11, 25, 0, 0 ,0));
+			advanceTo(new Date(Date.UTC(2018, 11, 25, 0, 0 ,0)));
 		});
 
 		afterEach(() => {
@@ -117,7 +117,7 @@ describe('The assemble helpers', () => {
 		});
 
 		it('should return current iso datetime', () => {
-			expect(helpers.datetime()).toBe('2018-12-24T23:00:00.000Z');
+			expect(helpers.datetime()).toBe('2018-12-25T00:00:00.000Z');
 		});
 
 	});
