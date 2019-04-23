@@ -1,4 +1,4 @@
-import MockDate from 'mockdate';
+import {advanceTo, clear} from 'jest-date-mock';
 import {Context} from 'pacto';
 
 import {Action} from './Initialize';
@@ -24,14 +24,14 @@ describe('The analytics initialize action', () => {
 	}
 
 	beforeEach(() => {
-		MockDate.set('12/25/2018');
+		advanceTo(new Date(2018, 11, 25, 0, 0 ,0));
 
 		context = new Context();
 		context.actions.add(EVENT_NAME, Action);
 	});
 
 	afterEach(() => {
-		MockDate.reset();
+		clear();
 
 		window.ga = null;
 		context = null;

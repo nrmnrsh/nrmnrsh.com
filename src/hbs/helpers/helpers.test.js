@@ -1,4 +1,4 @@
-import MockDate from 'mockdate';
+import {advanceTo, clear} from 'jest-date-mock';
 
 import helpers from './helpers';
 
@@ -93,11 +93,11 @@ describe('The assemble helpers', () => {
 	describe('year helper', () => {
 
 		beforeEach(() => {
-			MockDate.set('12/25/2018', 120);
+			advanceTo(new Date(2018, 11, 25, 0, 0 ,0));
 		});
 
 		afterEach(() => {
-			MockDate.reset();
+			clear();
 		});
 
 		it('should return current year', () => {
@@ -109,11 +109,11 @@ describe('The assemble helpers', () => {
 	describe('datetime helper', () => {
 
 		beforeEach(() => {
-			MockDate.set('12/25/2018', 120);
+			advanceTo(new Date(2018, 11, 25, 0, 0 ,0));
 		});
 
 		afterEach(() => {
-			MockDate.reset();
+			clear();
 		});
 
 		it('should return current iso datetime', () => {
