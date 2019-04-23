@@ -2,8 +2,9 @@ sudo: false
 language: node_js
 node_js:
 - 11
-before_install:
-- npm install -g grunt-cli
 install:
 - npm install
-s
+script:
+- make validate
+- make tests
+- make coverage
