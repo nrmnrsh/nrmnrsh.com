@@ -51,6 +51,8 @@ webpack:
 
 	mv ./web/browserconfig.xml.html ./web/browserconfig.xml
 	mv ./web/manifest.webmanifest.html ./web/manifest.webmanifest
+	mv ./web/robots.txt.html ./web/robots.txt
+	mv ./web/sitemap.xml.html ./web/sitemap.xml
 
 critical:
 	sed -i.bak \
