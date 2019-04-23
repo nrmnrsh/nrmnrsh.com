@@ -2,36 +2,23 @@ const Handlebars = require('handlebars');
 const slugify = require('helper-slugify');
 
 
-module.exports.fallback = (value, alternative) =>
-	typeof value === 'undefined' ?
-		alternative :
-		value;
+module.exports = {
+	fallback: (value, alternative) =>
+		typeof value === 'undefined' ?
+			alternative :
+			value,
 
+	schema: (schemas, str) => {
+		Object.keys(schemas).forEach((prop) => {
+			str = str.replace(schemas[prop], `<span itemprop="${prop}">${schemas[prop]}</span>`);
+		});
 
-module.exports.schema = function(schemas, str) {
-	Object.keys(schemas).forEach(function(prop) {
-		str = str.replace(
-			schemas[prop],
-			'<span itemprop="' + prop + '">' +
-				schemas[prop] +
-			'</span>'
-		);
-	});
+		return new Handlebars.SafeString(str);
+	},
 
-	return new Handlebars.SafeString(str);
-};
+	slugify: (str) => slugify(str),
 
+	year: () => (new Date()).getFullYear(),
 
-module.exports.slugify = function(str) {
-	return slugify(str);
-};
-
-
-module.exports.year = function() {
-	return (new Date()).getFullYear();
-};
-
-
-module.exports.datetime = function() {
-	return (new Date()).toISOString();
+	datetime: () => (new Date()).toISOString()
 };
