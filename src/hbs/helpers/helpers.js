@@ -9,7 +9,8 @@ module.exports = {
 			value,
 
 	schema: (schemas, str) => {
-		Object.keys(schemas).forEach((prop) => {
+		str = str || '';
+		Object.keys(schemas || {}).forEach((prop) => {
 			str = str.replace(schemas[prop], `<span itemprop="${prop}">${schemas[prop]}</span>`);
 		});
 
