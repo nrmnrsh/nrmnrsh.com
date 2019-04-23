@@ -15,9 +15,9 @@ module.exports = (env, argv) => {
 		{
 			entry: config.getEntries('./**/*.scss', {
 				ignore: ['./**/_*.scss'],
-				cwd: './sources/scss/'
+				cwd: './src/scss/'
 			}),
-			context: path.resolve(__dirname, 'sources', 'scss'),
+			context: path.resolve(__dirname, 'src', 'scss'),
 			output: {
 				filename: '[name].css',
 				path: path.join(__dirname, 'web', 'css')

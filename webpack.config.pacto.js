@@ -14,9 +14,9 @@ module.exports = (env, argv) => {
 		{
 			entry: config.getEntries('./*.js', {
 				ignore: ['./**/*.test.js'],
-				cwd: './sources/js/'
+				cwd: './src/js/'
 			}),
-			context: path.resolve(__dirname, 'sources', 'js'),
+			context: path.resolve(__dirname, 'src', 'js'),
 			output: {
 				filename: `[name].pkg.js`,
 				chunkFilename: `[name]-[chunkhash].js`,
@@ -32,7 +32,7 @@ module.exports = (env, argv) => {
 			},
 			resolve: {
 				modules: [
-					path.resolve(__dirname, 'sources', 'js'),
+					path.resolve(__dirname, 'src', 'js'),
 					path.resolve(__dirname, 'node_modules')
 				]
 			},

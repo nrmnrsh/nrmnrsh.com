@@ -1,6 +1,6 @@
-import {Action as TrackEvent} from 'modules/analytics/actions/TrackEvent';
-import {Scrolldepth} from 'modules/analytics/services/Scrolldepth';
-import {Registry} from 'modules/analytics/services/Registry';
+import {Action as TrackEvent} from 'components/analytics/actions/TrackEvent';
+import {Scrolldepth} from 'components/analytics/services/Scrolldepth';
+import {Registry} from 'components/analytics/services/Registry';
 
 
 const
