@@ -3,6 +3,12 @@
   "copy": "Below is a list of some of my open source projects and contributions. There are many other projects on GitHub which are not listed here. So if you're interested in some more projects, please have a look at my GitHub profile page.",
   "projects": [
     {
+      "name": "CarouCSSel",
+      "details": "CarouCSSel is a lightweight dependency-free css carousel for horizontal scrolling. It's shipped with a javascript api to render for example ui elements like buttons and pagination to control the scroll position.",
+      "url": "https://github.com/schorfES/caroucssel",
+      "url_label": "Visit on GitHub"
+    },
+    {
       "name": "Pacto",
       "details": "Pacto is a lightweight framework for non SPA websites including small features which use latest browser features like Proxy, IntersectionObserver and WeakMap. This website is based on pacto. To read more about the concepts behind pacto, please visit the GitHub project.",
       "url": "https://github.com/schorfES/pacto",
