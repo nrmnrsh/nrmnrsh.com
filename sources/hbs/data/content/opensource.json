@@ -1,0 +1,30 @@
+{
+  "headline": "Open source",
+  "copy": "Below is a list of some of my open source projects and contributions. There are many other projects on GitHub which are not listed here. So if you're interested in some more projects, please have a look at my GitHub profile page.",
+  "projects": [
+    {
+      "name": "Pacto",
+      "details": "Pacto is a lightweight framework for non SPA websites including small features which use latest browser features like Proxy, IntersectionObserver and WeakMap. This website is based on pacto. To read more about the concepts behind pacto, please visit the GitHub project.",
+      "url": "https://github.com/schorfES/pacto",
+      "url_label": "Visit on GitHub"
+    },
+    {
+      "name": "Lintspaces",
+      "details": "Lintspaces or better ”node-lintspaces” is a javascript module for checking different types of spaces in a source code. It validates a lot of different types like indentation, trailing whitespace, new line at end of file and some more. It respects team or project settings defined in .editorconfig and/or .lintspacesrc. ”node-linstpaces” is the core which other open source tools like ”lintspaces-cli” by Evan Shortiss, ”gulp-lintspaces” by Alberto Elias and ”grunt-lintspaces” are based on.",
+      "url": "https://github.com/schorfES/node-lintspaces",
+      "url_label": "Visit on GitHub"
+    },
+    {
+      "name": "Grunt Lintspaces",
+      "details": "This is the grunt plugin based on the ”node-lintspaces” core validation module.",
+      "url": "https://github.com/schorfES/grunt-lintspaces",
+      "url_label": "Visit on GitHub"
+    },
+    {
+      "name": "Picnic",
+      "details": "Depending on the stack we use at an agency called Moccu based in Berlin, this is a set of common front end features. These features are things like an overlay, accordion or different kind of media players such as core features to render templates and data in the given technology stack and more complex user flows like an ajax-based user page navigation. The stack requires the mv* framework backbone.js enhanced with a command framework called backbone.geppetto.",
+      "url": "https://github.com/moccu/picnic",
+      "url_label": "Visit on GitHub"
+    }
+  ]
+}

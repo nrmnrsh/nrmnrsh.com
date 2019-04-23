@@ -1,101 +1,51 @@
 const
-	autoprefixer = require('autoprefixer'),
-	cssnano = require('cssnano'),
 	glob = require('glob'),
-	merge = require('webpack-merge'),
-	path = require('path'),
-
-	ExtractTextPlugin = require('extract-text-webpack-plugin')
+	path = require('path')
 ;
 
 
-/**
- * Helper to grab multiple entries.
- */
-function entries(files, extension, ignore = []) {
-	return glob.sync(files, {ignore})
+/* Loads and returns all webpack configs from the project root */
+module.exports = (env, argv) => {
+	var configs = [];
+	glob.sync('./webpack.config.*.js').forEach((config) => {
+		config = require(config)(env, argv);
+		if (Array.isArray(config)) {
+			configs = configs.concat(config);
+		} else {
+			configs.push(config);
+		}
+	});
+
+	return configs;
+};
+
+
+/* Returns if the current mode is 'production' */
+module.exports.isInProduction = (env, argv) =>
+	(argv.mode === 'production');
+
+
+/* Retuns the project webpack defaults */
+module.exports.getGlobalSettings = (env, argv) =>
+	({
+		mode: argv.mode || 'development',
+		watch: !module.exports.isInProduction(env, argv),
+		stats: {
+			modules: module.exports.isInProduction(env, argv),
+			children: module.exports.isInProduction(env, argv)
+		}
+	});
+
+
+/** Helper to grab multiple entries. */
+module.exports.getEntries = (files, options) =>
+	glob.sync(files, options)
 		.reduce((entries, file) => {
-			const name = path.basename(file, extension);
+			const
+				extension = path.extname(file),
+				name = file.replace(extension, '')
+			;
+
 			entries[name] = file;
 			return entries;
 		}, {});
-}
-
-
-module.exports = (env, argv) => {
-	const
-		COMMON = {
-			mode: argv.mode || 'development',
-			watch: !argv.mode,
-			stats: {
-				modules: false,
-				children: false
-			}
-		},
-		JAVASCRIPT = {
-			entry: entries('./sources/js/*.js', '.js', ['./sources/js/*.test.js']),
-			output: {
-				filename: '[name].pkg.js',
-				path: path.join(__dirname, 'release', 'js'),
-				chunkFilename: '[name]-[chunkhash].js',
-				publicPath: './js/'
-			},
-			module: {
-				rules: [{
-					test: /\.js$/,
-					use: [
-						{loader: 'babel-loader'}
-					]
-				}]
-			},
-			resolve: {
-				modules: [
-					path.resolve(__dirname, 'sources', 'js'),
-					path.resolve(__dirname, 'node_modules')
-				]
-			}
-		},
-		STYLESHEET = {
-			entry: entries('./sources/scss/*.scss', '.scss', ['./sources/scss/_*.scss']),
-			output: {
-				filename: '[name].css',
-				path: path.join(__dirname, 'release', 'css'),
-			},
-			module: {
-				rules: [{
-					test: /\.scss$/,
-					use: ExtractTextPlugin.extract({use: [
-						{loader: 'css-loader'},
-						{loader: 'postcss-loader',
-							options: {
-								ident: 'postcss',
-								plugins: [autoprefixer, cssnano]
-							}
-						},
-						{loader: 'sass-loader'}
-					]})
-				}, {
-					test: /\.woff|\.woff2|\.jpg|\.webp$/,
-					use: [
-						{loader: 'file-loader',
-							options: {
-								name: '[name].[ext]'
-							}
-						}
-					]
-				}]
-			},
-			plugins: [
-				new ExtractTextPlugin({
-					filename: '[name].css',
-					allChunks: true
-				})
-			]
-		}
-	;
-
-	return [
-		merge(COMMON, JAVASCRIPT),
-		merge(COMMON, STYLESHEET)
-	];
-};

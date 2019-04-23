@@ -26,7 +26,6 @@ describe('The analytics initialize action', () => {
 		MockDate.set('12/25/2018');
 
 		context = new Context();
-		context.history = []; // Mock histroy
 		context.actions.add(EVENT_NAME, Action);
 	});
 

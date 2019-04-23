@@ -1,0 +1,20 @@
+{
+  "headline": "Follow me",
+  "links": [
+    {
+      "type": "github",
+      "label": "Github",
+      "href": "https://github.com/schorfES/"
+    },
+    {
+      "type": "twitter",
+      "label": "Twitter",
+      "href": "https://twitter.com/nrmnrsh"
+    },
+    {
+      "type": "linkedin",
+      "label": "LinkedIn",
+      "href": "https://www.linkedin.com/in/nrmnrsh/"
+    }
+  ]
+}
