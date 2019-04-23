@@ -93,7 +93,7 @@ describe('The assemble helpers', () => {
 	describe('year helper', () => {
 
 		beforeEach(() => {
-			MockDate.set('12/25/2018', 0);
+			MockDate.set('12/25/2018', 120);
 		});
 
 		afterEach(() => {
@@ -109,7 +109,7 @@ describe('The assemble helpers', () => {
 	describe('datetime helper', () => {
 
 		beforeEach(() => {
-			MockDate.set('12/25/2018', 0);
+			MockDate.set('12/25/2018', 120);
 		});
 
 		afterEach(() => {
