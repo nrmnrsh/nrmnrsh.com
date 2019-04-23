@@ -1,5 +1,6 @@
 import {debounce} from 'utils/debounce';
 
+
 const
 	EVENT_TYPE = 'scrolldepth:percentage',
 	PERCENTAGE_TRIGGERS = [25, 50, 75, 100]

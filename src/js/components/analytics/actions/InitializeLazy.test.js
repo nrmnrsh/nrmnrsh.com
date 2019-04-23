@@ -1,4 +1,5 @@
 import {Context} from 'pacto';
+
 import {Action} from './InitializeLazy';
 import {Action as InitializeAction} from './Initialize';
 import FixtureAction from './__fixtures__/Action';
