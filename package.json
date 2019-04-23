@@ -72,7 +72,7 @@
   "jest": {
     "moduleDirectories": [
       "node_modules",
-      "sources/js"
+      "src/js"
     ],
     "coverageDirectory": "./coverage/",
     "collectCoverage": true,

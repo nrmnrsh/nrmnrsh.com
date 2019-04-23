@@ -7,5 +7,5 @@ web/
 .DS_Store
 Thumbs.db
 *.sublime-*
-sources/scss/settings/_icons.scss
-sources/fonts/icons.*
+src/scss/settings/_icons.scss
+src/fonts/icons.*

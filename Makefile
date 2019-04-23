@@ -6,7 +6,7 @@ clean:
 
 tests:
 	./node_modules/.bin/jest \
-		sources/js/ \
+		src/js/ \
 		-- verbose \
 		-- coverage
 
@@ -25,26 +25,26 @@ validate:
 		./*.js \
 		./*.json \
 		./*.yml \
-		./sources/**/*.js \
-		./sources/**/*.scss \
-		./sources/**/*.hbs \
-		./sources/**/*.yml \
-		./sources/**/*.xml \
-		./sources/**/*.json \
-		./sources/**/*.webmanifest
+		./src/**/*.js \
+		./src/**/*.scss \
+		./src/**/*.hbs \
+		./src/**/*.yml \
+		./src/**/*.xml \
+		./src/**/*.json \
+		./src/**/*.webmanifest
 
 	./node_modules/.bin/sass-lint \
 		--verbose \
 		--no-exit \
-		"./sources/scss/**/*.scss"
+		"./src/scss/**/*.scss"
 
 webfont:
-	sh -c 'if [ ! -d "./sources/fonts" ]; then mkdir ./sources/fonts; fi'
+	sh -c 'if [ ! -d "./src/fonts" ]; then mkdir ./src/fonts; fi'
 
 	./node_modules/.bin/webfont \
-		"./sources/fonts/icons/*.svg" \
+		"./src/fonts/icons/*.svg" \
 		--config "./webfont.config.js" \
-		--dest "./sources/fonts/"
+		--dest "./src/fonts/"
 
 webpack:
 	./node_modules/.bin/webpack --mode production

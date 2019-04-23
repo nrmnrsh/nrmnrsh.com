@@ -13,9 +13,9 @@ module.exports = (env, argv) => {
 		config.getGlobalSettings(env, argv),
 		{
 			entry: config.getEntries('./*.hbs', {
-				cwd: './sources/hbs/pages/'
+				cwd: './src/hbs/pages/'
 			}),
-			context: path.resolve(__dirname, 'sources', 'hbs', 'pages'),
+			context: path.resolve(__dirname, 'src', 'hbs', 'pages'),
 			output: {
 				filename: '[name].html',
 				path: path.join(__dirname, 'web')
@@ -30,15 +30,15 @@ module.exports = (env, argv) => {
 			},
 			plugins: [
 				new AssembleWebpack.AttachedPlugin({
-					baseLayout: ['./sources/hbs/layouts/**/*.hbs'],
-					basePages: ['./sources/hbs/pages/**/*hbs'],
-					partialsLayout: ['./sources/hbs/partials/**/*.hbs'],
-					partialsData: ['./sources/hbs/data/**/*.json'],
-					helpers: ['./sources/hbs/helpers/*.js']
+					baseLayout: ['./src/hbs/layouts/**/*.hbs'],
+					basePages: ['./src/hbs/pages/**/*hbs'],
+					partialsLayout: ['./src/hbs/partials/**/*.hbs'],
+					partialsData: ['./src/hbs/data/**/*.json'],
+					helpers: ['./src/hbs/helpers/*.js']
 				}),
 				new CopyWebpackPlugin([
 					{
-						from: path.resolve(__dirname, 'sources', 'img'),
+						from: path.resolve(__dirname, 'src', 'img'),
 						to: 'img/'
 					}
 				])

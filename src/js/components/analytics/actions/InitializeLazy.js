@@ -1,7 +1,7 @@
 export class Action {
 
 	get import() {
-		return import(/* webpackChunkName: "analytics" */'modules/analytics/actions/Initialize');
+		return import(/* webpackChunkName: "analytics" */'components/analytics/actions/Initialize');
 	}
 
 	run() {
