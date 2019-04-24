@@ -3,6 +3,10 @@
   "copy": "These are some of the most valuable brands I could work for in the past years. All these brands are clients of that agencies I worked for.",
   "brands": [
     {
+      "name": "Dreamies™ Snacks by Mars Petcare",
+      "logo": "dreamies"
+    },
+    {
       "name": "ZDF – Zweites Deutsches Fernsehen",
       "logo": "zdf"
     },
