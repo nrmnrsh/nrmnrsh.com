@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/nrmnrsh/nrmnrsh.com/issues"
   },
-  "homepage": "https://nrmnrsh.github.io/nrmnrsh.com",
+  "homepage": "https://nrmnrsh.com/",
   "preinstall": "brew install GraphicsMagick",
   "dependencies": {
     "imagemin-cli": "^4.0.1",
