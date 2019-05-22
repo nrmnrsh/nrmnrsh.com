@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://nrmnrsh.github.io/nrmnrsh.com/sitemap.xml
+Sitemap: https://nrmnrsh.com/sitemap.xml
