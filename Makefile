@@ -1,4 +1,4 @@
-.PHONY: clean tests coverage validate webfont webpack critical optimize build release
+.PHONY: clean tests coverage validate webfont webpack critical optimize build release run
 
 clean:
 	rm -rf ./coverage/
@@ -97,3 +97,6 @@ release: build
 		--tag \
 		--all
 	gh-pages -d ./web/
+
+run:
+	./node_modules/.bin/live-server ./web/
