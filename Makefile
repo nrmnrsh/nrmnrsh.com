@@ -92,6 +92,8 @@ optimize:
 build: clean validate tests webfont webpack critical optimize
 
 release: build
+	cp ./CNAME ./web/CNAME
+
 	./node_modules/.bin/bump \
 		--commit "Release v%s" \
 		--tag \
