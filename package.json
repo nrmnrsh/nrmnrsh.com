@@ -1,6 +1,6 @@
 {
   "name": "nrmnrsh.com",
-  "version": "1.3.1",
+  "version": "1.4.0-beta.5",
   "description": "The portfolio website of Norman Rusch",
   "private": true,
   "scripts": {
@@ -22,6 +22,7 @@
   "preinstall": "brew install GraphicsMagick",
   "dependencies": {
     "intersection-observer": "^0.5.0",
+    "logrocket": "^1.0.3",
     "node-reset-scss": "^1.0.1",
     "pacto": "^0.4.2",
     "promise-polyfill": "^8.1.3",
