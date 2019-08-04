@@ -112,7 +112,12 @@ release: build
 	./node_modules/.bin/bump \
 		--commit "Release v%s" \
 		--tag \
-		--all
+		--all \
+		package.json \
+		package-lock.json \
+		src/js/components/logrocket/actions/Initialize.js \
+		web/js/logrocket-*.js
+
 	gh-pages -d ./web/
 
 run:
