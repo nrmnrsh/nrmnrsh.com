@@ -3,12 +3,16 @@
   "env": {
     "node": true,
     "browser": true,
-    "es6": true
+    "es6": true,
+    "serviceworker": true
   },
   "extends": [
     "eslint:recommended",
     "plugin:jest/recommended"
   ],
+  "globals": {
+    "workbox": "readonly"
+  },
   "plugins": [
     "jest"
   ],

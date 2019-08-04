@@ -1,4 +1,4 @@
-.PHONY: clean tests coverage validate webfont webpack critical optimize build release run
+.PHONY: clean tests coverage validate webfont webpack critical serviceworker optimize build release run
 
 clean:
 	rm -rf ./coverage/
@@ -67,6 +67,15 @@ critical:
 
 	mv ./web/index.critical.html ./web/index.html
 
+serviceworker:
+	./node_modules/.bin/workbox injectManifest ./workbox.config.js
+
+	sed -i.bak \
+		"s/__workbox_version__/$(shell ./node_modules/.bin/workbox --version)/g" \
+		"./web/sw.js"
+
+	rm ./web/sw.js.bak
+
 optimize:
 	imagemin ./web/img/backgrounds --out-dir=web/img/backgrounds
 	imagemin ./web/img/meta --out-dir=web/img/meta
@@ -89,7 +98,13 @@ optimize:
 	mv ./web/index.min.html ./web/index.html
 	rm ./web/index.processed.html
 
-build: clean validate tests webfont webpack critical optimize
+	./node_modules/.bin/uglifyjs \
+		--compress \
+		--mangle\
+		--output ./web/sw.js \
+		./web/sw.js
+
+build: clean validate tests webfont webpack critical serviceworker optimize
 
 release: build
 	cp ./CNAME ./web/CNAME
