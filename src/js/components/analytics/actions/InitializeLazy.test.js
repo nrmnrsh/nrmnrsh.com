@@ -1,8 +1,9 @@
 import {Context} from 'pacto';
 
+import {Action as InitializeLazyWhenLoaded} from 'generic/actions/InitializeLazyWhenLoaded';
 import {Action} from './InitializeLazy';
 import {Action as InitializeAction} from './Initialize';
-import FixtureAction from './__fixtures__/Action';
+import {Action as FixtureAction} from './__fixtures__/Action';
 
 
 describe('The analytics initialize lazy action', () => {
@@ -42,6 +43,10 @@ describe('The analytics initialize lazy action', () => {
 		window.navigator.doNotTrack = null;
 		window.navigator.msDoNotTrack = undefined;
 		window.doNotTrack = undefined;
+	});
+
+	test('should inherit generic initialize lazy when loaded action', () => {
+		expect(new Action() instanceof InitializeLazyWhenLoaded).toBeTruthy();
 	});
 
 	test('should pay attention to enabled do-not-track setting of user', (done) => {
