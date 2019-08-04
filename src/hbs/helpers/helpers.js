@@ -17,6 +17,16 @@ module.exports = {
 		return new Handlebars.SafeString(str);
 	},
 
+	linkify: (links, str) => {
+		str = str || '';
+		Object.keys(links || {}).forEach((prop) => {
+			var isExternal = /^https?:\/\//.test(prop);
+			str = str.replace(links[prop], `<a href="${prop}" title="Open ${links[prop]}" ${isExternal ? 'rel="noopener noreferrer" target="_blank"' : 'target="_self"'}>${links[prop]}</a>`);
+		});
+
+		return new Handlebars.SafeString(str);
+	},
+
 	slugify: (str) => slugify(str),
 
 	year: () => (new Date()).getFullYear(),
