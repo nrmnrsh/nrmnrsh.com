@@ -21,7 +21,6 @@
   "homepage": "https://nrmnrsh.com/",
   "preinstall": "brew install GraphicsMagick",
   "dependencies": {
-    "imagemin-cli": "^4.0.1",
     "intersection-observer": "^0.5.0",
     "node-reset-scss": "^1.0.1",
     "pacto": "^0.4.0",
@@ -58,6 +57,7 @@
     "helper-slugify": "^0.2.0",
     "html-minifier": "^4.0.0",
     "htmlprocessor": "^0.2.6",
+    "imagemin-cli": "^4.0.1",
     "jest": "^24.7.1",
     "jest-date-mock": "^1.0.7",
     "lintspaces-cli": "^0.7.1",
