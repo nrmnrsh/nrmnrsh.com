@@ -1,3 +1,8 @@
 {
-  "creator": "Norman Rusch"
+  "creator": "Norman Rusch",
+  "disclaimer": "This website is using Google Analytics and LogRocket.",
+  "links": {
+    "https://policies.google.com/privacy": "Google Analytics",
+    "https://docs.logrocket.com/docs/gdpr": "LogRocket"
+  }
 }

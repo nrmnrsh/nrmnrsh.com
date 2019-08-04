@@ -82,6 +82,50 @@ describe('The assemble helpers', () => {
 
 	});
 
+	describe('linkify helper', () => {
+
+		it('should wrap text sections with <a> tags', () => {
+			const
+				text = 'Hello, my name is Norman Rusch and I like to test.',
+				links = {
+					'http://www.norman.example': 'Norman',
+					'https://www.rusch.example': 'Rusch',
+					'./local': 'like to test'
+				}
+			;
+			expect(helpers.linkify(links, text))
+				.toEqual({
+					string: 'Hello, my name is <a href="http://www.norman.example" title="Open Norman" rel="noopener noreferrer" target="_blank">Norman' +
+						'</a> <a href="https://www.rusch.example" title="Open Rusch" rel="noopener noreferrer" target="_blank">Rusch' +
+						'</a> and I <a href="./local" title="Open like to test" target="_self">like to test' +
+						'</a>.'
+				});
+
+		});
+
+		it('should handle undefined', () => {
+			const links = {irrelevant: 'value'};
+			expect(helpers.linkify(links, undefined)).toEqual({
+				string: ''
+			});
+		});
+
+		it('should handle null', () => {
+			const links = {irrelevant: 'value'};
+			expect(helpers.linkify(links, null)).toEqual({
+				string: ''
+			});
+		});
+
+		it('should handle missing links', () => {
+			const text = 'Hello, my name is Norman and I like to test.';
+			expect(helpers.linkify(null, text)).toEqual({
+				string: text
+			});
+		});
+
+	});
+
 	describe('slugify helper', () => {
 
 		it('should slugify', () => {
