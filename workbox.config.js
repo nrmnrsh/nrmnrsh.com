@@ -6,7 +6,8 @@ module.exports = {
 	globPatterns: [
 		'js/**/*.pkg.js',
 		'css/**/*.{css,woff2,webp}',
-		'index.html'
+		'index.html',
+		'manifest.webmanifest'
 	],
 	globIgnores: [
 		'js/critical.pkg.js'
