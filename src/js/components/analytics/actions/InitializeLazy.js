@@ -1,4 +1,7 @@
-export class Action {
+import { Action as Initialize } from 'generic/actions/InitializeLazyWhenLoaded';
+
+
+export class Action extends Initialize {
 
 	get import() {
 		return import(/* webpackChunkName: "analytics" */'components/analytics/actions/Initialize');
@@ -9,44 +12,11 @@ export class Action {
 		// Chrome: chrome://settings/?search=Do+Not+Track
 		const doNotTrack = (navigator.doNotTrack || navigator.msDoNotTrack || window.doNotTrack);
 		if (doNotTrack === '1' || doNotTrack === 'yes') {
-			this._disconnect();
+			this.disconnect();
 			return;
 		}
 
-		if (document.readyState === 'complete') {
-			this._fetch();
-		} else {
-			this._onLoad = this._onLoad.bind(this);
-			window.addEventListener('load', this._onLoad);
-		}
-	}
-
-	_fetch() {
-		this.import.then(this._execute.bind(this));
-	}
-
-	_disconnect() {
-		this.context.actions.remove(this.event.type, this.constructor);
-	}
-
-	_execute(module) {
-		const
-			Module = (module.Action || module.default),
-			action = new Module(),
-			{context, event} = this
-		;
-
-		this._disconnect();
-		context.actions.add(event.type, Module);
-
-		action.context = context;
-		action.event = event;
-		action.run();
-	}
-
-	_onLoad() {
-		window.removeEventListener('load', this._onLoad);
-		this._fetch();
+		super.run();
 	}
 
 }
