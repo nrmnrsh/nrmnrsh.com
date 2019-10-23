@@ -118,7 +118,7 @@ release: build
 		src/js/components/logrocket/actions/Initialize.js \
 		web/js/logrocket-*.js
 
-	gh-pages -d ./web/
+	./node_modules/.bin/gh-pages -d ./web/
 
 run:
 	./node_modules/.bin/live-server ./web/
