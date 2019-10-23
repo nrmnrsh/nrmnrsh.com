@@ -77,14 +77,14 @@ serviceworker:
 	rm ./web/sw.js.bak
 
 optimize:
-	imagemin ./web/img/backgrounds --out-dir=web/img/backgrounds
-	imagemin ./web/img/meta --out-dir=web/img/meta
+	./node_modules/.bin/imagemin ./web/img/backgrounds --out-dir=web/img/backgrounds
+	./node_modules/.bin/imagemin ./web/img/meta --out-dir=web/img/meta
 
-	svgo -f ./web/img/brands
+	./node_modules/.bin/svgo -f ./web/img/brands
 
-	htmlprocessor ./web/index.html -o ./web/index.processed.html
+	./node_modules/.bin/htmlprocessor ./web/index.html -o ./web/index.processed.html
 
-	html-minifier \
+	./node_modules/.bin/html-minifier \
 		--collapse-whitespace \
 		--remove-comments \
 		--remove-redundant-attributes \
