@@ -1,7 +1,7 @@
 {
   "headline": "nrmnrsh.com",
   "subline": "A webdeveloper's portfolio",
-  "copy": "Hi! My name is Norman Rusch. I'm a senior web developer from Berlin focusing on front end technologies. I love to write reusable and tested javascript, semantic and accessible html and modular css. I am currently working in the automotive sector.",
+  "copy": "Hi! My name is Norman Rusch. I'm a senior web developer from Berlin focusing on front end technologies. I love to write reusable and tested javascript, semantic and accessible html and modular css.",
   "schema": {
     "givenName": "Norman",
     "familyName": "Rusch",
