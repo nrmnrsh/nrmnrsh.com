@@ -3,6 +3,14 @@
   "copy": "These are some of the most valuable brands I could work for in the past years. All these brands are clients of that agencies I worked for.",
   "brands": [
     {
+      "name": "The Pioneer",
+      "logo": "the-pioneer"
+    },
+    {
+      "name": "Mannheimer Morgen",
+      "logo": "mannheimer-morgen"
+    },
+    {
       "name": "Embassy of Canada in Berlin",
       "logo": "embassy-of-canada"
     },
