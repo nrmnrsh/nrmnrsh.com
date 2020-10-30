@@ -1,6 +1,7 @@
 import {Action as TrackEvent} from 'components/analytics/actions/TrackEvent';
-import {Scrolldepth} from 'components/analytics/services/Scrolldepth';
+import {Optimize} from 'components/analytics/services/Optimize';
 import {Registry} from 'components/analytics/services/Registry';
+import {Scrolldepth} from 'components/analytics/services/Scrolldepth';
 
 
 const
@@ -10,6 +11,7 @@ const
 		['set', 'anonymizeIp', true],
 		['send', 'pageview']
 	],
+	OPTIMIZE_PROPERTY = 'OPT-M6ZM5SM',
 	NAMESPACE = 'analytics:',
 	NAMESPACE_REGISTRY = NAMESPACE + 'registry',
 	EVENT_TRACKEVENT = NAMESPACE + 'trackevent',
@@ -70,11 +72,15 @@ export class Action {
 	_setup() {
 		const
 			{context} = this,
-			registry = new Registry({context, trackEventType: EVENT_TRACKEVENT})
+			registry = new Registry({context, trackEventType: EVENT_TRACKEVENT}),
+			optimize = new Optimize(OPTIMIZE_PROPERTY)
 		;
 
 		context.actions.add(EVENT_TRACKEVENT, TrackEvent);
 		context.values.add(NAMESPACE_REGISTRY, registry);
+
+		// Load google optimize script:
+		optimize.init();
 
 		// Register events from the scrolldepth service:
 		new Scrolldepth({context});
