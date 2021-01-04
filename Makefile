@@ -109,6 +109,9 @@ build: clean validate tests webfont webpack critical serviceworker optimize
 release: build
 	cp ./CNAME ./web/CNAME
 
+	# Create empty unused file for logrocket to prevent "version-bump-prompt" to fail if file is not created.
+	touch web/js/logrocket-empty.js
+
 	./node_modules/.bin/bump \
 		--commit "Release v%s" \
 		--tag \
