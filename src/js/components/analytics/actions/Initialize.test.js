@@ -125,10 +125,10 @@ describe('The analytics initialize action', () => {
 		]);
 	});
 
-	test('should load google optimize', () => {
+	test('should not load google optimize', () => {
 		context.trigger(EVENT_NAME);
 		const script = document.querySelectorAll('script[src="https://www.googleoptimize.com/optimize.js?id=OPT-M6ZM5SM"]');
-		expect(script).toHaveLength(1);
+		expect(script).toHaveLength(0);
 	});
 
 });
