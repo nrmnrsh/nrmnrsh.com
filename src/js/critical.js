@@ -1,8 +1,9 @@
+__webpack_public_path__ = window.app.staticURL; // eslint-disable-line no-undef
+
 var
 	win = window,
 	doc = document,
 	app = win.app,
-	staticUrl = __webpack_public_path__ = app.static_url, // eslint-disable-line no-undef
 	html = doc.documentElement
 ;
 
@@ -18,7 +19,7 @@ webp.src = 'data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0J
 
 addPromisePolyfill(function() {
 	addFrameworkPolyfills(function() {
-		injectScript(app.script_url, function() {
+		injectScript(app.appURL, function() {
 			html.classList.add('is-ready');
 		});
 	});
@@ -45,7 +46,7 @@ function injectScript(src, callback) {
 function addPromisePolyfill(callback) {
 	return win.Promise ?
 		callback() :
-		injectScript(staticUrl + 'polyfill-promise.js', callback);
+		injectScript(app.promiseURL, callback);
 }
 
 
