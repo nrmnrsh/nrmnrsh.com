@@ -1,8 +1,10 @@
-.PHONY: clean tests coverage validate webfont webpack critical serviceworker optimize build release run
+.PHONY: clean tests coverage validate webfont webpack eleventy critical serviceworker optimize develop build release serve
+
 
 clean:
 	rm -rf ./coverage/
 	rm -rf ./web/
+
 
 tests:
 	./node_modules/.bin/jest \
@@ -10,8 +12,10 @@ tests:
 		-- verbose \
 		-- coverage
 
+
 coverage:
 	node_modules/.bin/codecov
+
 
 validate:
 	./node_modules/.bin/eslint\
@@ -38,6 +42,7 @@ validate:
 		--no-exit \
 		"./src/scss/**/*.scss"
 
+
 webfont:
 	sh -c 'if [ ! -d "./src/fonts" ]; then mkdir ./src/fonts; fi'
 
@@ -46,13 +51,14 @@ webfont:
 		--config "./webfont.config.js" \
 		--dest "./src/fonts/"
 
+
 webpack:
 	./node_modules/.bin/webpack --mode production
 
-	mv ./web/browserconfig.xml.html ./web/browserconfig.xml
-	mv ./web/manifest.webmanifest.html ./web/manifest.webmanifest
-	mv ./web/robots.txt.html ./web/robots.txt
-	mv ./web/sitemap.xml.html ./web/sitemap.xml
+
+eleventy:
+	./node_modules/.bin/eleventy
+
 
 critical:
 	sed -i.bak \
@@ -67,6 +73,7 @@ critical:
 
 	mv ./web/index.critical.html ./web/index.html
 
+
 serviceworker:
 	./node_modules/.bin/workbox injectManifest ./workbox.config.js
 
@@ -76,35 +83,26 @@ serviceworker:
 
 	rm ./web/sw.js.bak
 
-optimize:
-	./node_modules/.bin/imagemin ./web/img/backgrounds --out-dir=web/img/backgrounds
-	./node_modules/.bin/imagemin ./web/img/meta --out-dir=web/img/meta
-
-	./node_modules/.bin/svgo -f ./web/img/brands
-
-	./node_modules/.bin/htmlprocessor ./web/index.html -o ./web/index.processed.html
-
-	./node_modules/.bin/html-minifier \
-		--collapse-whitespace \
-		--remove-comments \
-		--remove-redundant-attributes \
-		--remove-script-type-attributes \
-		--remove-tag-whitespace \
-		--use-short-doctype \
-		--minify-css true \
-		--minify-js true \
-		./web/index.processed.html > ./web/index.min.html
-
-	mv ./web/index.min.html ./web/index.html
-	rm ./web/index.processed.html
-
 	./node_modules/.bin/uglifyjs \
 		--compress \
 		--mangle\
 		--output ./web/sw.js \
 		./web/sw.js
 
-build: clean validate tests webfont webpack critical serviceworker optimize
+
+optimize:
+	./node_modules/.bin/imagemin ./src/img/backgrounds --out-dir=src/img/backgrounds
+	./node_modules/.bin/imagemin ./src/img/meta --out-dir=src/img/meta
+	./node_modules/.bin/svgo ./src/img/brands/*.svg --config ./.svgo.yml
+
+
+develop: clean webfont
+	./node_modules/.bin/webpack & \
+	./node_modules/.bin/eleventy --serve
+
+
+build: clean validate tests webfont optimize webpack eleventy critical serviceworker
+
 
 release: build
 	cp ./CNAME ./web/CNAME
@@ -123,5 +121,6 @@ release: build
 
 	./node_modules/.bin/gh-pages -d ./web/
 
-run:
+
+serve: build
 	./node_modules/.bin/live-server ./web/

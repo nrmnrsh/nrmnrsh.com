@@ -3,8 +3,10 @@ importScripts('https://storage.googleapis.com/workbox-cdn/releases/__workbox_ver
 
 var
 	CACHE_PREFIX = 'nrmnrsh.com::',
-	CACHE_PRECACHE = CACHE_PREFIX + 'cache-precache'
+	CACHE_VERSION = '2',
+	CACHE_POSTFIX = '::cache-precache',
+	CACHE_PRECACHE = CACHE_PREFIX + CACHE_VERSION + CACHE_POSTFIX
 ;
 
 
-workbox.precaching.precacheAndRoute([], {cacheName: CACHE_PRECACHE});
+workbox.precaching.precacheAndRoute(self.__WB_MANIFEST, {cacheName: CACHE_PRECACHE});

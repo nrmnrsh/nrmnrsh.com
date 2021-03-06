@@ -1,0 +1,8 @@
+<footer class="content content-footer">
+	<div>
+		&copy;
+		<time datetime="{{ page.date | datetime }}">{{ page.date | fullyear }}</time>,
+		{{ footer.creator }}
+		<sub>{% linkify footer.links, footer.disclaimer %}</sub>
+	</div>
+</footer>

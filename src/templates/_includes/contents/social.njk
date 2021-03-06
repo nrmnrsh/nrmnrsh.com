@@ -1,0 +1,19 @@
+<section class="content content-social">
+	<div>
+		<h2>{{content.social.headline}}</h2>
+
+		<ul>
+			{% for link in content.social.links %}
+				<li class="is-type-{{ link.type }}">
+					<a
+						href="{{ link.href }}"
+						title="Follow me on {{ link.label }}"
+						target="_blank"
+						rel="noopener noreferrer bookmark">
+						<span>{{ link.label }}</span>
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+</section>

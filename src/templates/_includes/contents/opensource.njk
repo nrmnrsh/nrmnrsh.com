@@ -1,0 +1,53 @@
+<section class="content content-opensource has-{{ scheme }}-scheme">
+	<div>
+		<h2>{{ content.opensource.headline }}</h2>
+		<p>{{ content.opensource.copy }}</p>
+
+		<ul>
+			{% for project in content.opensource.projects %}
+				<li id="opensource-{{ project.name | slug }}">
+					<h3>
+						<span>
+							{% if project.url %}
+								<a
+									href="{{ project.url }}"
+									title="Open the ”{{ project.name }}” website"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									{{ project.name }}
+								</a>
+							{% else %}
+								{{ project.name }}
+							{% endif %}
+						</span>
+						{% if project.note %}
+							<em>{{ project.note }}</em>
+						{% endif %}
+					</h3>
+
+					{% if project.datePublished %}
+						<time datetime="{{ project.datePublished | date | datetime }}">
+							{{ project.datePublished | date | fullyear }}
+						</time>
+					{% endif %}
+
+					{% if project.details %}
+						<p>{{ project.details }}</p>
+					{% endif %}
+
+					{% if project.url %}
+						<a
+							class="link"
+							href="{{ project.url }}"
+							title="Open the ”{{ project.name }}” website"
+							target="_blank"
+							rel="noopener noreferrer">
+							{% fallback url_label, 'Visit project' %}
+						</a>
+					{% endif %}
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+</section>
