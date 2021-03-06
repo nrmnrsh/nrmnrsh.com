@@ -1,0 +1,18 @@
+<section class="content content-brands">
+	<div>
+		<h2>{{content.brands.headline}}</h2>
+		<p>{{content.brands.copy}}</p>
+
+		<ul>
+			{% for brand in content.brands.brands %}
+				<li id="{{ brand.name |slug }}" itemprop="brand" itemscope itemtype="http://schema.org/Brand">
+					<span itemprop="name">{{ brand.name }}</span>
+
+					<div title="{{ brand.name }}" role="presentation" itemprop="logo">
+						<img src="{{ assets }}img/brands/{{ brand.logo }}.svg" alt="{{ brand.name }}" inline />
+					</div>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+</section>

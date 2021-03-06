@@ -4,12 +4,11 @@ module.exports = {
 	swDest: './web/sw.js',
 	globDirectory: './web',
 	globPatterns: [
-		'js/**/*.pkg.js',
-		'css/**/*.{css,woff2,webp}',
-		'index.html',
-		'manifest.webmanifest'
+		'js/**/*.pkg-*.js',
+		'css/**/*.{woff2,webp}',
+		'css/**/*-*.css'
 	],
 	globIgnores: [
-		'js/critical.pkg.js'
+		// 'js/critical.pkg.js'
 	]
 };
