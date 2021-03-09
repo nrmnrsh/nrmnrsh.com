@@ -2,6 +2,7 @@
 
 The portfolio website of Norman Rusch
 
+[![Actions Status](https://github.com/nrmnrsh/nrmnrsh.com/actions/workflows/ci.yml/badge.svg)](https://github.com/nrmnrsh/nrmnrsh.com/actions)
 [![Coverage Status on Codecov](https://codecov.io/gh/nrmnrsh/nrmnrsh.com/branch/main/graph/badge.svg)](https://codecov.io/gh/nrmnrsh/nrmnrsh.com)
 
 ## [Used tools](./package.json)
