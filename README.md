@@ -13,7 +13,7 @@ The portfolio website of Norman Rusch
 * [Workbox](https://developers.google.com/web/tools/workbox/)
 * [Eleventy](https://www.11ty.dev/)
 * [Babel](https://babeljs.io/)
-* [Eslint](https://eslint.org/)
+* [ESlint](https://eslint.org/)
 * [Sass Lint](https://github.com/sasstools/sass-lint)
 * [Lintspaces](https://github.com/facebook/jest)
 * [Jest](https://jestjs.io/)
@@ -26,3 +26,14 @@ The portfolio website of Norman Rusch
 * [SVGO](https://www.npmjs.com/package/svgo)
 * [Uglify JS](https://www.npmjs.com/package/uglify-js)
 * [Critical](https://www.npmjs.com/package/critical)
+
+## [Available tasks](./Makefile)
+
+This project uses a Makefile to run tasks. Here are some of them:
+
+* `make develop` starts webpack and eleventy in watch mode.
+* `make tests` runs all unit tests using jest.
+* `make validate` runs all validations using ESLint, Sass Lint and Lintspaces.
+* `make build` creates a production build.
+* `make serve` creates a production build and serves them.
+* `make release` creates a new release and publishes them to github pages.
