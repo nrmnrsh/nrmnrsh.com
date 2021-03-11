@@ -13,23 +13,27 @@ const inlineTransform = require('./src/lib/transforms/inline');
 const ROOT_PATH = `${__dirname}/web`;
 
 module.exports = (config) => {
+	config.setUseGitIgnore(false);
+	config.addWatchTarget('./web/js');
+	config.addWatchTarget('./web/css');
 	config.setTemplateFormats(['njk']);
 	config.addPassthroughCopy({'./src/img/': 'img'});
 	config.addPassthroughCopy({'./src/img/meta/favicon.ico': 'favicon.ico'});
-	config.addWatchTarget('./web/js/critical.pkg.js');
 
-	// Transforms:
-	config.addTransform('inline', inlineTransform({ rootpath: ROOT_PATH }));
-	config.addTransform('htmlmin', htmlminTransform({
-		collapseWhitespace: true,
-		removeComments: true,
-		removeRedundantAttributes: true,
-		removeScriptTypeAttributes: true,
-		removeTagWhitespace: true,
-		useShortDoctype: true,
-		minifyCSS: true,
-		minifyJS: true
-	}));
+	// Transforms for production:
+	if (process.env.NODE_ENV === 'production') {
+		config.addTransform('inline', inlineTransform({ rootpath: ROOT_PATH }));
+		config.addTransform('htmlmin', htmlminTransform({
+			collapseWhitespace: true,
+			removeComments: true,
+			removeRedundantAttributes: true,
+			removeScriptTypeAttributes: true,
+			removeTagWhitespace: true,
+			useShortDoctype: true,
+			minifyCSS: true,
+			minifyJS: true
+		}));
+	}
 
 	// Short codes:
 	config.addNunjucksShortcode('fallback', fallbackShortcode());

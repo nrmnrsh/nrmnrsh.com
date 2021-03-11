@@ -53,11 +53,11 @@ webfont:
 
 
 webpack:
-	./node_modules/.bin/webpack --mode production
+	NODE_ENV=production ./node_modules/.bin/webpack --mode production
 
 
 eleventy:
-	./node_modules/.bin/eleventy
+	NODE_ENV=production ./node_modules/.bin/eleventy
 
 
 critical:
@@ -97,8 +97,8 @@ optimize:
 
 
 develop: clean webfont
-	./node_modules/.bin/webpack & \
-	./node_modules/.bin/eleventy --serve
+	NODE_ENV=development ./node_modules/.bin/webpack & \
+	NODE_ENV=development ./node_modules/.bin/eleventy --serve --watch
 
 
 build: clean validate tests webfont optimize webpack eleventy critical serviceworker

@@ -3,6 +3,10 @@ const { fromFile } = require('hasha');
 const path = require('path');
 
 module.exports = ({ rootpath }) => async (file) => {
+	if (file, process.env.NODE_ENV === 'development') {
+		return file;
+	}
+
 	const source = path.join(rootpath, file);
 	const extname = path.extname(file);
 	const basename = path.basename(file, extname);
