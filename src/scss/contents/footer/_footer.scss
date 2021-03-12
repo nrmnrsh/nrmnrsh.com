@@ -1,5 +1,6 @@
 .content-footer {
-	@include render-background($footer-background);
+	background: $footer-background;
+	color: $footer-color;
 
 	sub {
 		display: block;

@@ -5,11 +5,13 @@ body {
 	-webkit-font-smoothing: antialiased;
 	// Prevent iOS font scaling in landscape:
 	-webkit-text-size-adjust: none;
-	background: $color-background;
-	color: $color-text;
 }
 
 html {
+	// Using ep naturalblack background pattern.
+	// Taken from: https://www.toptal.com/designers/subtlepatterns/ep-natural-black/
+	@include render-background($background-primary);
+	color: $color-text;
 	font-family: $font-default-family;
 	font-size: $font-size-base;
 }

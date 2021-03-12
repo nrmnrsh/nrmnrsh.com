@@ -12,15 +12,18 @@
 
 	@if $image1x {
 		@if $image1x-webp {
-			.supports-webp & {
+			.supports-webp &,
+			&.supports-webp {
 				background: $background url($image1x-webp) $repeat $attachment $position;
 			}
 
-			.supports-no-webp & {
+			.supports-no-webp &,
+			&.supports-no-webp {
 				background: $background url($image1x) $repeat $attachment $position;
 			}
 		} @else {
-			.is-ready & {
+			.is-ready &,
+			&.is-ready {
 				background: $background url($image1x) $repeat $attachment $position;
 			}
 		}
@@ -28,15 +31,18 @@
 		@if $image2x {
 			@include media-retina() {
 				@if $image2x-webp {
-					.supports-webp & {
+					.supports-webp &,
+					&.supports-webp {
 						background-image: url($image2x-webp);
 					}
 
-					.supports-no-webp & {
+					.supports-no-webp &,
+					&.supports-no-webp {
 						background-image: url($image2x);
 					}
 				} @else {
-					.is-ready & {
+					.is-ready &,
+					&.is-ready {
 						background-image: url($image2x);
 					}
 				}

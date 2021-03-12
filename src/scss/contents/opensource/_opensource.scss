@@ -1,4 +1,7 @@
 .content-opensource {
+	background: $opensource-background;
+	color: $opensource-color;
+
 	h2 {
 		@include headline-primary();
 	}
@@ -53,15 +56,6 @@
 			width: 100%;
 			max-width: 35rem;
 			border-bottom: 1px solid;
-		}
-	}
-
-	@each $name, $props in $project-schemes {
-		&.has-#{$name}-scheme {
-			$background: map-get($props, 'background');
-			$color: map-get($props, 'color');
-			@include render-background($background);
-			color: $color;
 		}
 	}
 }

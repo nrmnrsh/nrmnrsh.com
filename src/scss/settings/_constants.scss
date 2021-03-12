@@ -11,7 +11,7 @@ $color-background: #0F141C !default;
 $color-text: #FFFFFF !default;
 
 // Backgrounds:
-$background-priamry: (
+$background-primary: (
 	'background': $color-background,
 	'image@1x': '../img/backgrounds/subtlepatterns-ep-naturalblack.jpg',
 	'image@1x-webp': '../img/backgrounds/subtlepatterns-ep-naturalblack.webp',
@@ -55,31 +55,23 @@ $font-load:
 $headline-primary-animation-duration: 25s !default;
 
 // Intro:
+$intro-background: inherit !default;
+$intro-color: inherit !default;
 $intro-headline-animation-duration: 25s !default;
-$intro-background: $background-priamry !default;
 
 // Social:
 $social-background: $color-text !default;
 $social-color: lighten($color-background, 5%) !default;
 $social-icons: ('github', 'twitter', 'linkedin') !default;
 
-// Projects:
-$project-schemes: (
-	'dark': (
-		'background': $background-priamry,
-		'color': $color-text,
-	),
-	// 'light': (
-	// 	'background': (
-	// 		'background': $color-text,
-	// 	),
-	// 	'color': lighten($color-background, 5%),
-	// )
-) !default;
+// Open Source:
+$opensource-background: inherit !default;
+$opensource-color: inherit !default;
 
 // Brands:
 $brands-background: $color-text !default;
 $brands-color: lighten($color-background, 5%) !default;
 
 // Footer:
-$footer-background: $background-priamry !default;
+$footer-background: inherit !default;
+$footer-color: inherit !default;
