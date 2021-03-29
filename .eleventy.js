@@ -1,6 +1,7 @@
 const dateFilter = require('./src/lib/filter/date');
 const datetimeFilter = require('./src/lib/filter/datetime');
 const fullyearFilter = require('./src/lib/filter/fullyear');
+const fullyearmonthFilter = require('./src/lib/filter/fullyear-month');
 
 const fallbackShortcode = require('./src/lib/shortcodes/fallback');
 const linkifyShortcode = require('./src/lib/shortcodes/linkify');
@@ -45,6 +46,7 @@ module.exports = (config) => {
 	config.addNunjucksFilter('date', dateFilter());
 	config.addNunjucksFilter('datetime', datetimeFilter());
 	config.addNunjucksFilter('fullyear', fullyearFilter());
+	config.addNunjucksFilter('fullyearmonth', fullyearmonthFilter());
 
 	return {
 		dir: {
