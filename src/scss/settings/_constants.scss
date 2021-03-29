@@ -72,6 +72,10 @@ $opensource-color: inherit !default;
 $brands-background: $color-text !default;
 $brands-color: lighten($color-background, 5%) !default;
 
+// Companies:
+$companies-background: inherit !default;
+$companies-color: inherit !default;
+
 // Footer:
-$footer-background: inherit !default;
-$footer-color: inherit !default;
+$footer-background: $color-text !default;
+$footer-color: lighten($color-background, 5%) !default;

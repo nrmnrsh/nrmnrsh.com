@@ -1,0 +1,42 @@
+<section class="content content-companies">
+	<div>
+		<h2>{{ content.companies.headline }}</h2>
+		<ol>
+			{% for company in content.companies.list %}
+				<li>
+					<h3>{{ company.name }}</h3>
+					<dl>
+						<dt>Duration</dt>
+						<dd>
+							<span>from</span>
+							<time datetime="{{ company.duration.from | date | datetime }}">
+								{{ company.duration.from | date | fullyearmonth }}
+							</time>
+							{% if company.duration.to %}
+								<span>to</span>
+								<time datetime="{{ company.duration.to | date | datetime }}">
+									{{ company.duration.to | date | fullyearmonth }}
+								</time>
+							{% else %}
+								<span>till the present</span>
+							{% endif %}
+						</dd>
+						{% if company.url %}
+							<dt>Website</dt>
+							<dd>
+								<a
+									href="{{ company.url }}"
+									title="Open the ”{{ company.name }}” website"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									{{ company.url_label }}
+								</a>
+							</dd>
+						{% endif %}
+					</dl>
+				</li>
+			{% endfor %}
+		</ol>
+	</div>
+</section>

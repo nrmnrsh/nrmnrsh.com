@@ -1,0 +1,42 @@
+{
+  "headline": "Worked at",
+  "list": [
+    {
+      "name": "Edenspiekermann",
+      "duration": {
+        "from": "2019-10-15",
+        "to": null
+      },
+      "url": "http://www.edenspiekermann.com",
+      "url_label": "edenspiekermann.com"
+    },
+    {
+      "name": "Carmeq",
+      "duration": {
+        "from": "2019-04-01",
+        "to": "2019-10-14"
+      },
+      "url": "http://www.carmeq.de/",
+      "url_label": "carmeq.de"
+    },
+    {
+      "name": "Moccu",
+      "duration": {
+        "from": "2010-05-01",
+        "to": "2019-04-31"
+      },
+      "url": "https://www.moccu.com/",
+      "url_label": "moccu.com"
+    }
+    ,
+    {
+      "name": "Argonauten G2",
+      "duration": {
+        "from": "2009-07-01",
+        "to": "2010-01-31"
+      },
+      "url": "https://argonauten.de/",
+      "url_label": "argonauten.de"
+    }
+  ]
+}

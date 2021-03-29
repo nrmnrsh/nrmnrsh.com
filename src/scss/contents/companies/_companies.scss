@@ -1,0 +1,78 @@
+@import '~caroucssel/dist/caroucssel';
+
+.content-companies {
+	background: $companies-background;
+	color: $companies-color;
+
+	> div {
+		padding-right: 0;
+		padding-left: 0;
+		max-width: 100%;
+	}
+
+	h2 {
+		@include headline-primary();
+	}
+
+	h3 {
+		@include headline-secondary();
+	}
+
+	a {
+		text-decoration: none;
+
+		&:focus,
+		&:hover {
+			outline: none;
+			text-decoration: underline;
+		}
+	}
+
+	ol {
+		@include caroucssel();
+		@include caroucssel-snap($at: 100%);
+
+		li {
+			position: relative;
+			padding: 7rem 2rem 2rem;
+			width: 100%;
+
+			&::before {
+				transition:
+					opacity 0.6s,
+					transform 0.6s;
+				content: '';
+				speak: none;
+				opacity: 0;
+				transform: translate(-50%, 0) scale(0.5);
+				position: absolute;
+				top: 4rem;
+				left: 50%;
+				width: 1.5rem;
+				height: 1.5rem;
+				background: currentColor;
+				border-radius: 50%;
+			}
+
+			&.is-active::before {
+				animation: pulse 2s infinite;
+				opacity: 1;
+				transform: translate(-50%, 0) scale(1);
+			}
+		}
+
+		dt {
+			@include invisible();
+		}
+	}
+}
+
+@keyframes pulse {
+	from {
+		box-shadow: 0 0 0 0 rgba(#FFFFFF, 0.5);
+	}
+
+	to {
+		box-shadow: 0 0 0 3.5rem rgba(#FFFFFF, 0);
+	}
+}

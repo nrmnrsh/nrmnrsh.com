@@ -23,3 +23,16 @@ body {
 a {
 	color: inherit;
 }
+
+button {
+	appearance: none;
+	cursor: pointer;
+	margin: 0;
+	padding: 0;
+	background: transparent;
+	border: 0;
+	color: inherit;
+	font: inherit;
+	-webkit-touch-callout: none;
+	-webkit-tap-highlight-color: transparent;
+}
