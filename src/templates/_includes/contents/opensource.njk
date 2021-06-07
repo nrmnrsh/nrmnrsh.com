@@ -8,18 +8,7 @@
 				<li id="opensource-{{ project.name | slug }}">
 					<h3>
 						<span>
-							{% if project.url %}
-								<a
-									href="{{ project.url }}"
-									title="Open the ”{{ project.name }}” website"
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									{{ project.name }}
-								</a>
-							{% else %}
-								{{ project.name }}
-							{% endif %}
+							{{ project.name }}
 						</span>
 						{% if project.note %}
 							<em>{{ project.note }}</em>
@@ -33,18 +22,20 @@
 					{% endif %}
 
 					{% if project.details %}
-						<p>{{ project.details }}</p>
-					{% endif %}
+						<p>
+							{{ project.details }}
 
-					{% if project.url %}
-						<a
-							class="link"
-							href="{{ project.url }}"
-							title="Open the ”{{ project.name }}” website"
-							target="_blank"
-							rel="noopener noreferrer">
-							{% fallback url_label, 'Visit project' %}
-						</a>
+							{% if project.url %}
+								To get more details of this project, please visit the project page of
+								<a
+									class="link"
+									href="{{ project.url }}"
+									title="Open the ”{{ project.name }}” website in a new tab"
+									target="_blank"
+									rel="noopener noreferrer"
+								>{{ project.name }}</a>.
+							{% endif %}
+						</p>
 					{% endif %}
 				</li>
 			{% endfor %}
