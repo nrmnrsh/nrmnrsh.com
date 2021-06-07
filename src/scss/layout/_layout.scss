@@ -46,3 +46,13 @@ a {
 		text-decoration: underline;
 	}
 }
+
+::-moz-selection {
+	background-color: $color-focus;
+	color: $color-text;
+}
+
+::selection {
+	background-color: $color-focus;
+	color: $color-text;
+}
