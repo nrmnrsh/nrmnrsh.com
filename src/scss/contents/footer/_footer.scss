@@ -7,14 +7,4 @@
 		padding: 1rem 0;
 		font-size: 0.75em;
 	}
-
-	a {
-		text-decoration: none;
-
-		&:focus,
-		&:hover {
-			outline: none;
-			text-decoration: underline;
-		}
-	}
 }

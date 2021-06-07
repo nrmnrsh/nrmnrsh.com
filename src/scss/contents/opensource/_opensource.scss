@@ -9,24 +9,9 @@
 	h3 {
 		margin: 0 0 1em;
 
-		span,
-		em {
-			display: block;
-		}
-
 		span {
 			@include headline-secondary();
 			margin: 0;
-		}
-	}
-
-	a {
-		text-decoration: none;
-
-		&:focus,
-		&:hover {
-			outline: none;
-			text-decoration: underline;
 		}
 	}
 
