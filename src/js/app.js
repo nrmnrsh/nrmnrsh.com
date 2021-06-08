@@ -4,6 +4,7 @@ import 'what-input';
 
 import {Context} from 'pacto';
 import {Action as Analytics} from 'components/analytics/actions/InitializeLazy';
+import {Action as Footer} from 'components/footer/actions/InitializeLazy';
 // import {Action as Logrocket} from 'components/logrocket/actions/InitializeLazy';
 import {Action as Serviceworker} from 'components/serviceworker/actions/Initialize';
 import {Action as Privacy} from 'components/privacy/actions/Initialize';
@@ -16,6 +17,7 @@ context.actions.add('app:run', [
 	Privacy,
 
 	Analytics,
+	Footer,
 	// Logrocket,
 	Serviceworker,
 ]);
