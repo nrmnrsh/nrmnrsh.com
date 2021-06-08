@@ -25,6 +25,7 @@
     "logrocket": "^1.0.12",
     "node-reset-scss": "^1.0.1",
     "pacto": "^0.6.2",
+    "pacto.model": "^0.6.0",
     "promise-polyfill": "^8.1.3",
     "weakmap-polyfill": "^2.0.2",
     "what-input": "^5.2.10"

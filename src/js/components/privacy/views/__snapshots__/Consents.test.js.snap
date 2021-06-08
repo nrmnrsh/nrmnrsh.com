@@ -1,0 +1,184 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The privacy consents view should render 1`] = `
+<div>
+  
+	
+  <div
+    aria-describedby="privacy-description"
+    aria-hidden="true"
+    aria-labelledby="privacy-title"
+    aria-modal="true"
+    role="dialog"
+  >
+    
+		
+    <h2
+      id="privacy-title"
+    >
+      Enable services
+    </h2>
+    
+		
+    <div
+      id="privacy-description"
+    >
+      
+			
+      <div
+        class="description"
+      >
+        
+				
+        <p>
+          
+					This site is using different services that allow me to enhance and
+					analyze the usage of this page. They might uses cookies to work properly...
+				
+        </p>
+        
+				
+        <button
+          class="allow-all"
+          role="button"
+        >
+          Enable all
+        </button>
+        
+			
+      </div>
+      
+
+			
+      <details>
+        
+				
+        <summary>
+          Customize services
+        </summary>
+        
+
+				
+        <p>
+          
+					I believe preventing cookie usage is not the only way to protect
+					your privacy. Instead, you will have full control over all the services
+					that are loaded to control any data exchange to foreign services.
+				
+        </p>
+        
+
+				
+        <form
+          class="details"
+        >
+          
+					
+          <dl>
+            
+						
+            <dt>
+              
+							
+              <label>
+                
+								
+                <input
+                  name="privacy"
+                  type="checkbox"
+                  value="analytics"
+                />
+                
+								Google Analytics
+							
+              </label>
+              
+						
+            </dt>
+            
+						
+            <dd>
+              
+							Google Analytics is a web analytics service offered by Google that
+							tracks and reports website traffic. I track page views and clicks
+							on links. The service is running using the "anonymizeIp" setting.
+							Read more about 
+              <a
+                href="https://policies.google.com/privacy?hl=en#footnote-link-info"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                data privacy
+              </a>
+              
+							from Google Analytics.
+						
+            </dd>
+            
+
+						
+            <dt>
+              
+							
+              <label>
+                
+								
+                <input
+                  name="privacy"
+                  type="checkbox"
+                  value="logrocket"
+                />
+                
+								Logrocket
+							
+              </label>
+              
+						
+            </dt>
+            
+						
+            <dd>
+              
+							LogRocket is a cloud-based and on-premise logging and session replay
+							platform for JavaScript applications, which helps me track UX problems
+							and analyze as well as remediate the root causes of bugs.
+							Read more about 
+              <a
+                href="https://logrocket.com/privacy/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                privacy policy
+              </a>
+              
+							from LogRocket.
+						
+            </dd>
+            
+					
+          </dl>
+          
+
+					
+          <button
+            class="allow-selection"
+            role="button"
+          >
+            Use selection
+          </button>
+          
+				
+        </form>
+        
+			
+      </details>
+      
+		
+    </div>
+    
+	
+  </div>
+  
+
+</div>
+`;

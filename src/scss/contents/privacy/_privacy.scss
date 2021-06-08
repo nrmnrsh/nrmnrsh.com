@@ -1,0 +1,147 @@
+$consent-max-width: 40rem;
+
+
+.privacy {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	padding: 0 1rem;
+	width: 100%;
+
+	[role='dialog'] {
+		transition: transform 0.6s;
+		overflow: auto;
+		-webkit-overflow-scrolling: touch;
+		transform: translate(0, 0);
+		margin: 0 auto;
+		padding: 1rem 2rem;
+		max-width: $consent-max-width;
+		max-height: 85vh;
+		background: $color-text;
+		background: rgba($color-text, 0.85); // sass-lint:disable-line no-duplicate-properties
+		border: 3px solid transparent;
+		border-radius: 0 0 0.25rem 0.25rem;
+		box-shadow: 0 10px 20px rgba($color-background, 0.1);
+		color: $color-background;
+		line-height: 1.5;
+		backdrop-filter: blur(5px);
+
+		@supports (animation: x) {
+			animation: privacy-slide-in 0.6s;
+		}
+
+		@media
+		(-ms-high-contrast: active),
+		(prefers-contrast: forced),
+		(prefers-reduced-motion) {
+			animation: none;
+			transition: none;
+			background: $color-text;
+			backdrop-filter: none;
+		}
+
+		@include break-at($consent-max-width) {
+			font-size: 1rem;
+		}
+
+		&[aria-hidden='true'] {
+			animation: none;
+			transform: translate(0, -100%);
+		}
+	}
+
+	[type='checkbox'] {
+		@include checkbox();
+	}
+
+	h2 {
+		font-size: 1rem;
+		font-weight: bold;
+	}
+
+	p,
+	dl {
+		@include break-at($consent-max-width) {
+			flex: 1 1 auto;
+			margin-right: 1em;
+		}
+	}
+
+	dt {
+		margin-top: 1em;
+	}
+
+	dd {
+		font-size: 0.9em;
+		font-style: italic;
+	}
+
+	button {
+		@include button-primary();
+		margin-top: 1em;
+		width: 9em;
+
+		@include break-at($consent-max-width) {
+			flex: 0 0 9em;
+			align-self: flex-end;
+		}
+	}
+
+	summary {
+		cursor: pointer;
+		user-select: none;
+		display: inline-block;
+		margin: 1em 0;
+
+		@include when-focused() {
+			background-color: $color-focus;
+			outline: none;
+		}
+
+		@include when-hovered() {
+			text-decoration: underline;
+		}
+
+		&::-webkit-details-marker {
+			display: none;
+		}
+
+		&::before {
+			transition: transform 0.3s;
+			content: '';
+			speak: none;
+			display: inline-block;
+			transform: rotate(-45deg) translate(0, -0.1em);
+			margin: 0 0.75em 0 0;
+			width: 0.45em;
+			height: 0.45em;
+			border-right: 1px solid;
+			border-bottom: 1px solid;
+		}
+	}
+
+	[open] summary::before {
+		transform: rotate(45deg) translate(0.05em, -0.3em);
+	}
+
+	.description,
+	.details {
+		width: 100%;
+
+		@include break-at($consent-max-width) {
+			display: flex;
+			justify-content: flex-end;
+		}
+	}
+}
+
+@keyframes privacy-slide-in {
+	from {
+		transform: translate(0, -100%);
+	}
+
+	to {
+		transform: translate(0, 0);
+	}
+}
