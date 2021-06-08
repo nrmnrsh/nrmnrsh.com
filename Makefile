@@ -9,8 +9,8 @@ clean:
 tests:
 	./node_modules/.bin/jest \
 		src/ \
-		-- verbose \
-		-- coverage
+		--verbose \
+		--coverage
 
 
 coverage:
