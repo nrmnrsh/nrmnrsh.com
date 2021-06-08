@@ -1,0 +1,42 @@
+%button {
+	padding: 0.25em 0.75em;
+	border: 1px solid;
+	text-align: center;
+	text-decoration: none;
+
+	&:focus {
+		background-color: $color-focus;
+		color: $color-text;
+	}
+
+	&:active {
+		background-color: $color-focus;
+		color: $color-text;
+	}
+}
+
+@mixin button-primary() {
+	@extend %button;
+	transition:
+		background 0.3s,
+		border 0.3s,
+		color 0.3s,
+		box-shadow 0.3s;
+	background: transparent;
+	box-shadow: 0 0 0 rgba($color-background, 0);
+
+	&:hover {
+		background: $color-background;
+		border-color: $color-background;
+		box-shadow: 0 5px 15px rgba($color-background, 0.5);
+		color: $color-text;
+	}
+
+	[data-whatinput='mouse'] &:focus,
+	[data-whatinput='touch'] &:focus {
+		background: $color-background;
+		border-color: $color-background;
+		color: $color-text;
+		text-decoration: none;
+	}
+}
