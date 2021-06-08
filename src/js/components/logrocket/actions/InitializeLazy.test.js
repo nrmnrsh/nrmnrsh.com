@@ -1,6 +1,10 @@
 import {Context} from 'pacto';
 
 import {Action as InitializeLazyWhenLoaded} from 'generic/actions/InitializeLazyWhenLoaded';
+import {Action as InitializeLazyWhenLoadedWithConsent} from 'generic/actions/InitializeLazyWhenLoadedWithConsent';
+import {Consents} from 'components/privacy/models/Consents';
+import {NAMESPACE_MODEL} from 'components/privacy/shared/config';
+
 import {Action} from './InitializeLazy';
 import {Action as InitializeAction} from './Initialize';
 import {Action as FixtureAction} from './__fixtures__/Action';
@@ -10,6 +14,7 @@ describe('The logrocket initialize lazy action', () => {
 
 	const EVENT_TYPE = 'test:event';
 
+	let consents;
 	let context;
 
 	function runAndCompleteWhen(eventPostfix) {
@@ -34,11 +39,16 @@ describe('The logrocket initialize lazy action', () => {
 	}
 
 	beforeEach(() => {
+		consents = new Consents();
+		consents.props.logrocket = true;
+
 		context = new Context();
 		context.actions.add(EVENT_TYPE, TestAction);
+		context.values.add(NAMESPACE_MODEL, consents);
 	});
 
 	afterEach(() => {
+		consents = null;
 		context = null;
 		window.navigator.doNotTrack = null;
 		window.navigator.msDoNotTrack = undefined;
@@ -47,6 +57,10 @@ describe('The logrocket initialize lazy action', () => {
 
 	test('should inherit generic initialize lazy when loaded action', () => {
 		expect(new Action() instanceof InitializeLazyWhenLoaded).toBeTruthy();
+	});
+
+	test('should inherit generic initialize lazy when loaded with consent action', () => {
+		expect(new Action() instanceof InitializeLazyWhenLoadedWithConsent).toBeTruthy();
 	});
 
 	test('should pay attention to enabled do-not-track setting of user', (done) => {
@@ -170,6 +184,24 @@ describe('The logrocket initialize lazy action', () => {
 
 		runAndCompleteWhen('loaded').then(() => {
 			expect(context.actions.get(EVENT_TYPE)).toEqual([FixtureAction]);
+			done();
+		});
+	});
+
+	test('should pay attention to unset consent settings', (done) => {
+		consents.props.logrocket = undefined;
+
+		runAndCompleteWhen('done').then(() => {
+			expect(context.actions.get(EVENT_TYPE)).toEqual([TestAction]);
+			done();
+		});
+	});
+
+	test('should pay attention to declined consent settings', (done) => {
+		consents.props.logrocket = false;
+
+		runAndCompleteWhen('done').then(() => {
+			expect(context.actions.get(EVENT_TYPE)).toEqual([TestAction]);
 			done();
 		});
 	});
