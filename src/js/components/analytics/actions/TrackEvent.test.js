@@ -1,5 +1,8 @@
 import {Context} from 'pacto';
 
+import {Consents} from 'components/privacy/models/Consents';
+import {NAMESPACE_MODEL} from 'components/privacy/shared/config';
+
 import {Action} from './TrackEvent';
 
 
@@ -7,17 +10,25 @@ describe('The analytics trackevent action', () => {
 
 	const EVENT_TYPE = 'test:event';
 
-	let context, ga;
+	let ga;
+	let consents;
+	let context;
 
 	beforeEach(() => {
 		window.ga = ga = jest.fn();
+
+		consents = new Consents();
+		consents.props.analytics = true;
+
 		context = new Context();
 		context.values.add('tracking:api', ga);
+		context.values.add(NAMESPACE_MODEL, consents);
 		context.actions.add(EVENT_TYPE, Action);
 	});
 
 	afterEach(() => {
 		window.ga = ga = null;
+		consents = null;
 		context = null;
 	});
 
@@ -33,6 +44,28 @@ describe('The analytics trackevent action', () => {
 
 		expect(() => context.trigger(EVENT_TYPE, {action: 'action-name'}))
 			.toThrow(new Error('Missing action or category for event tracking.'));
+	});
+
+	test('should not track when user consent for analytics is not given', () => {
+		consents.props.analytics = false;
+
+		context.trigger(EVENT_TYPE, {
+			category: 'category-name',
+			action: 'action-name'
+		});
+
+		expect(ga).not.toHaveBeenCalled();
+	});
+
+	test('should not track when user consent for analytics is unset', () => {
+		consents.props.analytics = undefined;
+
+		context.trigger(EVENT_TYPE, {
+			category: 'category-name',
+			action: 'action-name'
+		});
+
+		expect(ga).not.toHaveBeenCalled();
 	});
 
 	test('should track category and action', () => {

@@ -1,6 +1,9 @@
 import {advanceTo, clear} from 'jest-date-mock';
 import {Context} from 'pacto';
 
+import {Consents} from 'components/privacy/models/Consents';
+import {NAMESPACE_MODEL} from 'components/privacy/shared/config';
+
 import {Action} from './Initialize';
 import {Action as TrackEvent} from './TrackEvent';
 import {Registry} from '../services/Registry';
@@ -10,6 +13,7 @@ describe('The analytics initialize action', () => {
 
 	const EVENT_NAME = 'test:event';
 
+	let consents;
 	let context;
 
 	function __createLinkAndClick(href) {
@@ -26,7 +30,11 @@ describe('The analytics initialize action', () => {
 	beforeEach(() => {
 		advanceTo(new Date(Date.UTC(2018, 11, 25, 0, 0 ,0)));
 
+		consents = new Consents();
+		consents.props.analytics = true;
+
 		context = new Context();
+		context.values.add(NAMESPACE_MODEL, consents);
 		context.actions.add(EVENT_NAME, Action);
 	});
 
@@ -34,6 +42,7 @@ describe('The analytics initialize action', () => {
 		clear();
 
 		window.ga = null;
+		consents = null;
 		context = null;
 
 		document.querySelectorAll('script').forEach((script) => script.parentNode.removeChild(script));
