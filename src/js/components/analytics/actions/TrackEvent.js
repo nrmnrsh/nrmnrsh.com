@@ -1,6 +1,16 @@
+import {CONSENT_ANALYTICS, NAMESPACE_MODEL} from 'components/privacy/shared/config';
+
+
 export class Action {
 
 	run() {
+		const consents = this.context.values.get(NAMESPACE_MODEL);
+		const isAllowed = !!consents.props[CONSENT_ANALYTICS];
+		if (!isAllowed) {
+			// Do not track if there is no consent...
+			return;
+		}
+
 		const
 			{action, category, label, value} = this.event.data || {},
 			args = ['send', 'event', category, action]

@@ -1,7 +1,12 @@
-import { Action as Initialize } from 'generic/actions/InitializeLazyWhenLoaded';
+import {Action as Initialize} from 'generic/actions/InitializeLazyWhenLoadedWithConsent';
+import {CONSENT_ANALYTICS} from 'components/privacy/shared/config';
 
 
 export class Action extends Initialize {
+
+	constructor() {
+		super(CONSENT_ANALYTICS);
+	}
 
 	get import() {
 		return import(/* webpackChunkName: "analytics" */'components/analytics/actions/Initialize');
