@@ -1,0 +1,42 @@
+%checkbox {
+	appearance: none;
+	cursor: pointer;
+	position: relative;
+	margin: 0 0.25em 0 0;
+	width: 1em;
+	height: 1em;
+	border: 1px solid;
+	border-radius: 0;
+	vertical-align: text-top;
+
+	&::before {
+		transition: transform 0.15s;
+		content: '';
+		speak: none;
+		transform: scale(0);
+		position: absolute;
+		top: 2px;
+		right: 2px;
+		bottom: 2px;
+		left: 2px;
+		background: currentColor;
+	}
+
+	&:checked::before {
+		transform: scale(1);
+	}
+
+	&:focus {
+		outline: none;
+		color: $color-focus;
+	}
+
+	[data-whatinput='mouse'] &:focus,
+	[data-whatinput='touch'] &:focus {
+		color: inherit;
+	}
+}
+
+@mixin checkbox() {
+	@extend %checkbox;
+}
