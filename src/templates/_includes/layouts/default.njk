@@ -83,6 +83,10 @@
 	</head>
 	<body>
 		<main>
+			{% block privacy %}
+				{% include '../partials/privacy.njk' %}
+			{% endblock %}
+
 			<article
 				itemprop="about"
 				itemscope

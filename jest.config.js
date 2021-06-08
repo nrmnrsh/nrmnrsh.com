@@ -11,5 +11,8 @@ module.exports = {
 	],
 	setupFiles: [
 		'jest-date-mock'
-	]
+	],
+	setupFilesAfterEnv: [
+		'<rootDir>/src/js/__setup__/localstorage.js',
+	],
 };
