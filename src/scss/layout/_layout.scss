@@ -20,30 +20,32 @@ body {
 	line-height: $font-line-height-base;
 }
 
-a {
+a,
+button {
 	transition: text-underline-offset 0.3s;
-	border: 3px solid transparent;
+	appearance: none;
+	cursor: pointer;
+	margin: 0;
+	padding: 0;
+	background: transparent;
+	border: 0;
+	border-bottom: 1px solid transparent;
+	border-radius: 0;
 	color: inherit;
+	font: inherit;
+	text-align: inherit;
 	text-decoration: underline;
 	text-underline-offset: 0.1em;
 
-	&:hover {
-		box-shadow: none;
+	@include when-hovered() {
 		text-underline-offset: 0.25em;
 	}
 
-	&:focus {
+	@include when-focused() {
 		background-color: $color-focus;
 		outline: none;
 		color: $color-text;
 		text-decoration: none;
-	}
-
-	[data-whatinput='mouse'] &:focus,
-	[data-whatinput='touch'] &:focus {
-		background-color: transparent;
-		color: inherit;
-		text-decoration: underline;
 	}
 }
 
