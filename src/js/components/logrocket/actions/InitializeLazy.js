@@ -1,7 +1,12 @@
-import { Action as Initialize } from 'generic/actions/InitializeLazyWhenLoaded';
+import {Action as Initialize} from 'generic/actions/InitializeLazyWhenLoadedWithConsent';
+import {CONSENT_LOGROCKET} from 'components/privacy/shared/config';
 
 
 export class Action extends Initialize {
+
+	constructor() {
+		super(CONSENT_LOGROCKET);
+	}
 
 	get import() {
 		return import(/* webpackChunkName: "logrocket" */'components/logrocket/actions/Initialize.js');
