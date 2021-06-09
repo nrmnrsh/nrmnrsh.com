@@ -1,0 +1,40 @@
+// Creates a selector for :hover effects depending on user input type.
+@mixin when-hovered() {
+	.no-js &,
+  [data-whatintent='mouse'] & {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+// Creates a selector for :active effects depending on user input type.
+@mixin when-pressed() {
+	.no-js &,
+  [data-whatinput='keyboard'] &,
+  [data-whatintent='mouse'] & {
+    &:active {
+      @content;
+    }
+  }
+}
+
+// Creates a selector for :focus effects depending on user input type.
+@mixin when-focused() {
+	.no-js &,
+  [data-whatinput='keyboard'] & {
+    &:focus {
+      @content;
+    }
+  }
+}
+
+// Creates a selector for :focus-within effects depending on user input type.
+@mixin when-focused-within() {
+	.no-js &,
+  [data-whatinput='keyboard'] & {
+    &:focus-within {
+      @content;
+    }
+  }
+}
