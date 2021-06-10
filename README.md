@@ -8,7 +8,7 @@ The portfolio website of Norman Rusch
 ## [Used tools](./package.json)
 
 * [Webpack](https://webpack.js.org/)
-* [Pacto](https://github.com/schorfES/pacto)
+* [Pacto](https://github.com/schorfES/pacto) & [Pacto.Model](https://github.com/schorfES/pacto.model)
 * [Sass](https://sass-lang.com/)
 * [Workbox](https://developers.google.com/web/tools/workbox/)
 * [Eleventy](https://www.11ty.dev/)
