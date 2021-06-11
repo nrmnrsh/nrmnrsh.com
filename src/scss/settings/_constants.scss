@@ -7,7 +7,12 @@ $transition-duration: 0.3s !default;
 $ready-delay: 2s !default;
 
 // Overall colors:
-$color-background: #0F141C !default;
+$color-gradients: (
+	(rgba(#FFF700, 0.6), transparent, transparent),
+	(rgba(#0072FF, 0.73), transparent, transparent),
+	(#FF00C8, #1D004E),
+);
+$color-background: #1C1C1C !default;
 $color-text: #FFFFFF !default;
 $color-focus: #FF0076 !default;
 
@@ -61,8 +66,9 @@ $intro-color: inherit !default;
 $intro-headline-animation-duration: 25s !default;
 
 // Social:
-$social-background: $color-text !default;
-$social-color: lighten($color-background, 5%) !default;
+$social-background: rgba($color-background, 0.7) !default;
+$social-shadow: 2px 2px 20px rgba($color-background, 0.3);
+$social-color: inherit !default;
 $social-icons: ('github', 'twitter', 'linkedin') !default;
 
 // Open Source:
@@ -70,8 +76,9 @@ $opensource-background: inherit !default;
 $opensource-color: inherit !default;
 
 // Brands:
-$brands-background: $color-text !default;
-$brands-color: lighten($color-background, 5%) !default;
+$brands-background: rgba($color-background, 0.7) !default;
+$brands-shadow: 2px 2px 20px rgba($color-background, 0.3);
+$brands-color: currentColor !default;
 
 // Footer:
 $footer-background: inherit !default;

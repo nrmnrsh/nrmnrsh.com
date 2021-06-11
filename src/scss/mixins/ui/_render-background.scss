@@ -1,58 +1,7 @@
-@mixin render-background($bg) {
-	$background: map-get($bg, 'background') or transparent;
-	$image1x: map-get($bg, 'image@1x') or false;
-	$image2x: map-get($bg, 'image@2x') or false;
-	$image1x-webp: map-get($bg, 'image@1x-webp') or false;
-	$image2x-webp: map-get($bg, 'image@2x-webp') or false;
-	$attachment: map-get($bg, 'attachment') or scroll;
-	$repeat: map-get($bg, 'repeat') or no-repeat;
-	$position: map-get($bg, 'position') or center;
-	$width: map-get($bg, 'width') or false;
-	$height: map-get($bg, 'height') or false;
-
-	@if $image1x {
-		@if $image1x-webp {
-			.supports-webp &,
-			&.supports-webp {
-				background: $background url($image1x-webp) $repeat $attachment $position;
-			}
-
-			.supports-no-webp &,
-			&.supports-no-webp {
-				background: $background url($image1x) $repeat $attachment $position;
-			}
-		} @else {
-			.is-ready &,
-			&.is-ready {
-				background: $background url($image1x) $repeat $attachment $position;
-			}
-		}
-
-		@if $image2x {
-			@include media-retina() {
-				@if $image2x-webp {
-					.supports-webp &,
-					&.supports-webp {
-						background-image: url($image2x-webp);
-					}
-
-					.supports-no-webp &,
-					&.supports-no-webp {
-						background-image: url($image2x);
-					}
-				} @else {
-					.is-ready &,
-					&.is-ready {
-						background-image: url($image2x);
-					}
-				}
-
-				@if $width or $height {
-					background-size: ($width or auto) ($height or auto);
-				}
-			}
-		}
-	} @else {
-		background: $background;
-	}
+@mixin render-background() {
+	background: $color-background repeat fixed 50%;
+	background-image:
+		linear-gradient(127deg, nth($color-gradients, 1)),
+		linear-gradient(347deg, nth($color-gradients, 2)),
+		linear-gradient(45deg, nth($color-gradients, 3));
 }
