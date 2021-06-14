@@ -4,39 +4,31 @@
 	text-align: center;
 	text-decoration: none;
 
-	&:focus {
+	@include when-hovered() {
+		background: $color-text;
+		color: $color-background;
+	}
+
+	@include when-focused() {
 		background-color: $color-focus;
 		color: $color-text;
 	}
 
-	&:active {
-		background-color: $color-focus;
-		color: $color-text;
+	@include when-pressed() {
+		transform: scale(1.02);
+		background: $color-text;
+		color: $color-background;
 	}
 }
 
 @mixin button-primary() {
 	@extend %button;
 	transition:
+		tansform 0.15s,
 		background 0.3s,
 		border 0.3s,
 		color 0.3s,
 		box-shadow 0.3s;
 	background: transparent;
 	box-shadow: 0 0 0 rgba($color-background, 0);
-
-	&:hover {
-		background: $color-background;
-		border-color: $color-background;
-		box-shadow: 0 5px 15px rgba($color-background, 0.5);
-		color: $color-text;
-	}
-
-	[data-whatinput='mouse'] &:focus,
-	[data-whatinput='touch'] &:focus {
-		background: $color-background;
-		border-color: $color-background;
-		color: $color-text;
-		text-decoration: none;
-	}
 }
