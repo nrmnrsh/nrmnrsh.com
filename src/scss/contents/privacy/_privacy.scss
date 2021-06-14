@@ -93,6 +93,8 @@ $consent-max-width: 40rem;
 		user-select: none;
 		display: inline-block;
 		margin: 1em 0;
+		-webkit-touch-callout: none;
+		-webkit-tap-highlight-color: transparent;
 
 		@include when-focused() {
 			background-color: $color-focus;
