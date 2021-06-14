@@ -1,5 +1,6 @@
 .content-brands {
 	background: $brands-background;
+	background: rgba($brands-background, 0.7); // sass-lint:disable-line no-duplicate-properties
 	box-shadow: $brands-shadow;
 	color: $brands-color;
 

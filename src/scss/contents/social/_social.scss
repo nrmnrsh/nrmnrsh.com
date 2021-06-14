@@ -1,5 +1,6 @@
 .content-social {
 	background: $social-background;
+	background: rgba($social-background, 0.7); // sass-lint:disable-line no-duplicate-properties
 	box-shadow: $social-shadow;
 	color: $social-color;
 

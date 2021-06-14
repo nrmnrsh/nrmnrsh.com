@@ -52,7 +52,7 @@ $intro-color: inherit !default;
 $intro-headline-animation-duration: 25s !default;
 
 // Social:
-$social-background: rgba($color-background, 0.7) !default;
+$social-background: $color-background !default;
 $social-shadow: 2px 2px 20px rgba($color-background, 0.3);
 $social-color: inherit !default;
 $social-icons: ('github', 'twitter', 'linkedin') !default;
@@ -62,7 +62,7 @@ $opensource-background: inherit !default;
 $opensource-color: inherit !default;
 
 // Brands:
-$brands-background: rgba($color-background, 0.7) !default;
+$brands-background: $color-background !default;
 $brands-shadow: 2px 2px 20px rgba($color-background, 0.3);
 $brands-color: currentColor !default;
 
