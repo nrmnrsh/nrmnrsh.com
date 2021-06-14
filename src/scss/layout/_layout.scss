@@ -34,6 +34,8 @@ button {
 	text-align: inherit;
 	text-decoration: underline;
 	text-underline-offset: 0.1em;
+	-webkit-touch-callout: none;
+	-webkit-tap-highlight-color: transparent;
 
 	@include when-hovered() {
 		text-underline-offset: 0.25em;
