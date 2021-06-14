@@ -26,14 +26,9 @@
 		transform: scale(1);
 	}
 
-	&:focus {
+	@include when-focused() {
 		outline: none;
 		color: $color-focus;
-	}
-
-	[data-whatinput='mouse'] &:focus,
-	[data-whatinput='touch'] &:focus {
-		color: inherit;
 	}
 }
 
