@@ -18,12 +18,12 @@ $consent-max-width: 40rem;
 		padding: 1rem 2rem;
 		max-width: $consent-max-width;
 		max-height: 85vh;
-		background: $color-text;
-		background: rgba($color-text, 0.85); // sass-lint:disable-line no-duplicate-properties
+		background: $color-background;
+		background: rgba($color-background, 0.7); // sass-lint:disable-line no-duplicate-properties
 		border: 3px solid transparent;
 		border-radius: 0 0 0.25rem 0.25rem;
 		box-shadow: 0 10px 20px rgba($color-background, 0.1);
-		color: $color-background;
+		color: $color-text;
 		line-height: 1.5;
 		backdrop-filter: blur(5px);
 
