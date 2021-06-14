@@ -16,20 +16,6 @@ $color-background: #1C1C1C !default;
 $color-text: #FFFFFF !default;
 $color-focus: #FF0076 !default;
 
-// Backgrounds:
-$background-primary: (
-	'background': $color-background,
-	'image@1x': '../img/backgrounds/subtlepatterns-ep-naturalblack.jpg',
-	'image@1x-webp': '../img/backgrounds/subtlepatterns-ep-naturalblack.webp',
-	'image@2x': '../img/backgrounds/subtlepatterns-ep-naturalblack@2x.jpg',
-	'image@2x-webp': '../img/backgrounds/subtlepatterns-ep-naturalblack@2x.webp',
-	'attachment': fixed,
-	'position': center,
-	'repeat': repeat,
-	'width': 200px,
-	'height': 200px,
-) !default;
-
 // Font definitions
 $font-size-base: 16px !default;
 $font-line-height-base: 30px / $font-size-base !default;
