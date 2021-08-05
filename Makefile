@@ -1,4 +1,4 @@
-.PHONY: clean tests coverage validate webfont webpack eleventy critical serviceworker optimize develop build release serve
+.PHONY: clean tests coverage validate webfont webpack eleventy critical serviceworker optimize develop build build_fast release serve
 
 
 clean:
@@ -101,7 +101,10 @@ develop: clean webfont
 	NODE_ENV=development ./node_modules/.bin/eleventy --serve --watch
 
 
-build: clean validate tests webfont optimize webpack eleventy critical serviceworker
+build: clean validate tests build_fast
+
+
+build_fast: webfont optimize webpack eleventy critical serviceworker
 
 
 release: build

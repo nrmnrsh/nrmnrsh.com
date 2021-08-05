@@ -46,7 +46,7 @@ jobs:
         env:
           CI: true
 
-      - name: Run build
-        run: make build
+      - name: Run build process
+        run: make build_fast
         env:
           CI: true
