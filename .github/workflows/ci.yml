@@ -45,3 +45,8 @@ jobs:
         run: make validate
         env:
           CI: true
+
+      - name: Run build
+        run: make build
+        env:
+          CI: true
