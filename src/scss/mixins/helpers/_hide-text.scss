@@ -1,5 +1,7 @@
+@use 'sass:math';
+
 @mixin hide-text() {
-	$approximate-em-value: 12px / 1em;
+	$approximate-em-value: math.div(12px, 1em);
 	$wider-than-any-screen: -9999em;
 	overflow: hidden;
 	text-align: left;

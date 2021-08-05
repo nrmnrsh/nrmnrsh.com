@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 // Dimensions:
 $content-max-width: 65rem !default;
 $content-breakpoints: (62rem, 65rem,) !default;
@@ -18,7 +20,7 @@ $color-focus: #FF0076 !default;
 
 // Font definitions
 $font-size-base: 16px !default;
-$font-line-height-base: 30px / $font-size-base !default;
+$font-line-height-base: math.div(30px, $font-size-base) !default;
 
 // Default font:
 $font-default-family: Georgia, serif !default;
