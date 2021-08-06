@@ -124,6 +124,8 @@ release: build
 
 	./node_modules/.bin/gh-pages -d ./web/
 
+	git push && git push --tags
+
 
 serve: build
 	./node_modules/.bin/live-server ./web/
