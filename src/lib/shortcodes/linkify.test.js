@@ -15,8 +15,8 @@ describe('the linkify shortcode', () => {
 			`
 		)).toBe(
 			`
-			Lorem ipsum dolor sit amet, <a href="https://consectetur.adipisicing/" title="Open consectetur adipisicing" rel="noopener noreferrer" target="_blank">consectetur adipisicing</a> elit, sed do
-			eiusmod <a href="/tempor.html" title="Open tempor" target="_self">tempor</a> incididunt ut labore et dolore magna aliqua.
+			Lorem ipsum dolor sit amet, <a href="https://consectetur.adipisicing/" rel="noopener noreferrer" target="_blank">consectetur adipisicing</a> elit, sed do
+			eiusmod <a href="/tempor.html">tempor</a> incididunt ut labore et dolore magna aliqua.
 			`
 		);
 	});
