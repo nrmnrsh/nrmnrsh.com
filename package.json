@@ -22,7 +22,7 @@
   "preinstall": "brew install GraphicsMagick",
   "dependencies": {
     "intersection-observer": "^0.11.0",
-    "logrocket": "^1.0.12",
+    "logrocket": "^2.0.0",
     "node-reset-scss": "^1.0.1",
     "pacto": "^0.6.4",
     "pacto.model": "^0.6.0",
