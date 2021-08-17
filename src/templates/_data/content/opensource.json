@@ -1,36 +1,63 @@
 {
   "headline": "Open source",
-  "copy": "Below is a list of some of my open source projects and contributions. There are many other projects on GitHub which are not listed here. So if you're interested in some more projects, please have a look at my GitHub profile page.",
+  "copy": "Below is a list of some of my open-source projects and contributions. There are many other projects on GitHub which are not listed here. So if you're interested in some more projects, please have a look at my GitHub profile page.",
+  "links": {
+    "https://github.com/schorfES": "GitHub profile"
+  },
   "projects": [
     {
       "name": "Routz",
-      "details": "This small project is built out of a pattern, that I've used in several projects before. I saw a need to publish this as a separate module. It's defining routes of an application in a single place to prevent repetitive usage by exposing helper functions. The name of this project is Routz and pronounced as ”Routes” (/ɹuːts/).",
+      "details": [
+        "This small project is built out of a pattern, that I've used in several projects before. I saw a need to publish this as a separate module. It's defining routes of an application in a single place to prevent repetitive usage by exposing helper functions. The name of this project is Routz and pronounced as ”Routes” (/ɹuːts/). The source and documentation is public on GitHub and the package published to npm."
+      ],
       "url": "https://github.com/schorfES/routz",
-      "url_label": "Visit on GitHub"
+      "links": {
+        "https://github.com/schorfES/routz": "GitHub",
+        "https://www.npmjs.com/package/routz": "npm"
+      }
     },
     {
       "name": "CarouCSSel",
-      "details": "CarouCSSel is a lightweight dependency-free css carousel for horizontal scrolling. It's shipped with a javascript api to render for example ui elements like buttons and pagination to control the scroll position.",
+      "details": [
+        "CarouCSSel is a lightweight dependency-free css carousel for horizontal scrolling. It's shipped with a javascript api to render for example UI elements like buttons and pagination to control the scroll position. To see this in action you can visit the project page or have a look into the demos. For more details, please visit the project on GitHub."
+      ],
       "url": "https://github.com/schorfES/caroucssel",
-      "url_label": "Visit on GitHub"
+      "links": {
+        "https://schorfes.github.io/caroucssel/": "project page",
+        "https://schorfes.github.io/caroucssel/demo/": "demos",
+        "https://github.com/schorfES/caroucssel": "GitHub"
+      }
     },
     {
       "name": "Pacto",
-      "details": "Pacto is a lightweight framework for non SPA websites including small features which use latest browser features like Proxy, IntersectionObserver and WeakMap. This website is based on pacto. To read more about the concepts behind pacto, please visit the GitHub project.",
+      "details": [
+        "Pacto is a lightweight framework for non SPA websites including small features which use latest browser features like Proxy, IntersectionObserver and WeakMap. This website is based on pacto.",
+        "To read more about the concepts behind pacto, please visit the GitHub project and please try it on you next project."
+      ],
       "url": "https://github.com/schorfES/pacto",
-      "url_label": "Visit on GitHub"
+      "links": {
+        "https://github.com/schorfES/pacto": "GitHub",
+        "https://www.npmjs.com/package/pacto": "try it"
+      }
     },
     {
       "name": "Lintspaces",
-      "details": "Lintspaces or better ”node-lintspaces” is a javascript module for checking different types of spaces in a source code. It validates a lot of different types like indentation, trailing whitespace, new line at end of file and some more. It respects team or project settings defined in .editorconfig and/or .lintspacesrc. ”node-linstpaces” is the core which other open source tools like ”lintspaces-cli” by Evan Shortiss, ”gulp-lintspaces” by Alberto Elias and ”grunt-lintspaces” are based on.",
+      "details": [
+        "Lintspaces is a javascript module for checking different types of spaces in a source code. It validates a lot of different types like indentation, trailing whitespace, newlines at end of the file, and some more. It is designed to be language-independent. It respects team or project settings defined in .editorconfig and/or .lintspacesrc.",
+        "Lintspaces is the core on which other open-source tools like lintspaces-cli by Evan Shortiss, gulp-lintspaces by Alberto Elias, and grunt-lintspaces by myself are based on.",
+        "The project started in 2013 where other tools like ESLint did not exist. Despite that, it could possibly be replaced by other tools, but it is still used within 16k+ projects. If you want to learn more about this project, please visit the GitHub project page."
+      ],
       "url": "https://github.com/schorfES/node-lintspaces",
-      "url_label": "Visit on GitHub"
-    },
-    {
-      "name": "Grunt Lintspaces",
-      "details": "This is the grunt plugin based on the ”node-lintspaces” core validation module.",
-      "url": "https://github.com/schorfES/grunt-lintspaces",
-      "url_label": "Visit on GitHub"
+      "links": {
+        "https://github.com/schorfES/node-lintspaces": "GitHub",
+        "https://github.com/schorfES/grunt-lintspaces": "grunt-lintspaces",
+        "https://www.npmjs.com/package/lintspaces-cli": "lintspaces-cli",
+        "https://github.com/evanshortiss": "Evan Shortiss",
+        "https://www.npmjs.com/package/gulp-lintspaces": "gulp-lintspaces",
+        "https://github.com/AlbertoElias": "Alberto Elias",
+        "https://github.com/schorfES/node-lintspaces/network/dependents": "16k+ projects"
+
+      }
     }
   ]
 }

@@ -1,7 +1,7 @@
 <section class="content content-opensource">
 	<div>
 		<h2>{{ content.opensource.headline }}</h2>
-		<p>{{ content.opensource.copy }}</p>
+		<p>{% linkify content.opensource.links, content.opensource.copy %}</p>
 
 		<ul>
 			{% for project in content.opensource.projects %}
@@ -22,20 +22,11 @@
 					{% endif %}
 
 					{% if project.details %}
-						<p>
-							{{ project.details }}
-
-							{% if project.url %}
-								To get more details of this project, please visit the project page of
-								<a
-									class="link"
-									href="{{ project.url }}"
-									title="Open the ”{{ project.name }}” website in a new tab"
-									target="_blank"
-									rel="noopener noreferrer"
-								>{{ project.name }}</a>.
-							{% endif %}
-						</p>
+						{% for line in project.details %}
+							<p>
+								{% linkify project.links, line %}
+							</p>
+						{% endfor %}
 					{% endif %}
 				</li>
 			{% endfor %}
