@@ -3,6 +3,12 @@
   "copy": "Below is a list of some of my open source projects and contributions. There are many other projects on GitHub which are not listed here. So if you're interested in some more projects, please have a look at my GitHub profile page.",
   "projects": [
     {
+      "name": "Routz",
+      "details": "This small project is built out of a pattern, that I've used in several projects before. I saw a need to publish this as a separate module. It's defining routes of an application in a single place to prevent repetitive usage by exposing helper functions. The name of this project is Routz and pronounced as ”Routes” (/ɹuːts/).",
+      "url": "https://github.com/schorfES/routz",
+      "url_label": "Visit on GitHub"
+    },
+    {
       "name": "CarouCSSel",
       "details": "CarouCSSel is a lightweight dependency-free css carousel for horizontal scrolling. It's shipped with a javascript api to render for example ui elements like buttons and pagination to control the scroll position.",
       "url": "https://github.com/schorfES/caroucssel",
