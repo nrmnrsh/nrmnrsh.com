@@ -46,7 +46,7 @@
     "babel-jest": "^26.3.0",
     "babel-loader": "^8.1.0",
     "babel-plugin-dynamic-import-node": "^2.3.3",
-    "codecov": "^3.7.2",
+    "codecov": "^3.8.3",
     "copy-webpack-plugin": "^5.1.2",
     "critical": "^2.0.4",
     "css-loader": "^2.1.1",
