@@ -48,7 +48,7 @@
     "babel-plugin-dynamic-import-node": "^2.3.3",
     "codecov": "^3.8.3",
     "copy-webpack-plugin": "^5.1.2",
-    "critical": "^2.0.4",
+    "critical": "^4.0.1",
     "css-loader": "^2.1.1",
     "cssnano": "^4.1.10",
     "eslint": "^7.32.0",
