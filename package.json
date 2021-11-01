@@ -61,7 +61,7 @@
     "hasha": "^5.2.2",
     "helper-slugify": "^0.2.0",
     "html-minifier": "^4.0.0",
-    "imagemin-cli": "^6.0.0",
+    "imagemin-cli": "^7.0.0",
     "inline-source": "^7.2.0",
     "jest": "^26.4.2",
     "jest-date-mock": "^1.0.8",
