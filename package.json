@@ -57,7 +57,7 @@
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^6.2.0",
     "gh-pages": "2.0.1",
-    "glob": "^7.1.6",
+    "glob": "^7.2.0",
     "hasha": "^5.2.2",
     "helper-slugify": "^0.2.0",
     "html-minifier": "^4.0.0",
