@@ -1,7 +1,7 @@
 const
 	config = require('./webpack.config.js'),
-	merge = require('webpack-merge'),
 	path = require('path'),
+	webpackMerge = require('webpack-merge'),
 
 	CopyWebpackPlugin = require('copy-webpack-plugin'),
 	UglifyJsPlugin = require('uglifyjs-webpack-plugin')
@@ -9,7 +9,7 @@ const
 
 
 module.exports = (env, argv) => {
-	return merge(
+	return webpackMerge.merge(
 		config.getGlobalSettings(env, argv),
 		{
 			entry: config.getEntries('./*.js', {

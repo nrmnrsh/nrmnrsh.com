@@ -2,15 +2,15 @@ const
 	autoprefixer = require('autoprefixer'),
 	config = require('./webpack.config.js'),
 	cssnano = require('cssnano'),
-	merge = require('webpack-merge'),
 	path = require('path'),
+	webpackMerge = require('webpack-merge'),
 
 	ExtractTextPlugin = require('extract-text-webpack-plugin')
 ;
 
 
 module.exports = (env, argv) => {
-	return merge(
+	return webpackMerge.merge(
 		config.getGlobalSettings(env, argv),
 		{
 			entry: config.getEntries('./**/*.scss', {
