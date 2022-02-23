@@ -39,7 +39,7 @@
     "@babel/plugin-transform-runtime": "^7.15.0",
     "@babel/plugin-transform-spread": "^7.11.0",
     "@babel/preset-env": "^7.15.6",
-    "@moccu/eslint-config": "^0.2.2",
+    "@moccu/eslint-config": "^0.3.0",
     "autoprefixer": "^9.8.7",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.1.0",
