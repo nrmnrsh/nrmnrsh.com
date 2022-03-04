@@ -4,7 +4,8 @@
     "node": true,
     "browser": true,
     "es6": true,
-    "serviceworker": true
+    "serviceworker": true,
+    "jest/globals": true
   },
   "extends": [
     "eslint:recommended",
@@ -16,5 +17,5 @@
   "plugins": [
     "jest"
   ],
-  "parser": "babel-eslint"
+  "parser": "@babel/eslint-parser"
 }
