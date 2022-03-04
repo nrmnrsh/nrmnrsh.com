@@ -4,6 +4,7 @@ version: 2
 updates:
   - package-ecosystem: "npm"
     directory: "/" # Location of package manifests
+    open-pull-requests-limit: 0
     schedule:
       interval: "monthly"
 
