@@ -6,3 +6,9 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "monthly"
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    open-pull-requests-limit: 0
+    schedule:
+      interval: "monthly"
