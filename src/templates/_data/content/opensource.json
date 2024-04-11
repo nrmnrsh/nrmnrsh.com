@@ -1,75 +1,74 @@
 {
-  "headline": "Open source",
-  "copy": "Below is a list of some of my open-source projects and contributions. There are many other projects on GitHub which are not listed here. So if you're interested in some more projects, please have a look at my GitHub profile page.",
+  "headline": "Open Source",
+  "copy": "Below is a list of some of my open-source projects and contributions. While these projects are featured here, there are many others on GitHub. For more projects, please visit my GitHub profile page.",
   "links": {
-    "https://github.com/schorfES": "GitHub profile"
+    "https://github.com/schorfES": "GitHub profile page"
   },
   "projects": [
     {
       "name": "CarouCSSel",
       "details": [
-        "CarouCSSel is a lightweight dependency-free css carousel for horizontal scrolling. It's shipped with a javascript api to render for example UI elements like buttons and pagination to control the scroll position. To see this in action you can visit the project page or have a look into the demos. For more details, please visit the project on GitHub."
+        "CarouCSSel is a lightweight, dependency-free CSS carousel for horizontal scrolling. It includes a JavaScript API to render UI elements such as buttons and pagination to control the scroll position. To see it in action, visit the project page or check out the demos. For more details, visit the project on GitHub."
       ],
       "url": "https://github.com/schorfES/caroucssel",
       "links": {
-        "https://schorfes.github.io/caroucssel/": "project page",
-        "https://schorfes.github.io/caroucssel/demo/": "demos",
-        "https://github.com/schorfES/caroucssel": "GitHub"
+        "https://schorfes.github.io/caroucssel/": "the project page",
+        "https://schorfes.github.io/caroucssel/demo/": "check out the demos",
+        "https://github.com/schorfES/caroucssel": "the project on GitHub"
       }
     },
     {
       "name": "React Hook Webstorage",
       "details": [
-        "react-hook-webstorage offers a collection of React hooks designed to simplify the management of data on top of the Web Storage API and implements LocalStorage and SessionStorage. Whether you're building a small application or a large-scale project, these hooks provide an efficient way to handle persistent data in your React applications.",
-        "The source and documentation is public on GitHub and the package published to npm."
+        "react-hook-webstorage offers a collection of React hooks designed to simplify data management on top of the Web Storage API, implementing LocalStorage and SessionStorage. Whether you're building a small application or a large-scale project, these hooks provide an efficient way to handle persistent data in your React applications.",
+        "Read the documentation on GitHub and use the package published on npm in your next project."
       ],
       "url": "https://github.com/schorfES/react-hook-webstorage",
       "links": {
         "https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API": "Web Storage API",
-        "https://github.com/schorfES/react-hook-webstorage": "GitHub",
-        "https://www.npmjs.com/package/react-hook-webstorage": "npm"
+        "https://github.com/schorfES/react-hook-webstorage": "documentation on GitHub",
+        "https://www.npmjs.com/package/react-hook-webstorage": "published on npm"
       }
     },
     {
       "name": "Pacto",
       "details": [
-        "Pacto is a lightweight framework for non SPA websites including small features which use latest browser features like Proxy, IntersectionObserver and WeakMap. This website is based on pacto.",
-        "To read more about the concepts behind pacto, please visit the GitHub project and please try it on you next project."
+        "Pacto is a lightweight framework for non-SPA websites that includes small features using the latest browser features like Proxy, IntersectionObserver, and WeakMap. This website is also based on Pacto.",
+        "To learn more about the concepts behind Pacto, visit the GitHub project and try it in your next project."
       ],
       "url": "https://github.com/schorfES/pacto",
       "links": {
-        "https://github.com/schorfES/pacto": "GitHub",
-        "https://www.npmjs.com/package/pacto": "try it"
+        "https://github.com/schorfES/pacto": "the GitHub project",
+        "https://www.npmjs.com/package/pacto": "Try It"
       }
     },
     {
       "name": "Routz",
       "details": [
-        "This small project is built out of a pattern, that I've used in several projects before. I saw a need to publish this as a separate module. It's defining routes of an application in a single place to prevent repetitive usage by exposing helper functions. The name of this project is Routz and pronounced as ”Routes” (/ɹuːts/). The source and documentation is public on GitHub and the package published to npm."
+        "This small project is built from a pattern that I've used in several projects before. I saw a need to publish this as a separate module. It defines routes of an application in a single place to prevent repetitive usage by exposing helper functions. The name of this project is Routz and pronounced as 'Routes' (/ɹuːts/). The source and documentation are publicly available on GitHub, and the package is published on npm."
       ],
       "url": "https://github.com/schorfES/routz",
       "links": {
-        "https://github.com/schorfES/routz": "GitHub",
-        "https://www.npmjs.com/package/routz": "npm"
+        "https://github.com/schorfES/routz": "available on GitHub",
+        "https://www.npmjs.com/package/routz": "published on npm"
       }
     },
     {
       "name": "Lintspaces",
       "details": [
-        "Lintspaces is a javascript module for checking different types of spaces in a source code. It validates a lot of different types like indentation, trailing whitespace, newlines at end of the file, and some more. It is designed to be language-independent. It respects team or project settings defined in .editorconfig and/or .lintspacesrc.",
+        "Lintspaces is a JavaScript module for checking different types of spaces in source code. It validates various types, including indentation, trailing whitespace, newlines at the end of files, and more. It is designed to be language-independent and respects team or project settings defined in .editorconfig and/or .lintspacesrc.",
         "Lintspaces is the core on which other open-source tools like lintspaces-cli by Evan Shortiss, gulp-lintspaces by Alberto Elias, and grunt-lintspaces by myself are based on.",
-        "The project started in 2013 where other tools like ESLint did not exist. Despite that, it could possibly be replaced by other tools, but it is still used within 16k+ projects. If you want to learn more about this project, please visit the GitHub project page."
+        "The project started in 2013 when other tools like ESLint did not exist. Despite that, it is still used in over 24k projects. To learn more about this project, visit the GitHub project page."
       ],
       "url": "https://github.com/schorfES/node-lintspaces",
       "links": {
-        "https://github.com/schorfES/node-lintspaces": "GitHub",
+        "https://github.com/schorfES/node-lintspaces": "the GitHub project page",
         "https://github.com/schorfES/grunt-lintspaces": "grunt-lintspaces",
         "https://www.npmjs.com/package/lintspaces-cli": "lintspaces-cli",
         "https://github.com/evanshortiss": "Evan Shortiss",
         "https://www.npmjs.com/package/gulp-lintspaces": "gulp-lintspaces",
         "https://github.com/AlbertoElias": "Alberto Elias",
-        "https://github.com/schorfES/node-lintspaces/network/dependents": "16k+ projects"
-
+        "https://github.com/schorfES/node-lintspaces/network/dependents": "over 24k projects"
       }
     }
   ]
