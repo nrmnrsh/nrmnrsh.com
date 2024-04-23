@@ -34,12 +34,14 @@ jobs:
         env:
           CI: true
 
-      - name: Run tests code coverage
-        uses: codecov/codecov-action@v4
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
-          fail_ci_if_error: true
-          verbose: true
+      # Currently disabled, connection to this organization from codecov is
+      # not available...
+      # - name: Run tests code coverage
+      #   uses: codecov/codecov-action@v4
+      #   with:
+      #     token: ${{ secrets.CODECOV_TOKEN }}
+      #     fail_ci_if_error: true
+      #     verbose: true
 
       - name: Run validations
         run: make validate
