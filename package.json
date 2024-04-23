@@ -62,7 +62,7 @@
     "helper-slugify": "^0.2.0",
     "html-minifier": "^4.0.0",
     "imagemin-cli": "^7.0.0",
-    "inline-source": "^7.2.0",
+    "inline-source": "^8.0.3",
     "jest": "^26.4.2",
     "jest-date-mock": "^1.0.8",
     "lintspaces-cli": "^0.7.1",
