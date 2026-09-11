@@ -1,1 +1,3 @@
-lts/gallium
+# Node 26 (Lithium) becomes Active LTS on 2026-10-28; switch .nvmrc to
+# 'lts/lithium' once that alias is available.
+26
