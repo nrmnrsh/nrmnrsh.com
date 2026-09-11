@@ -1,0 +1,20 @@
+---
+import {schema} from '../utils/schema';
+import introData from '../data/content/intro.json';
+import type {IntroContent} from '../data/types';
+import styles from './intro.module.scss';
+
+const content = introData as IntroContent;
+const copy = schema(content.schema, content.copy);
+---
+
+<section class={`content ${styles.intro}`}>
+  <div>
+    <h1>
+      <em>{content.headline}<span> -</span></em>
+      <span>{content.subline}</span>
+    </h1>
+
+    <p set:html={copy} />
+  </div>
+</section>

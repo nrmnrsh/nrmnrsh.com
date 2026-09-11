@@ -1,12 +1,13 @@
 # Directories
 coverage/
 node_modules/
-web/
+dist/
+.astro/
 
 # Files
 .DS_Store
 Thumbs.db
 *.sublime-*
-src/scss/settings/_icons.scss
+src/styles/_icons.scss
 src/fonts/icons.*
-src/lib/shortcodes/__fixtures__/static-*.file
+public/fonts/icons.*

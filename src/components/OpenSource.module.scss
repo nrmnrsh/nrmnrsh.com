@@ -1,0 +1,49 @@
+@use '../styles/constants' as *;
+@use '../styles/mixins/typography' as *;
+
+.opensource {
+  background: $opensource-background;
+  color: $opensource-color;
+
+  h2 {
+    @include headline-primary();
+  }
+
+  h3 {
+    margin: 0 0 1em;
+
+    span {
+      @include headline-secondary();
+      margin: 0;
+    }
+  }
+
+  time {
+    margin: 0 0 1em;
+    font-style: italic;
+  }
+
+  p {
+    margin: 0 auto 1rem;
+    max-width: 31rem;
+  }
+
+  li {
+    position: relative;
+    padding: 5rem 2rem 0;
+
+    &:before {
+      content: '';
+      speak: none;
+      display: block;
+      opacity: 0.5;
+      transform: translateX(-50%);
+      position: absolute;
+      top: 2rem;
+      left: 50%;
+      width: 100%;
+      max-width: 35rem;
+      border-bottom: 1px solid;
+    }
+  }
+}

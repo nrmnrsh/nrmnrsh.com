@@ -1,0 +1,74 @@
+@use 'sass:math';
+
+// Dimensions:
+$content-max-width: 65rem !default;
+$content-breakpoints: (
+  62rem,
+  65rem,
+) !default;
+
+// Animations:
+$transition-duration: 0.3s !default;
+$ready-delay: 2s !default;
+
+// Overall colors:
+$color-gradients: (
+  (rgba(#FFF700, 0.6), transparent, transparent),
+  (rgba(#0072FF, 0.73), transparent, transparent),
+  (#FF00C8, #1D004E),
+);
+$color-background: #1C1C1C !default;
+$color-text: #FFFFFF !default;
+$color-focus: #FF0076 !default;
+
+// Font definitions
+$font-size-base: 16px !default;
+$font-line-height-base: math.div(30px, $font-size-base) !default;
+
+// Default font:
+$font-default-family: Georgia, serif !default;
+
+// Primary font:
+$font-primary-name: 'satisfy' !default;
+$font-primary-family: 'satisfy', Verdana, Arial, sans-serif !default;
+$font-primary-weight: 400 !default;
+$font-primary-dir: '/fonts/' !default;
+$font-primary-filename: 'satisfy' !default;
+$font-primary-display: swap !default;
+
+// Icon-font:
+$font-icons-name: 'icons' !default;
+$font-icons-weight: 400 !default;
+$font-icons-dir: '/fonts/' !default;
+$font-icons-filename: 'icons' !default;
+$font-icons-display: block !default;
+
+$font-load: ($font-primary-name, $font-primary-weight, $font-primary-display, $font-primary-dir, $font-primary-filename),
+  ($font-icons-name, $font-icons-weight, $font-icons-display, $font-icons-dir, $font-icons-filename);
+
+// Headlines (mixin):
+$headline-primary-animation-duration: 25s !default;
+
+// Intro:
+$intro-background: inherit !default;
+$intro-color: inherit !default;
+$intro-headline-animation-duration: 25s !default;
+
+// Social:
+$social-background: $color-background !default;
+$social-shadow: 2px 2px 20px rgba($color-background, 0.3);
+$social-color: inherit !default;
+$social-icons: ('github', 'twitter', 'linkedin') !default;
+
+// Open Source:
+$opensource-background: inherit !default;
+$opensource-color: inherit !default;
+
+// Brands:
+$brands-background: $color-background !default;
+$brands-shadow: 2px 2px 20px rgba($color-background, 0.3);
+$brands-color: currentColor !default;
+
+// Footer:
+$footer-background: inherit !default;
+$footer-color: inherit !default;

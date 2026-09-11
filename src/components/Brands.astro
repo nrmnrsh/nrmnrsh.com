@@ -1,0 +1,40 @@
+---
+import {slug} from '../utils/slug';
+import brandsData from '../data/content/brands.json';
+import type {BrandsContent} from '../data/types';
+import styles from './brands.module.scss';
+
+const content = brandsData as BrandsContent;
+
+const logos = import.meta.glob<string>('../img/brands/*.svg', {
+  query: '?raw',
+  import: 'default',
+  eager: true,
+});
+
+function readLogo(logo: string): string {
+  const svg = logos[`../img/brands/${logo}.svg`];
+  if (!svg) {
+    throw new Error(`Missing brand logo: ${logo}.svg`);
+  }
+
+  return svg;
+}
+---
+
+<section class={`content ${styles.brands}`}>
+  <div>
+    <h2>{content.headline}</h2>
+    <p>{content.copy}</p>
+
+    <ul>
+      {content.brands.map(brand => (
+        <li id={slug(brand.name)} itemprop='brand' itemscope itemtype='https://schema.org/Brand'>
+          <span itemprop='name'>{brand.name}</span>
+
+          <div title={brand.name} role='presentation' itemprop='logo' set:html={readLogo(brand.logo)} />
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>

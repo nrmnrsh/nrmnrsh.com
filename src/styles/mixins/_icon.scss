@@ -1,0 +1,41 @@
+@use 'sass:list';
+@use '../constants' as *;
+@use '../icons' as *;
+
+%icon-pseudoclass {
+  speak: none;
+  display: inline-block;
+  width: 1em;
+  font-family: $font-icons-name;
+  font-size: 1em;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-align: left;
+  text-transform: none;
+  text-decoration: inherit;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin icon($name, $position: 'before') {
+  :global(.is-ready) &:#{$position} {
+    @extend %icon-pseudoclass;
+    @content;
+  }
+
+  @include icon-sign($name, $position);
+}
+
+@mixin icon-sign($name, $position: 'before', $important: false) {
+  :global(.is-ready) &:#{$position} {
+    @each $icon in $icons {
+      @if $name == list.nth($icon, 1) {
+        content: list.nth($icon, 2);
+        @content;
+      }
+    }
+  }
+}

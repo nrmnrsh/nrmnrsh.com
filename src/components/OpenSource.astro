@@ -1,0 +1,38 @@
+---
+import {linkify} from '../utils/linkify';
+import {slug} from '../utils/slug';
+import openSourceData from '../data/content/opensource.json';
+import type {OpenSourceContent} from '../data/types';
+import styles from './OpenSource.module.scss';
+
+const content = openSourceData as unknown as OpenSourceContent;
+const copy = linkify(content.links, content.copy);
+---
+
+<section class={`content ${styles.opensource}`}>
+  <div>
+    <h2>{content.headline}</h2>
+    <p set:html={copy} />
+
+    <ul>
+      {content.projects.map(project => (
+        <li id={`opensource-${slug(project.name)}`}>
+          <h3>
+            <span>{project.name}</span>
+            {project.note && <em>{project.note}</em>}
+          </h3>
+
+          {project.datePublished && (
+            <time datetime={new Date(project.datePublished).toISOString()}>
+              {new Date(project.datePublished).getFullYear()}
+            </time>
+          )}
+
+          {project.details?.map(line => (
+            <p set:html={linkify(project.links, line)} />
+          ))}
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
