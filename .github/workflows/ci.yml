@@ -15,21 +15,15 @@ jobs:
 
     steps:
       - name: Git checkout
-        uses: actions/checkout@v2
-
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 12.3.4
+        uses: actions/checkout@v7
 
       - name: Read .nvmrc
         id: nvm
         run: echo ::set-output name=NVMRC::$(cat .nvmrc)
 
       - name: Use Node.js ${{ steps.nvm.outputs.NVMRC }}
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v7
         with:
-          node-version: '${{ steps.nvm.outputs.NVMRC }}'
           cache: 'pnpm'
 
       - name: Install dependencies
