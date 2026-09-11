@@ -19,6 +19,13 @@
     "url": "https://github.com/nrmnrsh/nrmnrsh.com/issues"
   },
   "homepage": "https://nrmnrsh.com/",
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "12.3.4",
+      "onFail": "error"
+    }
+  },
   "preinstall": "brew install GraphicsMagick",
   "dependencies": {
     "intersection-observer": "^0.11.0",

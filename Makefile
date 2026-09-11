@@ -53,7 +53,8 @@ webfont:
 
 
 webpack:
-	NODE_ENV=production ./node_modules/.bin/webpack --mode production
+	# Webpack 4's MD4 hashing needs OpenSSL's legacy provider on Node 17+.
+	NODE_ENV=production NODE_OPTIONS=--openssl-legacy-provider ./node_modules/.bin/webpack --mode production
 
 
 eleventy:
@@ -97,7 +98,7 @@ optimize:
 
 
 develop: clean webfont
-	NODE_ENV=development ./node_modules/.bin/webpack & \
+	NODE_ENV=development NODE_OPTIONS=--openssl-legacy-provider ./node_modules/.bin/webpack & \
 	NODE_ENV=development ./node_modules/.bin/eleventy --serve --watch
 
 
