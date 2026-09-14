@@ -3,7 +3,7 @@ import {linkify} from '../utils/linkify';
 import {slug} from '../utils/slug';
 import openSourceData from '../data/content/opensource.json';
 import type {OpenSourceContent} from '../data/types';
-import styles from './OpenSource.module.scss';
+import styles from './open-source.module.scss';
 
 const content = openSourceData as unknown as OpenSourceContent;
 const copy = linkify(content.links, content.copy);
