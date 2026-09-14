@@ -1,0 +1,95 @@
+@use 'node-reset-scss/scss/reset';
+
+@use 'sass:list';
+@use '../styles/constants' as *;
+@use '../styles/mixins/break-at' as *;
+@use '../styles/mixins/render-background' as *;
+@use '../styles/mixins/states' as *;
+
+html,
+body {
+  // Allow better font smoothing:
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  // Prevent iOS font scaling in landscape:
+  -webkit-text-size-adjust: none;
+}
+
+html {
+  @include render-background();
+  box-sizing: border-box;
+  color: $color-text;
+  font-family: $font-default-family;
+  font-size: $font-size-base;
+}
+
+* {
+  &,
+  &::before,
+  &::after {
+    box-sizing: inherit;
+  }
+}
+
+body {
+  line-height: $font-line-height-base;
+}
+
+a,
+button {
+  transition: text-underline-offset 0.3s;
+  appearance: none;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid transparent;
+  border-radius: 0;
+  color: inherit;
+  font: inherit;
+  text-align: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.1em;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+
+  @include when-hovered() {
+    text-underline-offset: 0.25em;
+  }
+
+  @include when-focused() {
+    background-color: $color-focus;
+    outline: none;
+    color: $color-text;
+    text-decoration: none;
+  }
+}
+
+::-moz-selection {
+  background-color: $color-focus;
+  color: $color-text;
+}
+
+::selection {
+  background-color: $color-focus;
+  color: $color-text;
+}
+
+.content {
+  > div {
+    margin: 0 auto;
+    padding: 3.5rem 2rem;
+    width: 100%;
+    max-width: $content-max-width;
+    text-align: center;
+
+    @include break-at(list.nth($content-breakpoints, 1)) {
+      padding: 5rem 2rem;
+    }
+
+    @include break-at(list.nth($content-breakpoints, 2)) {
+      padding: 6.5rem 2rem;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+---
+import socialData from '../data/content/social.json';
+import type {SocialContent} from '../data/types';
+import styles from './social.module.scss';
+
+const content = socialData as SocialContent;
+---
+
+<section class={`content ${styles.social}`}>
+  <div>
+    <h2>{content.headline}</h2>
+
+    <ul>
+      {content.links.map(link => (
+        <li class={styles[`is-type-${link.type}`]}>
+          <a
+            href={link.href}
+            title={`Follow me on ${link.label}`}
+            target='_blank'
+            rel='noopener noreferrer bookmark'
+          >
+            <span>{link.label}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>

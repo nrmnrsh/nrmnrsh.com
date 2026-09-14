@@ -1,0 +1,65 @@
+@use 'sass:list';
+@use '../styles/constants' as *;
+@use '../styles/mixins/break-at' as *;
+@use '../styles/mixins/icon' as *;
+@use '../styles/mixins/invisible' as *;
+@use '../styles/mixins/states' as *;
+@use '../styles/mixins/typography' as *;
+
+.social {
+  background: $social-background;
+  background: rgba($social-background, 0.7); // sass-lint:disable-line no-duplicate-properties
+  box-shadow: $social-shadow;
+  color: $social-color;
+
+  h2 {
+    @include headline-primary();
+  }
+
+  li,
+  a {
+    display: inline-block;
+  }
+
+  li {
+    position: relative;
+    padding: 0 0.5rem;
+
+    @include break-at(list.nth($content-breakpoints, 1)) {
+      padding: 0 1rem;
+    }
+
+    @include break-at(list.nth($content-breakpoints, 2)) {
+      padding: 0 2rem;
+    }
+  }
+
+  a {
+    @include icon('github', 'before');
+    transition: transform $transition-duration * 5;
+    padding: 1rem;
+    font-size: 2.5em;
+    text-decoration: none;
+
+    @include when-hovered() {
+      transition: transform $transition-duration * 2;
+      transform: scale(1.15);
+    }
+  }
+
+  span {
+    font-size: 0.4em;
+
+    :global(.is-ready) & {
+      @include invisible();
+    }
+  }
+
+  @each $icon in $social-icons {
+    .is-type-#{$icon} {
+      a {
+        @include icon-sign($icon, 'before');
+      }
+    }
+  }
+}

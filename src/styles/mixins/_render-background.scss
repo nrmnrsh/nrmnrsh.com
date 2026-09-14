@@ -1,0 +1,22 @@
+@use 'sass:list';
+@use '../constants' as *;
+
+@mixin render-background() {
+  background: $color-background;
+
+  &:before {
+    content: '';
+    speak: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    background: $color-background;
+    background-image:
+      linear-gradient(127deg, list.nth($color-gradients, 1)),
+      linear-gradient(347deg, list.nth($color-gradients, 2)),
+      linear-gradient(45deg, list.nth($color-gradients, 3));
+  }
+}

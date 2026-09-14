@@ -1,0 +1,6 @@
+{
+  "fontName": "icons",
+  "formats": ["woff", "woff2"],
+  "template": "./src/assets/fonts/icons/_icons.scss.njk",
+  "destTemplate": "./src/styles/"
+}

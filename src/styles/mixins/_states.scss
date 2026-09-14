@@ -1,0 +1,29 @@
+// Creates a selector for :hover effects, only for pointer devices that support true hover.
+@mixin when-hovered() {
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+// Creates a selector for :active effects.
+@mixin when-pressed() {
+  &:active {
+    @content;
+  }
+}
+
+// Creates a selector for :focus-visible effects.
+@mixin when-focused() {
+  &:focus-visible {
+    @content;
+  }
+}
+
+// Creates a selector for :focus-within effects.
+@mixin when-focused-within() {
+  &:focus-within {
+    @content;
+  }
+}

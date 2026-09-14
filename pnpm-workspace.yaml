@@ -1,0 +1,23 @@
+# A map of package matchers to explicitly allow (`true`) or disallow (`false`)
+# script execution. This field replaces `onlyBuiltDependencies` and
+# `ignoredBuiltDependencies` (which are also deprecated by this new setting),
+# providing a single source of truth:
+allowBuilds:
+  '@parcel/watcher': true
+  esbuild: true
+  fsevents: true
+  gifsicle: true
+  jpegtran-bin: true
+  optipng-bin: true
+  puppeteer: true
+  sharp: true
+  unrs-resolver: true
+
+# Serialize downloads: legacy postinstall scripts (optipng-bin, gifsicle,
+# jpegtran-bin) race on a shared tmp path when run concurrently.
+networkConcurrency: 1
+
+# Force the ancient puppeteer@2.1.1 pulled in transitively by critical ->
+# penthouse to a modern version with Apple Silicon Chromium support.
+overrides:
+  puppeteer: ^25.10.0
