@@ -27,7 +27,7 @@
 @mixin button-primary() {
   @extend %button;
   transition:
-    tansform 0.15s,
+    transform 0.15s,
     background 0.3s,
     border 0.3s,
     color 0.3s,
