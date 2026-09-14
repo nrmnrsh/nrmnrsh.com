@@ -6,14 +6,14 @@ import styles from './Brands.module.scss';
 
 const content = brandsData as BrandsContent;
 
-const logos = import.meta.glob<string>('../img/brands/*.svg', {
+const logos = import.meta.glob<string>('../assets/img/brands/*.svg', {
   query: '?raw',
   import: 'default',
   eager: true,
 });
 
 function readLogo(logo: string): string {
-  const svg = logos[`../img/brands/${logo}.svg`];
+  const svg = logos[`../assets/img/brands/${logo}.svg`];
   if (!svg) {
     throw new Error(`Missing brand logo: ${logo}.svg`);
   }

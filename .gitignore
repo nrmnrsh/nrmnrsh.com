@@ -9,5 +9,5 @@ dist/
 Thumbs.db
 *.sublime-*
 src/styles/_icons.scss
-src/fonts/icons.*
+src/assets/fonts/icons.*
 public/fonts/icons.*

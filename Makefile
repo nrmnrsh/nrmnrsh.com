@@ -36,17 +36,17 @@ validate:
 
 
 webfont:
-	sh -c 'if [ ! -d "./src/fonts" ]; then mkdir ./src/fonts; fi'
+	sh -c 'if [ ! -d "./src/assets/fonts" ]; then mkdir ./src/assets/fonts; fi'
 
 	./node_modules/.bin/webfont \
-		"./src/fonts/icons/*.svg" \
+		"./src/assets/fonts/icons/*.svg" \
 		--config "./webfont.config.json" \
 		--dest "./public/fonts/"
 
 
 optimize:
 	./node_modules/.bin/imagemin ./public/img/meta --out-dir=public/img/meta
-	./node_modules/.bin/svgo ./src/img/brands/*.svg --config ./.svgo.yml
+	./node_modules/.bin/svgo ./src/assets/img/brands/*.svg --config ./.svgo.yml
 
 
 develop: clean webfont
