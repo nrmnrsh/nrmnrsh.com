@@ -14,7 +14,7 @@ coverage:
 	node_modules/.bin/codecov
 
 
-validate:
+validate: webfont
 	./node_modules/.bin/eslint .
 
 	./node_modules/.bin/astro check
