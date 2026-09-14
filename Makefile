@@ -66,8 +66,7 @@ release: clean validate tests build
 		--commit "Release v%s" \
 		--tag \
 		--all \
-		package.json \
-		package-lock.json
+		package.json
 
 	./node_modules/.bin/gh-pages -d ./dist/
 
