@@ -48,6 +48,6 @@ jobs:
           CI: true
 
       - name: Run build process
-        run: make build_fast
+        run: make build
         env:
           CI: true
